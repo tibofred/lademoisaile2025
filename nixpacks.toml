@@ -1,25 +1,41 @@
+# --- Nix packages to install via Nixpacks ---
 [phases.setup]
-# Keep PHP + Node + Yarn in the Nix env; omit composer to avoid LICENSE clash
-nixPkgs = ["php81", "nodejs_20", "yarn", "git"]
-
-[phases.install]
-# Install Composer via PHAR (outside Nix) so no env collision occurs
-cmds = [
-  "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"",
-  "php composer-setup.php --install-dir=/usr/local/bin --filename=composer",
-  "php -r \"unlink('composer-setup.php');\"",
-  # Your app deps (adjust flags as needed)
-  "composer install --no-interaction --prefer-dist --no-progress"
+# Keep Yarn out of Nix only if you used Option B. Since you chose Option A, keep it.
+nixPkgs = [
+  "php81",
+  "nodejs_20",
+  "yarn",
+  "git"
 ]
 
-[phases.build]
-# If you have a JS build step; otherwise remove this block
+# --- Install phase: install Composer outside Nix and use it ---
+[phases.install]
 cmds = [
-  "yarn install --frozen-lockfile || true",   # remove if you use npm
+  # be strict and fail fast
+  "set -euxo pipefail",
+  # install Composer to a dir always on PATH
+  "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"",
+  "php composer-setup.php --install-dir=/bin --filename=composer",
+  "rm -f composer-setup.php",
+  # confirm it’s visible
+  "composer --version",
+  # install PHP deps
+  "COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --no-progress"
+]
+
+# --- Build phase (optional: only if you actually have a JS step) ---
+[phases.build]
+cmds = [
+  "yarn install --frozen-lockfile || true",
   "yarn build || true",
   "php bin/console cache:clear --env=prod || true"
 ]
 
+# --- Runtime env you may want ---
+[variables]
+COMPOSER_ALLOW_SUPERUSER = "1"
+
+# --- Start command (adjust to your Symfony layout) ---
 [start]
-# Your start command (example for Symfony 3.4 in /web)
+# For Symfony 3.4 with /web front controller
 cmd = "php -S 0.0.0.0:${PORT} -t web web/app.php"
