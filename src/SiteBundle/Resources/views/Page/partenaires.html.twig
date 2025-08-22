@@ -1,0 +1,87 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %}Nos partenaires - La deMOIs’aile {% endblock %}
+{% block metaDescription %}La deMOIs’aile - Nos partenaires{% endblock %}
+{% block content %}
+    <section class="head_part">
+        <h1>Partenaires</h1>
+    </section>
+    <div class="text-center px-3">
+        <div class="bloc_part">
+            <img style="width:200px;" src="/assets/css/images/logo-partenaires/quebec.svg" alt=''/>
+            <img style="width:130px;" src="/assets/css/images/logo-partenaires/logo-viweb-vert.svg" alt=''/>
+            <img style="width:80px;" src="/assets/scss/images/logo-partenaires/innov.png" alt=''/>
+            <img style="width:150px;" src="/assets/css/images/logo-partenaires/medialo.jpg" alt=''/>
+            <img style="width:180px;" src="/assets/scss/images/logo-partenaires/ILLICOsainte-adele.jpg" alt=''/>
+            <img style="width:180px;" src="/assets/css/images/logo-partenaires/LogoMRCL_Slogan.png" alt=''/>
+            <img style="width:140px;" src="/assets/css/images/logo-partenaires/PREL_logo_CMJN_couleur.png" alt=''/>
+        </div>
+    </div>
+   <div class="container">
+      <div class="row mb-2">
+        <div class="col-12">
+            
+
+            
+            <div class="form_part">
+                <div class="row">
+
+               {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+               {{ form_start(form, { attr: {'class': 'row'}}) }}
+
+                
+                    <div class="col-12">
+                        <hr>
+                        <h2>Devenir partenaire</h2>
+                        <h3>Vos informations</h3>    
+                    </div>
+                    <div class="col-6 mb-3">
+                        {{ form_label(form.nom,"Nom de l’entité") }}
+                        {{ form_widget(form.nom) }}
+                    </div>
+                    <div class="col-6 mb-3">
+                        {{ form_label(form.region, "Région") }}
+                        {{ form_widget(form.region) }}
+                    </div>
+    
+                    <div class="col-6 mb-3">
+                        {{ form_label(form.courriel, "Courriel") }}
+                        {{ form_widget(form.courriel) }}
+                    </div>
+                    <div class="col-6 mb-3">
+                        {{ form_label(form.telephone, "Téléphone") }}
+                        {{ form_widget(form.telephone) }}
+                    </div>
+    
+                    <div class="col-12 mb-3">
+                        {{ form_label(form.description, "Message") }}
+                        {{ form_widget(form.description) }}
+                    </div>
+    
+                    <div class="col-12">
+                        <button class="btn" type="submit">Envoyer</button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+                
+            </div>
+            <div class="bloc_deve my-5">
+                <img src="/assets/scss/images/motif12.png" alt=""/>
+                <h2>Devenez notre partenaire privilégié</h2>
+                <img src="/assets/scss/images/logo-lademoisaile1.png" alt=""/>
+            </div>
+               
+
+        </div>
+
+      </div>
+  </div>
+
+
+     
+{% endblock %}
+
+
+

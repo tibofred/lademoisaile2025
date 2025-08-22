@@ -1,0 +1,30 @@
+{% extends ":admin:layout.html.twig" %}
+
+{% block title %}
+
+    Soumission - {{ parent() }}
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="sm-col-12">
+        <h2>Supprimer la soumission</h2>
+
+        <p>
+            Etes-vous certain de vouloir supprimer la soumission?
+        </p>
+
+        {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+        <form action="{{ path('viweb_admin_soumission_delete', {'id': soumission.id}) }}" method="post">
+            <a href="{{ path('viweb_admin_soumission_all') }}" class="btn btn-default">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Retour
+            </a>
+            {# Ici j'ai écrit le bouton de soumission à la main #}
+            <input type="submit" value="Supprimer" class="btn btn-danger"/>
+            {# Ceci va générer le champ CSRF #}
+            {{ form_rest(form) }}
+        </form>
+    </div>
+{% endblock %}

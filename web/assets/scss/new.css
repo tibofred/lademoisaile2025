@@ -1,0 +1,1035 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+/* PINK : #E83E8C; */
+
+.banniere-haut.eco_ecole-secondaire-des-trois-saisons .logo {
+  right: 80px;
+  top: 60px;
+}
+.like_face {
+    background: #3b3b3b;    
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-align: center !important;
+    padding: 8px 0 8px;
+}
+.like_face .fa {
+    color: #FFF;
+}
+.lf_right {
+	margin: 0 25px;
+	padding: 0;
+}
+nav.fixed-top {
+    top: 49px;
+}
+.navbar .row{
+	width: 100%;
+}
+.navbar {
+    border-bottom: none;
+    padding-bottom: 0; 
+}
+.button_boutique {
+	padding: 83px 0 0 ;
+}
+.button_boutique a {
+	display: inline-block;
+	border: 1px solid #E83E8C;
+	color: #E83E8C;
+	padding: 5px 15px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.button_boutique:before {
+	position: absolute;
+	content: ' ';
+	background: url(images/motif1.png) no-repeat;
+	top: -24px;
+	left: 115px;
+	width: 81px;
+	height: 107px;
+	font-weight: bold;
+
+}
+.left_nav {
+	margin: 84px 0 0;
+}
+.left_nav a {
+	text-transform: uppercase;
+}
+.left_nav span {
+	vertical-align: 3px;
+}
+.navbar_bloc {
+    padding-top: 35px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .submenu_ecole.sub_ecole1 {
+    display: none ;
+  }
+}
+
+
+.search_bloc {
+	position: relative;
+	text-align: center;
+	width: 200px;
+	max-width: 200px;
+	margin: 15px auto 0;
+}
+.gsc-input {
+	width: 100%;
+}
+.gsc-search-button {    
+	position: absolute;
+    right: 17px;
+    top: 5px;
+}
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus {
+    background-color: inherit !important;
+    border: none !important;
+    background-image: none;
+    filter: none;
+    padding: 0 !important;
+}
+.gsc-search-button-v2 svg {
+    fill: #808080 !important;
+}
+input.gsc-input {
+    padding: 1px 6px;
+    border: 1px solid #ababab;
+    width: 100%;
+}
+.navbar-expand-md .navbar-nav {
+	text-align: center;
+	margin: 15px auto 0;
+}
+body .navbar-expand-md .navbar-nav .nav-link {
+	color: #000 !important;
+	text-transform: uppercase;
+    margin: 0 25px !important;
+    padding: 0 0 10px !important;
+    letter-spacing: 2px;
+}
+body .navbar-expand-md .navbar-nav li:first-child .nav-link {
+   margin: 0 25px 0 0 !important;
+}   
+body .navbar-expand-md .navbar-nav li:last-child .nav-link {
+   margin: -10px 0 0 25px !important;
+}
+.navbar-expand-md .navbar-nav .nav-link:hover {
+	color: #000 !important;
+}
+.navbar-expand-md .navbar-nav li {
+    margin: 0 20px;
+}
+.navbar-expand-md .navbar-nav .nav-link.btn-primary {
+    color: #fff !important;
+    background-color: #E83E8C;
+    border-color: transparent;
+    border-radius: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 15px !important; 
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.navbar-expand-md .navbar-collapse {
+    z-index: 2000;
+    position: relative;
+}
+.nav-item.toogle_submenu .nav-link {
+	border-bottom: 5px solid #E83E8C;
+}
+.submenu_ecole {
+    background: #d9d9d9;
+    padding: 0;
+    text-align: left;
+    z-index: 2000;
+}
+.navbar-expand-md .navbar-nav li {
+    margin: 0;
+}
+.submenu_ecole li a {
+    color: #000 !important;
+    display: block;
+    padding: 5px 20px
+}
+.submenu_ecole li a:hover {
+    background: #a6a6a6 !important;
+}
+/*.navbar:after  {
+	content: ' ';
+	position: absolute;
+	background: url(images/motif2.png) no-repeat;
+	top: 140px;
+	left: 0;
+	width: 417px;
+	height: 305px;
+	z-index: 1040;
+}*/
+#imageAccueil .wrap-txt-home {
+    position: absolute;
+    top: inherit;
+    bottom: 100px;
+    left: 12%;
+    font-family: 'Glass Antiqua', cursive;
+}
+@media(max-width: 1520px) {
+    .navbar:after  {
+    	width: 180px;
+    }	
+}
+@media(min-width: 1100px) {
+	#imageAccueil .wrap-txt-home {
+	    bottom: 250px;
+	}
+}
+#imageAccueil h2 {
+    font-size: 2.8rem;
+    text-transform: none;
+}
+#imageAccueil {
+	background-position: center;
+}
+#imageAccueil p {
+    width: 30%;
+}
+#slide_home {
+	margin: 75px 0 105px;
+}
+.sect_slide .carousel-inner {
+	margin: 0 65px;	
+	width: inherit;
+}
+.sect_slide .fa {
+	font-size: 85px;
+	color:  #E83E8C;
+	font-weight: bold;
+	bottom: inherit;
+}
+.sect_slide .carousel-control-prev {
+	
+	left: 0;
+	top: -35px;
+	display: block;
+}
+.sect_slide .carousel-control-next {
+	left: inherit;
+	right: 0;
+	bottom: 0;
+	top: inherit;
+}
+.car_title {
+	margin: 20px 0 0;
+	font-style: italic;
+	font-size: 12px;
+}
+.text_exp {
+	clear: both;
+	background: url(images/motifb.png) no-repeat #c3e9fc;
+	background-position: center; 
+	min-height: 179px;
+	padding: 25px 0;
+	text-align: center;
+}
+.text_exp h4 {
+	font-size: 1.5rem;
+    font-family: 'Glass Antiqua', cursive;
+    margin: 0 0 20px;
+}
+.text_exp h4 span {
+	color: #E83E8C;
+}
+.btn.btn-primary {
+    color: #fff !important;
+    background-color: #E83E8C;
+    border-color: transparent;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 45px !important; 
+    letter-spacing: 2px;
+}
+.sect_vid {
+	padding:  85px 0 0;
+}
+.sect_vid .col-md-6, .sect_vid .col-md-4, .sect_vid .col-md-3, .sect_vid .row {
+	margin: 0;
+	padding: 0;
+}
+.sect_vid .col-md-4, .sect_vid .col-md-3 {
+	border-right: 1px solid #ababab;
+}
+.sect_vid .col-md-4:nth-child(3), .sect_vid .col-md-3:nth-child(4) {
+	border-right: none;
+}
+.sect_vid .col-md-6:first-child {
+	margin: 0;
+	padding: 0;
+	border-right: 1px solid #ababab;
+}
+.sect_vid .bloc_svframe {
+	margin: 0 25px;
+	padding: 0;
+}
+.bloc_capv {
+	text-align: center;
+	margin: 75px 0;
+}
+.bloc_capv h2 {
+	margin: 25px 0;
+    font-family: 'Glass Antiqua', cursive;
+}
+/*.sect_capsul .col-md-3, .sect_capsul .row {
+	margin: 0;
+	padding: 0;
+}*/
+.wrap-articles {
+	padding-top: 55px;
+}
+.box_blog {
+	margin: 25px 0 0;
+	display: block;
+}
+.box_blog img {
+	position: absolute;
+}
+.box_btext {
+	margin: 0 0 0 100px;
+}
+.wrap-articles .wrap-article .box_btext h7, .article-ecole h7 {
+    font-size: 1em !important;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    text-align: left;
+}
+.wrap-articles .wrap-article .box_btext h6 {
+    font-size: 1em;
+}
+.tp_button {	
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.wrap-articles .wrap-article .btn-primary {
+    background-color: #E83E8C;
+    border-radius: 25px !important;
+    margin-top: 1em;
+    font-weight: bold;
+    position: relative;
+    bottom: inherit;
+    left: inherit;
+    margin-left: 0;
+    padding: 10px 30px !important;
+}
+.h4_command {
+	margin: 45px 0 0;
+	text-align: center !important;
+	font-size: 2rem;
+    font-family: 'Glass Antiqua', cursive;
+}.commanditaire {
+	margin: 45px 0 0;
+}
+.commanditaire  .btn-primary {
+    font-weight: bold;
+    padding: 10px 30px !important;
+}
+footer {
+	clear: both;
+}
+.footer_links {
+	background: #575757;
+	position: relative;
+	text-align: center;
+}
+.footer_links a {
+	color: white;
+}
+.footer_links:before {
+	content: ' ';
+	background: url(images/motifb.png) no-repeat;
+	background-position: center bottom; 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	bottom: 0;
+	left: 0
+
+}
+.footer_links .col-md-4 {
+	margin: 0;
+	padding: 0;
+}
+.footer_col2 {
+	border-left: 1px solid #757575;
+	border-right: 1px solid #757575;
+}
+.footer_col1, .footer_col2 {
+	margin: 45px 0;
+}
+.footer_col1 a, .footer_col2 a {
+	display: inline-block;
+	margin: 10px 0;
+	line-height: 1.2;
+}
+.footer_col3 {
+	margin: 35px 0;
+}
+.footer_social {
+	margin: 25px 0;
+}
+.footer_social .fa {
+	font-size: 25px;
+	margin: 0 5px;
+}
+#mc_embed_signup{
+	background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;
+}
+#mc_embed_signup .fa-envelope{
+	font-size: 34px;
+	color: #E83E8C;
+	vertical-align: -3.5px;
+	display: inline-block;
+	border:3px solid #FFF;
+	border-top:0 solid #FFF;
+	border-bottom:2px solid #FFF;
+	background: #FFF;
+	line-height: 30.5px;
+	padding: 0;
+	margin: 0;
+}
+#mc_embed_signup_scroll {
+
+	display: inline-block;	
+}
+#mc_embed_signup input.email {
+    font-size: 15px;
+    border: 3px solid #FFF !important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    color: white  !important;
+    background-color: transparent  !important;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0px 0.4em;
+    display: inline-block;
+    margin: 0;
+    width: 350px;
+    vertical-align: top;
+}
+#mc_embed_signup #mc-embedded-subscribe {
+	font-size: 13px;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 3px;
+	letter-spacing: 0;
+	color: #fff;
+	box-sizing: border-box;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 18px;
+	display: inline-block;
+	margin: 0;
+	transition: all 0.23s ease-in-out 0s;
+	border: 3px solid white !important;
+	background-color: #E83E8C !important;
+}
+#mc_embed_signup form {
+    text-align: center !important;
+}
+#mc_embed_signup input.email {
+    width: 180px !important;
+}
+#mc_embed_signup input.email::placeholder {
+  color: white;
+}  
+.footer_droits{
+	text-align: center;
+	color: white;
+	background: #3b3b3b;
+	font-weight: normal;
+	padding: 5px 0;
+}
+.footer_droits a {
+	color: white;
+}
+
+.header_mobile {
+	display: none;
+}
+.header_site.sticky .left_nav {
+    margin: 10px 0 0;
+}
+.header_site.sticky .navbar_bloc {
+    padding-top: 0;
+}
+.header_site.sticky .navbar_bloc img {
+	height: 45px;
+}
+.header_site.sticky .button_boutique {
+    padding: 10px 0 0;
+}
+.header_site.sticky .navbar {
+	margin-top: 0;
+}
+.header_site.sticky .button_boutique::before {
+    position: absolute;
+    content: ' ';
+    background: url(images/motif1.png) no-repeat;
+    top: -79px;
+    left: 115px;
+    width: 81px;
+    height: 107px;
+    font-weight: bold;
+}
+.header_site.sticky .search_bloc {
+	display: none;
+}
+@media(max-width: 1200px) {
+	#imageAccueil p {
+	    width: 60%;
+	}
+}
+@media(max-width: 768px) {
+	body {
+	    padding-top: 0 !important;
+	}
+	.header_mobile {
+		display: block;
+		background: #FFF;
+		min-height: 100px;
+	}
+	.header_site {
+		display: none;
+	}
+	.navbar-toggler {
+		position: absolute;
+		color: #E83E8C;
+		z-index: 20000;
+		font-size: 45px;
+	}
+	#navbarColmob {
+		display: none;
+	    padding: 10px 25px;
+	    border-top: 1px solid #d9d9d9 ;
+	}
+	#navbarColmob.show {
+	    display: block;
+	}
+
+	.navbar_bloc {
+	    padding: 10px 0 15px;
+	    text-align: center;
+	}
+
+	.submenu_ecole {
+		display: block;
+	    background: #d9d9d9;
+	    padding: 0;
+	    text-align: left;
+	    position: relative;
+	}
+	#imageAccueil p {
+	    width: 95%;
+	}
+
+	.sect_vid .col-md-6:first-child {
+		border-right: none;
+	}
+	.sect_vid .col-md-4 {
+		border-right: none;
+	}
+	.sect_vid .bloc_svframe {
+		margin: 0 0;
+		padding: 0;
+	}
+}
+/*.img_cat span {
+	position: absolute !important;
+	top: 45% !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	text-align: center !important;
+	left: 0 !important;
+	z-index: 3 !important;
+	color: #E83E8C !important;
+	font-size: 26px !important;
+	font-family: 'Anton', sans-serif !important;
+	transition: all 2s !important;
+	letter-spacing: 0.1em !important;
+	-webkit-text-stroke: 1px white !important;
+}*/
+.articles-recents {
+    color: #E83E8C;
+}
+.wrap-ecole-participante {
+    background-attachment: inherit !important;
+}
+.page_site {
+    margin-top: 190px  !important;	
+}
+.wrap-menu-ecole {
+    background-color: #E83E8C !important;
+}
+.pink, h3.article-title, h3.article-title a, .wrap-user-arvhive h4 a, .auteur-single h3 a, h1.entry-title, ul#auteur-info li a, .entry-content a, .dernier_articles h3,
+.vos-demoisailes h1 span, .rose {
+    color: #E83E8C !important;
+}
+.dernier_articles .da_bloc {
+    border-bottom: 1px solid #E83E8C !important;
+}
+.banniere-haut {
+	position: relative;
+}
+.banniere-haut.eco_cure-mercure .logo {
+    top: 50px;
+}
+.banniere-haut.eco_ecole-secondaire-la-source .logo {
+    top: 50px;
+    width: 250px;
+}
+.banniere-haut.eco_polyvalente-deux-montagnes .logo {
+    top: 50px;
+    width: 250px;
+}
+.banniere-haut.eco_la-polyvalente-des-monts .logo {
+    top: 59px !important;
+}
+.banniere-haut.eco_ecole-secondaire-poly-jeunesse .logo {
+    top: 50px !important;
+}
+.banniere-haut.eco_cap-jeunesse .logo {
+    top: 50px !important;
+}
+
+@media(max-width: 768px) {
+	.page_site {
+	    margin-top: 10px  !important;	
+	}
+}
+.banniere-haut.eco_liberte-jeunesse .logo {
+    top: 50px !important;
+}
+.inscri_bas {
+	margin: 45px 0;
+	text-align: center;
+
+}
+.navbar-expand-md .navbar-nav .nav-link.btn-primary {
+border-radius: 30px;
+}
+.wrap-contactez-nous {
+    background-color: #FFF !important;
+}
+.commanditaire .btn.btn-primary br {
+    display:none !important;
+}
+@media(max-width:680px) {
+    .commanditaire .btn.btn-primary {
+        font-size:0.9rem !important;
+    }
+    
+    .commanditaire .btn.btn-primary br {
+        display:block !important;
+        line-height: 5px !important;
+    }
+}
+.connexion.btn.btn-primary {
+    
+    margin: 0 0 0 25px;
+    padding: 5px 15px !important;
+}
+@media(max-width:1000px) {
+    .wme_footer .btn.btn-primary {
+        margin-bottom: 10px;
+    }
+}
+@media(max-width:980px) {
+    .banniere-haut.eco_la-polyvalente-des-monts .logo {
+        right: inherit !important;
+    }
+}
+
+#carouselfeatured_mob {
+	display: none;
+}
+@media(max-width:768px) {
+	#carouselfeatured_mob {
+		display: block;
+	}
+	#carouselfeatured {
+		display: none;
+	}
+}
+.link_apro {
+	display: inline-block;
+}
+.submenu_apr {
+	display: none;
+	position: absolute;
+	list-style: none;
+    background: #d9d9d9;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    z-index: 200000;
+}
+.submenu_apr li {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.submenu_apr li a {
+    color: #000 !important;
+    display: block;
+    padding: 5px 20px;
+}
+.submenu_apr li a:hover {
+    background: #a6a6a6 !important;
+}
+@media only screen and (max-width: 768px) {
+    .mc-banner {
+        top: 120px !important;
+        margin: 0 15px !important;
+        width: calc(100% - 30px) !important;
+    }
+}
+
+.ttooltip {
+    display: none;
+    position: absolute;
+    width:calc(100% - 50px);
+    background:#000;
+    color: #FFF;
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.bloc_sv2frame .ttooltip {
+    width:calc(100% - 30px);
+}
+.sect_vid .bloc_capv .col-md-6 {
+  padding-right: 15px;
+padding-left: 15px;
+}
+.banniere-haut.eco_ecole-secondaire-des-trois-saisons img {
+    max-width:150px;
+}
+.form_hide_b {
+    display: none;
+}
+.bloc_ecole img {
+    width: 120px;
+}
+.bloc_ecole {
+    margin: 0 0 0 45px;
+    border-bottom: 1px solid #CCC;
+    padding: 8px 0;
+}
+.bloc_ecole .be_text {
+    width: calc(100% - 140px);
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 0 0 15px;
+}
+.bloc_ecole h4 {
+    font-size: 1.1rem;
+}
+.left_ec {
+    height: 850px;
+    overflow-y: auto;
+}
+.map_ecole {
+    width: 100%; 
+    height: 850px;
+}   
+.img_soum.img_soum2:after {
+    background: url(images/soumission2.png) no-repeat center center;
+}
+.owl-carousel .owl-nav button.owl-prev {
+    left: 5px;
+    position: absolute;
+    font-size: 65px;
+    line-height: 0.5;
+    top: calc(50% - 45px);
+}
+.owl-carousel .owl-nav button.owl-next {
+    right: 5px;
+    position: absolute;
+    font-size: 65px;
+    line-height: 0.5;
+    top: calc(50% - 45px);
+}
+.infopop {
+    width:600px;
+    max-width: 100%;
+}
+.infopop img {
+    width:200px;
+    max-width: 100%;
+}
+.text_infpop {
+    display: inline-block;
+    width: calc(95% - 220px);
+    margin: 0 0 0 10px;
+}
+.text_infpop a {
+    color:#E83E8C;
+    font-weight: bold;
+}   
+@media(max-width: 580px) {
+    .infopop img {
+        display: block;
+        margin: 5px auto 25px;
+    }
+    .text_infpop {
+        display: inline-block;
+        width: auto;
+    }
+}
+.form_sb button {
+    position: absolute;
+    background: transparent;
+    border: none;
+    right: 0;
+top: 0;
+}
+.search_blog {
+    padding: 15px 0 15px;
+    border-bottom: 1px solid #EEE;
+    position: relative;
+    z-index: 1050;
+}
+.search_blog img {
+    width:100px;
+    vertical-align: top;
+}
+.search_blog h3 a {
+    color: #E83E8C;
+    font-size: 1.2rem;
+}
+.search_blog h4 {
+    color: #E83E8C;
+    font-size: 0.95rem;
+}
+.search_blog .text_sb {
+    width:calc(100% - 120px);
+    margin : 0 0 0 10px;
+    display: inline-block;
+}
+.search_blog .text_sb2 {
+    font-size:0.85rem;
+}
+h2.title_search {
+    font-size: 1.2rem;
+    margin: 25px 0 0;
+}
+.img_soum.img_soum2:after {
+  background: none !important;
+}
+.style84 h3 {
+    text-align: center;
+    font-size: 2.6em;
+    font-family: 'Glass Antiqua', cursive;
+    font-weight: 500;
+}
+.style88 {
+    
+    text-align: center;
+    font-size: 1.6em;
+    font-family: 'Glass Antiqua', cursive;
+    font-weight: 500;
+    color: #E83E8C;
+}
+.form_insc textarea.form-control {
+  height: 200px;
+}
+@media(max-width:768px) {
+    .hidem {
+        display: none !important;
+    }
+}
+.contact-form1 {
+    background: #ECEBEA;
+    padding: 35px 45px 55px;
+    margin: 20px 0 35px;
+}
+.contact-form1 h5 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 1.3em;
+  font-size: 2.6em;
+  font-family: 'Glass Antiqua', cursive;
+}
+.contact-form1 h5:before {
+  border-top: 2px solid #dfdfdf;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+.contact-form1 h5 span {
+  background: #ECEBEA;
+  padding: 0 15px;
+}
+.link_ress {
+    margin: 60px 0 30px;
+    text-align: center;
+}
+.link_ress a {
+    position:relative;
+}
+.link_ress .fa {
+    position: absolute;
+    right: 15px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    top: 3px;
+}  
+h3.h3_cont {
+    text-transform: uppercase;
+}
+h3.h3_cont span {
+    text-decoration: underline;
+    margin: 0 25px 0 0;
+}
+@media (min-width: 768px) {
+  .h-md-250 {
+      height: auto;
+    min-height: 250px;
+  }
+}
+
+.banniere-haut.eco_la-foret .logo {
+  max-width: 320px;
+}
+.bloc_ecole.la-foret img {
+    background: #000;
+}
+.infopop.la-foret img {
+    background: #000;
+}
+.bloc_part {
+    margin: 25px auto 45px;
+}
+.bloc_part img {
+    margin: 0 10px 10px;
+}
+.head_part {
+	background: url(images/head_part.png) no-repeat;
+	background-size:cover;
+	height: 200px;
+	text-align: center;
+}
+
+.head_part h1 {
+    color: black;
+    margin-top: 65px;
+    padding: 0 0 10px;
+    display: inline-block;
+    border-bottom: 5px solid #E83E8C;
+    font-size: 2.7rem;
+}
+.bloc_deve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bloc_deve h2 {
+    font-family: 'Glass Antiqua', cursive;
+}
+.form_part {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.form_part h2 {
+    text-align: center;
+    color: #E83E8C;
+    margin: 45px 0;
+}
+.form_part h3 {
+    position: relative;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: 0 0 5px;
+    margin: 0 0 30px;
+}
+.form_part h3:after {
+    content: '';
+    border-bottom: 5px solid #E83E8C;
+    bottom: 0;
+    width: 65px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+}
+.banniere-haut.eco_ecole-secondaire-du-harfang .logo {
+  width: 300px;
+}
+
+.logo_asdr {
+  position: absolute;
+  right: 50px;
+  width: 150px;
+  margin: 180px 0 0 0;
+}
+.logo_asdr img {
+    width: 150px;
+}
+@media (max-width: 990px) {
+    .logo_asdr {
+      position: relative;
+        right: inherit;
+        width: 100%;
+        margin: 45px 0 0 0;
+        text-align: right;
+    }
+}
+.banniere-haut.eco_la-polyvalente-des-monts .logo {
+  right: 50px;
+}
+@media(min-width:981px) AND (max-width:1550px) {
+    /*.banniere-haut.eco_augustin-norbert-morin h3, .banniere-haut.eco_cap-jeunesse h3 {*/
+    .banniere-haut h3 {    
+        padding-left:20%;
+        padding-right:20%;
+    }
+    .banniere-haut.eco_polyvalente-st-jerome .logo {
+      width: 220px;
+    }
+}
+.submenu_ecole {
+  overflow: auto;
+  height: 350px;
+}
+
+.banniere-haut.eco_ecole-secondaire-du-marechal .logo {
+  top: 50px;
+}
+
+@media(min-width: 981px) {
+    .face_mob {
+        display: none !important;
+    }
+}
+@media(max-width: 980px) {
+    .face_desk {
+        display: none !important;
+    }
+}

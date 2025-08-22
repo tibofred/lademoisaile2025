@@ -1,0 +1,62 @@
+site_admin_regions:
+    path:     /regions
+    defaults: { _controller: ViwebEcoleBundle:Admin\Region:regions }
+
+site_admin_region_new:
+    path:     /region/ajouter
+    defaults: { _controller: ViwebEcoleBundle:Admin\Region:ajouter }
+
+site_admin_region_edit:
+    path:     /region/{region_id}/edit
+    defaults: { _controller: ViwebEcoleBundle:Admin\Region:edit }
+
+site_admin_region_delete:
+    path:      /region/{region_id}/delete
+    defaults:
+        _controller: ViwebEcoleBundle:Admin\Region:delete
+    requirements:
+        id: \d+
+    
+    
+site_admin_commissions:
+    path:     /commissions
+    defaults: { _controller: ViwebEcoleBundle:Admin\Commission:commissions }
+
+
+site_admin_commission_new:
+    path:     /commission/ajouter
+    defaults: { _controller: ViwebEcoleBundle:Admin\Commission:ajouter }
+
+site_admin_commission_edit:
+    path:     /commission/{commission_id}/edit
+    defaults: { _controller: ViwebEcoleBundle:Admin\Commission:edit }
+    
+
+    
+    
+    
+site_admin_ecoles:
+    path:     /ecoles
+    defaults: { _controller: ViwebEcoleBundle:Admin\Ecole:ecoles }
+
+site_admin_ecole_new:
+    path:     /ecole/ajouter
+    defaults: { _controller: ViwebEcoleBundle:Admin\Ecole:ajouter }
+
+site_admin_ecole_edit:
+    path:     /ecole/{ecole_id}/edit
+    defaults: { _controller: ViwebEcoleBundle:Admin\Ecole:edit }
+
+site_admin_ecole_delete:
+    path:      /ecole/{ecole_id}/delete
+    defaults:
+        _controller: ViwebEcoleBundle:Admin\Ecole:delete
+    requirements:
+        id: \d+
+        
+site_admin_commission_delete:
+    path:      /commission/{commission_id}/delete
+    defaults:
+        _controller: ViwebEcoleBundle:Admin\Commission:delete
+    requirements:
+        id: \d+

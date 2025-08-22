@@ -1,0 +1,9 @@
+site_admin_realisation_realisations:
+    path:     /realisations
+    defaults: { _controller: ViwebRealisationBundle:Admin\Realisation:realisations }
+site_admin_realisation_new:
+    path:     /realisation/ajouter
+    defaults: { _controller: ViwebRealisationBundle:Admin\Realisation:ajouter }
+site_admin_realisation_edit:
+    path:     /realisation/{realisation_id}-{realisation_slug}/edit
+    defaults: { _controller: ViwebRealisationBundle:Admin\Realisation:realisation }

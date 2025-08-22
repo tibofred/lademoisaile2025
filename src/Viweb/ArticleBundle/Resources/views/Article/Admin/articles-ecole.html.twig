@@ -1,0 +1,60 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+
+		<!-- =================================================
+			Content Wrapper
+		================================================== -->
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Liste des articles</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h4><i class="ti i-cl-4 ti-plus"></i> <a href="{{ path('site_admin_article_new')}}">Ajouter un article</a></h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive"> 
+                                    
+                                    <h3>Liste des blogueuse de l'école Y</h3>
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+                                                <th>Prénom</th>
+                                                <th></th>
+                                                 <th></th>
+											</tr>
+										</thead>
+										<tbody>
+                                            
+                                             {% for blogueuse in blogueuses %}
+											<tr>
+												<td>{{ blogueuse.nom }}</td>
+                                                
+											</tr>
+                                            {% endfor %}
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
+
+{% endblock %}

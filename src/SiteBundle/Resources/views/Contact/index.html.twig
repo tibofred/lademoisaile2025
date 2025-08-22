@@ -1,0 +1,70 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+    
+        <div class="row">
+
+            <div class="col-12">
+                <h1 class="primary-color">Contact</h1>
+                <p>Phrase pour inciter le client à prendre contact avec vous. Phrase qui est sur votre flyers aussi.</p>
+            </div>
+
+            <div class="col-6">
+                <p>Climatisation Cayer</p>
+                <p>281 ch. du Bois, Piedmont,<br/>
+                    J0R 1K0, Quebec<br/>
+                    yorie@climatisationcayer.ca<br/>
+                    Tél.: 514 293-4142</p>
+            </div>
+
+            <div class="col-6">
+                <p class="secondary-color">Map</p>
+            </div>
+
+        </div>
+        
+        fasdfasdf
+
+        <div class="row">
+            <div class="col-12">
+                {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+                {{ form_start(form, { attr: {'class': 'row'}}) }}
+
+                <div class="col-6">
+                    {{ form_label(form.prenom) }}
+                    {{ form_widget(form.prenom) }}
+                </div>
+                <div class="col-6">
+                    {{ form_label(form.nom) }}
+                    {{ form_widget(form.nom) }}
+                </div>
+
+                <div class="col-6">
+                    {{ form_label(form.courriel) }}
+                    {{ form_widget(form.courriel) }}
+                </div>
+                <div class="col-6">
+                    {{ form_label(form.telephone) }}
+                    {{ form_widget(form.telephone) }}
+                </div>
+
+                <div class="col-12">
+                    {{ form_label(form.message) }}
+                    {{ form_widget(form.message) }}
+                </div>
+
+                <div class="col-12">
+                    <button class="btn" type="submit">Modifier</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

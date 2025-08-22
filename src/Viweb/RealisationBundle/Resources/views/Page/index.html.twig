@@ -1,0 +1,32 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %}{{ realisation.titre }}{% endblock %}
+{% block content %}
+
+
+<div class="jumbotron jumbotron1">
+        <div class="container inner">
+            <div>
+                <h1>{{ realisation.h1 }}</h1>
+                <h2>{{ realisation.h2 }}</h2>
+                <p>{{ realisation.contenu|raw }}</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="same_grid">
+        <div class="container">
+
+            {% if realisation.carousel is not null %}
+            <div class="row">
+                <div class="col-sm-12">
+                    {{ render(controller('ViwebCarouselBundle:Default:carousel', {'id': realisation.carousel.id})) }}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

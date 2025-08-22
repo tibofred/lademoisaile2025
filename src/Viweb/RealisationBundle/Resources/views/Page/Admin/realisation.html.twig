@@ -1,0 +1,17 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+{% block content %}
+
+ <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+
+    <button class="btn" type="submit">Modifier</button>
+    {{ form_end(form) }}
+</main>
+
+{% endblock %}

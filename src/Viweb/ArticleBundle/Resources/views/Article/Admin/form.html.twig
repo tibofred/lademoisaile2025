@@ -1,0 +1,324 @@
+<!-- .col-md-6 -->
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+                                <h4><i class="ti i-cl-4 ti-arrow-left"></i> <a href="{{ path('site_admin_article')}}">Revenir à tous les articles</a></h4>
+							</div>
+
+							<div class="card-body">
+
+
+
+
+                                {{ form_start(form) }}
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                         <div class="form-group">
+                                            {{ form_label(form.titre, "Titre") }}
+
+                                            {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Titre</small>
+                                            {{ form_errors(form.titre) }}
+
+								        </div>
+
+                                        <div class="form-group">
+                                            {{ form_label(form.blogueuse, "Blogueuse") }}
+
+                                            {{ form_widget(form.blogueuse, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Blogueuse</small>
+                                            {{ form_errors(form.blogueuse) }}
+
+								        </div>
+                                    </div>
+
+
+
+                                    <div class="col-md-6">
+                                         <div class="form-group">
+                                            {{ form_label(form.slug, "Slug") }}
+
+                                            {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Ex.: www.lademoisaile.ca/ecole/<strong>votreslug</strong>. Il ne doit pas avoir de caratères spéciaux, espace, point, virgule etc.. Seulement minuscule et des traits d'union. Ne pas mettre le www.lademoisaile.ca/ecole/</small>
+                                            {{ form_errors(form.titre) }}
+
+								        </div>
+                                        <div class="form-group">
+                                            {{ form_label(form.coupdecoeur, "coupdecoeur") }}
+
+                                            {{ form_widget(form.coupdecoeur, {'attr': {'class': 'form-check-input'}}) }}
+
+                                            {{ form_errors(form.coupdecoeur) }}
+
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form_label(form.journee, "journee") }}
+
+                                            {{ form_widget(form.journee, {'attr': {'class': 'form-check-input'}}) }}
+
+                                            {{ form_errors(form.journee) }}
+
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form_label(form.lainee, "lainee") }}
+
+                                            {{ form_widget(form.lainee, {'attr': {'class': 'form-check-input'}}) }}
+
+                                            {{ form_errors(form.lainee) }}
+
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form_label(form.lblog, "lblog") }}
+
+                                            {{ form_widget(form.lblog, {'attr': {'class': 'form-check-input'}}) }}
+
+                                            {{ form_errors(form.lblog) }}
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                         <div class="form-group form_cat">
+                                            {{ form_label(form.categories, "Catégorie") }}
+
+                                            {{ form_widget(form.categories, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Catégorie</small>
+                                            {{ form_errors(form.categories) }}
+
+								        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3">
+                                         <div class="form-group">
+                                            {{ form_label(form.anneScolaire, "Année scolaire") }}
+
+                                            {{ form_widget(form.anneScolaire, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Catégorie</small>
+                                            {{ form_errors(form.anneScolaire) }}
+
+								        </div>
+                                    </div>
+
+
+                                    <div class="col-md-2">
+                                         <div class="form-group">
+                                            {{ form_label(form.datePlanification, "Date de Planification") }}
+
+                                            {{ form_widget(form.datePlanification, {'attr': {'class': 'form-control date_time'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Date de Planification</small>
+                                            {{ form_errors(form.datePlanification) }}
+
+								        </div>
+                                    </div>
+
+
+                                    <div class="col-md-2">
+                                         <div class="form-group">
+                                            {{ form_label(form.datePublication, "Date de publication") }}
+
+                                            {{ form_widget(form.datePublication, {'attr': {'class': 'form-control date_time'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">datePublication</small>
+                                            {{ form_errors(form.datePublication) }}
+
+								        </div>
+                                    </div>
+
+
+                                    <div class="col-md-2">
+                                         <div class="form-group">
+                                            {{ form_label(form.brouillon, "brouillon") }}
+
+                                            {{ form_widget(form.brouillon, {'attr': {'class': 'form-check-input'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">brouillon</small>
+                                            {{ form_errors(form.brouillon) }}
+
+								        </div>
+                                    </div>
+
+
+                                     <div class="col-6">
+
+                                        <div class="form-group">
+                                            {{ form_label(form.description, "Courte description") }}
+
+                                            {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">La phrase qu'on voit sur les pages archives</small>
+                                            {{ form_errors(form.description) }}
+
+								        </div>
+
+                                    </div>
+
+                                     <div class="col-6">
+
+                                        <div class="form-group">
+
+                                            {% if form.vars.value.photo is defined and form.vars.value.photo is not null %}
+
+                                            <img src="{{ absolute_url(asset('/uploads/photos-articles/')) }}{{ form.vars.value.photo.id }}.{{ form.vars.value.photo.url }}" class="img-fluid single-article-img">
+
+                                            {% endif %}
+
+
+
+                                            {{ form_label(form.photo, "Photo") }}
+
+                                            {{ form_widget(form.photo, {'attr': {'class': 'form-control-file'}}) }}
+
+                                            <strong id="emailHelp" class="form-text text-muted">La grandeur de l'image doit être de : 730px de largeur par 487 px de hauteur</strong>
+                                            {{ form_errors(form.photo) }}
+                                            <br><br>
+
+
+
+
+
+
+								        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="row">
+
+
+                                     <div class="col-12">
+
+                                        <div class="form-group">
+                                            {{ form_label(form.contenu, "Contenu") }}
+
+                                            {{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Contenu</small>
+                                            {{ form_errors(form.contenu) }}
+
+								        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="col-12">
+
+                                        <h3>SEO</h3>
+
+                                    </div>
+
+
+                                     <div class="col-6">
+
+                                        <div class="form-group">
+                                            {{ form_label(form.metaTitle, "Référencement organiaue : Meta Title") }}
+
+                                            {{ form_widget(form.metaTitle, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Le titre qu'on voit sur les moteurs de recherches - 50–60 characters</small>
+                                            {{ form_errors(form.metaTitle) }}
+
+								        </div>
+
+                                    </div>
+
+
+                                    <div class="col-6">
+
+                                        <div class="form-group">
+                                            {{ form_label(form.metaDescription, "Référencement organiaue : Meta Description") }}
+
+                                            {{ form_widget(form.metaDescription, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">La courte description qu'on voit sur les moteurs de recherche - Max 300 caractères</small>
+                                            {{ form_errors(form.metaDescription) }}
+
+								        </div>
+
+                                    </div>
+
+
+                                    <div class="col-6">
+
+                                        <div class="form-group">
+                                            {{ form_label(form.ogtitle, "Facebook : Titre") }}
+
+                                            {{ form_widget(form.ogtitle, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Le titre de l'article dans Facebook</small>
+                                            {{ form_errors(form.ogtitle) }}
+
+								        </div>
+
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <div class="form-group">
+                                            {{ form_label(form.ogdescription, "Facebook : Description") }}
+
+                                            {{ form_widget(form.ogdescription, {'attr': {'class': 'form-control'}}) }}
+
+                                            <small id="emailHelp" class="form-text text-muted">Description dans Facebook</small>
+                                            {{ form_errors(form.ogdescription) }}
+
+								        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                                  {{ form_widget(form) }}
+
+
+
+							<button class="btn btn-success" type="submit">Ajouter</button>
+
+							</div>
+						</div>
+
+
+
+                            {{ form_end(form) }}
+
+
+					</div>
+					<!-- /.col-md-6 -->
+<style type="text/css">
+    .form_cat .form-check {
+        display: inline-block;
+        margin: 0 0 0 25px;
+        width: 280px;
+    }
+    .form_cat .form-control {
+        height: auto;
+        min-height: 40px;
+    }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
+<script>
+ $(function(){
+  $("#viweb_articlebundle_article_blogueuse").select2();
+ }); 
+</script>

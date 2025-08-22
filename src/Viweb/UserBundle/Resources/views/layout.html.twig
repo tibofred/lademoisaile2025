@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Connexion - La demois'aile</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{{ asset('assets/admin/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+		<!-- Custom fonts for this template -->
+		<link href="{{ asset('assets/admin/assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+		<!-- Custom fonts for this template -->
+		<link href="{{ asset('assets/admin/assets/plugins/themify/css/themify.css') }}" rel="stylesheet" type="text/css">
+
+		<!-- Angular Tooltip Css -->
+		<link href="{{ asset('assets/admin/assets/plugins/angular-tooltip/angular-tooltips.css') }}" rel="stylesheet">
+
+		<!-- Page level plugin CSS -->
+		<link href="{{ asset('assets/admin/css/animate.css') }}" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="{{ asset('assets/admin/css/glovia.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/admin/css/glovia-responsive.css') }}" rel="stylesheet">
+		
+		<!-- Custom styles for Color -->
+		<link href="{{ asset('assets/admin/css/skins/default.css') }}" rel="stylesheet">
+	</head>
+    
+    
+
+	<body>
+	
+
+
+
+
+
+
+
+                {% if app.request.hasPreviousSession %}
+                    {% for type, messages in app.session.flashBag.all %}
+                        {% for message in messages %}
+                            <div class="{{ type }}">
+                                {{ message|trans({}, 'FOSUserBundle') }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+
+                    
+
+                        
+                        
+                        
+                      
+                    {% block fos_user_content %}
+
+
+                    {% endblock fos_user_content %}
+                        
+
+		
+
+		<!-- Bootstrap core JavaScript-->
+		<script src="{{ asset('assets/admin/assets/plugins/jquery/jquery.min.js') }}"></script>
+        
+		<script src="{{ asset('assets/admin/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+		
+		<!-- Core plugin JavaScript-->
+		<script src="{{ asset('assets/admin/assets/plugins/jquery-easing/jquery.easing.min.js') }}"></script>
+		
+		 <!-- Slick Slider Js -->
+		<script src="{{ asset('assets/admin/assets/plugins/slick-slider/slick.js') }}"></script>
+		
+		<!-- Slim Scroll -->
+		<script src="{{ asset('assets/admin/assets/plugins/slim-scroll/jquery.slimscroll.min.js') }}"></script>
+		
+		<!-- Custom scripts for all pages-->
+		<script src="{{ asset('assets/admin/js/glovia.js') }}"></script>
+		
+		<script>
+		  $('.dropdown-toggle').dropdown()
+		</script>
+	  
+	</body>
+</html>

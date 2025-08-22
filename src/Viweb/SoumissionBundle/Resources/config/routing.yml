@@ -1,0 +1,14 @@
+
+viweb_soumission_merci:
+    path:     /inscrire-votre-ecole/merci
+    defaults: { _controller: ViwebSoumissionBundle:Default:merci }
+
+
+viweb_soumission_confirmation:
+    path:     /inscrire-votre-ecole/confirmation
+    defaults: { _controller: ViwebSoumissionBundle:Default:confirmation }
+
+viweb_soumission_new:
+    path:     /inscrire-votre-ecole
+    defaults: { _controller: ViwebSoumissionBundle:Default:index }
+

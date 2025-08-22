@@ -1,0 +1,136 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %}{{ page.metaTitle }}{% endblock %}
+{% block metaDescription %}{{ page.metaDescription }}{% endblock %}
+{% block content %}
+
+<div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-9">
+                
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main padd">
+                        <h1>{{page.titre|raw}}</h1>
+                        {{ page.contenu|raw }}
+                        <p><br/></p>
+                        <p><a class="btn btn-primary" style="color: white;" href="{{ path('site_page', {'page_slug': 'ressources'}) }}">Ressources</a></p>
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+            
+            </div>
+            
+            <!-- ################################################
+                                      SIDE BAR
+                 ################################################  -->
+            
+            
+            <div class="col-sm-3">
+                <aside id="secondary" class="widget-area widget-fondateurs">
+                    
+                <span class="widget-title">Les fondateurs</span>
+                 <!-- Marie-Eve 
+                _______________________________________________________________________________
+                --> 
+                 
+
+                    {% if marie.avatar.id is defined and marie.avatar.id is not null %}
+					<img class="card-img-top" src="{{ absolute_url(asset('/uploads/users-avatar/')) }}{{ marie.avatar.id }}.{{ marie.avatar.url }}" alt="{{ marie.prenom }} {{ marie.nom }}" />
+                    {% endif %}
+
+               
+
+                <h4>{% if marie.titre is defined and marie.titre is not null %}
+						{{ marie.titre|raw }}
+                     {% endif %}
+                   </h4>
+                <p>{% if  marie.courteDescription is defined and  marie.courteDescription is not null %}
+                    
+						{{  marie.courteDescription|raw }}
+                    
+                     {% endif %}</p>
+
+
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bd-marie-eve-modal-lg">En savoir plus</button>
+
+
+                <div class="modal fade bd-marie-eve-modal-lg" tabindex="-1" role="dialog" aria-labelledby="marie-eve-modal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+						<span style="position: absolute; right: 30px;cursor: pointer;" onClick="$('.modal.fade').click()">✖</span>
+						  {{ marie.description|raw }}
+                      
+                    </div>
+                  </div>
+                </div>   
+
+
+                <!-- Matieu 
+                _______________________________________________________________________________
+                -->
+                
+                  {% if mathieu.avatar.id is defined and mathieu.avatar.id is not null %}
+					<img class="card-img-top" src="{{ absolute_url(asset('/uploads/users-avatar/')) }}{{ mathieu.avatar.id }}.{{ mathieu.avatar.url }}" alt="{{ mathieu.prenom }} {{ mathieu.nom }}" />
+                    {% endif %}
+
+               
+
+                <h4>{% if mathieu.titre is defined and mathieu.titre is not null %}
+						{{ mathieu.titre|raw }}
+                     {% endif %}
+                   </h4>
+                <p>{% if  mathieu.courteDescription is defined and  mathieu.courteDescription is not null %}
+                    
+						{{  mathieu.courteDescription|raw }}
+                    
+                     {% endif %}</p>
+
+
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bd-mathieu-modal-lg">En savoir plus</button>
+
+
+                <div class="modal fade bd-mathieu-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mathieu-modal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+						<span style="position: absolute; right: 30px;cursor: pointer;" onClick="$('.modal.fade').click()">✖</span>
+						  {{ mathieu.description|raw }}
+                      
+                    </div>
+                  </div>
+                </div> 
+
+                </aside><!-- #secondary -->
+            </div>
+        
+        </div>
+
+    </div>
+
+
+    
+    <div class="wrap-inscris">
+        <span class="ligne-top"></span>
+        <img src="{{ asset('assets/scss/images/fleur-jinscrs-mon-ecole-la-demoisaile.png') }}" class="fleur-gauche-gros">
+        
+        <img src="{{ asset('assets/scss/images/fleur-jinscrit--mon-ecole-gauche-la-demoisaile.png') }}" class="fleur-gauche">
+        <img src="{{ asset('assets/scss/images/fleur-jinscris-mon-ecole-droite-la-demoisaile.png') }}" class="fleur-droite">
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-12 text-center">
+                    <h4>
+                        Vous voulez faire vivre l’expérience « La deMOIs’aile » à votre école ?<br>
+                        Nous vous invitons à vous inscrire dès maintenant. 
+                    </h4>
+                    <a href="{{ path('viweb_soumission_new') }}" class="btn btn-default ">J'inscris mon école</a>
+                </div>
+            </div>
+        </div>
+        <span class="ligne-bottom"></span>
+
+        
+    </div>
+    <div class="iframe_tube"><iframe width="100%" height="450" src="https://www.youtube.com/embed/XPNKayAkzLw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+     
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+
+		<!-- =================================================
+			Content Wrapper
+		================================================== -->
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Liste des écoles</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h4><i class="ti i-cl-4 ti-plus"></i> <a href="{{ path('site_admin_ecole_new')}}">Ajouter une école</a></h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive"> 
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>Nom</th>
+                                                <th>Région</th>
+                                                <th></th>
+                                                 <th></th>
+											</tr>
+										</thead>
+										<tbody>
+                                            
+                                             {% for ecole in ecoles %}
+											<tr>
+												<td>{{ ecole.nom }}</td>
+                                                <td>{{ ecole.region.nom }}</td>
+                                                
+                                                    <td><a href="{{ path('site_admin_ecole_edit', { 'ecole_id': ecole.id }) }}" class="btn btn-success">Modifier</a>
+                                                    </td>
+                                                    <td><a href="#" class="btn btn-primary"  target="_blank">Voir</a>
+                                                    </td>
+                                                    <th><a href="{{ path('site_admin_ecole_delete', { 'ecole_id': ecole.id }) }}" class="btn btn-danger" >Supprimer</a></th>
+											</tr>
+                                            {% endfor %}
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
+
+{% endblock %}

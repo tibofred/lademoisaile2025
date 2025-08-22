@@ -1,0 +1,170 @@
+ {{ form_start(form) }}
+
+    
+    <div class="container">
+        
+        <div class="row">
+
+        
+        <div class="col-sm-6">
+            
+            <div class="row">
+                
+                        <div class="col-sm-12">
+                            <h2>École</h2>
+                        </div>
+
+                        <div class="col-sm-12">
+                            
+                              <div class="form-group">
+                                {{ form_label(form.nom, "Nom de l'école") }}
+                                   {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                                <small id="emailHelp" class="form-text text-muted">Le nom de l'école</small>
+                                   {{ form_errors(form.nom) }}
+                              </div>
+
+
+                               <div class="form-group">
+                                {{ form_label(form.slug, "Slug de l'école") }}
+                                   {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+                                    <small id="emailHelp" class="form-text text-muted">Le slug de l'école</small>
+                                   {{ form_errors(form.slug) }}
+                              </div>
+
+
+                                <div class="form-group">
+                                {{ form_label(form.region, "Région") }}
+                                   {{ form_widget(form.region, {'attr': {'class': 'custom-select mb-2 form-control'}}) }}
+                                <small id="emailHelp" class="form-text text-muted">Région de l'école</small>
+                                   {{ form_errors(form.region) }}
+                              </div>
+
+
+                             <div class="form-group">
+                                {{ form_label(form.commission, "Commission") }}
+                               {{ form_widget(form.commission, {'attr': {'class': 'custom-select mb-2 form-control'}}) }}
+                            <small id="emailHelp" class="form-text text-muted">Commisssion scolaire</small>
+                              {{ form_errors(form.commission) }}
+
+                            </div>
+
+
+                        <div class="form-group">
+                            {{ form_label(form.logo, "Logo") }}
+                            {{ form_widget(form.logo, {'attr': {'class': 'form-control-file'}}) }}
+                            <small id="emailHelp" class="form-text text-muted">L'image doit avoir 1200px X 630px</small>
+                            {{ form_errors(form.logo) }}
+                            
+                            {% if form.logo.vars['value'].id is defined %}
+                                <img src="{{ asset('uploads/logos-ecoles/') }}{{ form.logo.vars['value'].id }}.{{ form.logo.vars['value'].url }}">
+                            {% endif %}
+                            
+                            
+                            
+
+                          </div>
+
+                        <div class="form-group">
+                            {{ form_label(form.telephone, "Téléphone") }}
+                            {{ form_widget(form.telephone, {'attr': {'class': 'form-control-file'}}) }}
+                            <small id="emailHelp" class="form-text text-muted">Tél.:</small>
+                            {{ form_errors(form.telephone) }}            
+                          </div>
+
+
+                        <div class="form-group">
+                            {{ form_label(form.codepostal, "Code postal") }}
+                            {{ form_widget(form.codepostal, {'attr': {'class': 'form-control-file'}}) }}
+                            <small id="emailHelp" class="form-text text-muted">Code postal</small>
+                            {{ form_errors(form.codepostal) }}
+                          </div>
+
+
+                         <div class="form-group">
+                            {{ form_label(form.email, "Courriel") }}
+                            {{ form_widget(form.email, {'attr': {'class': 'form-control-file'}}) }}
+                            <small id="emailHelp" class="form-text text-muted">Email</small>
+                            {{ form_errors(form.email) }}            
+                          </div>
+
+
+                        <div class="form-group">
+                            {{ form_label(form.ville, "Ville") }}
+                            {{ form_widget(form.ville, {'attr': {'class': 'form-control-file'}}) }}
+                            <small id="emailHelp" class="form-text text-muted">Ville</small>
+                            {{ form_errors(form.ville) }}
+                          </div>
+
+
+                        <div class="form-group">
+                            {{ form_label(form.adresse, "Adresse") }}
+                            {{ form_widget(form.adresse, {'attr': {'class': 'form-control-file'}}) }}
+                            <small id="emailHelp" class="form-text text-muted">Adresse</small>
+                            {{ form_errors(form.adresse) }}
+                         </div>
+
+
+                
+                </div><!--row -->
+            
+            </div><!--col -->
+        
+        
+            </div>
+        
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Responsable de l'école</h2>
+                </div>
+                
+                 <div class="col-sm-12">
+                    <div class="form-group">
+                    {{ form_label(form.responsable, "Nom du responsable") }}
+                    {{ form_widget(form.responsable, {'attr': {'class': 'form-control-file'}}) }}
+                    <small id="emailHelp" class="form-text text-muted">Veuillez entrer prénom et nom du responsable</small>
+                    {{ form_errors(form.responsable) }}
+                    </div>
+                     
+                     <div class="col-sm-12">
+                    <div class="form-group">
+                    {{ form_label(form.titreResponsable, "Titre du responsable") }}
+                    {{ form_widget(form.titreResponsable, {'attr': {'class': 'form-control-file'}}) }}
+                    <small id="emailHelp" class="form-text text-muted">Veuillez entrer prénom et nom du responsable</small>
+                    {{ form_errors(form.titreResponsable) }}
+                    </div>
+                     
+                    <div class="form-group">
+                      {{ form_label(form.imgResponsable, "Image responsable") }}
+                      {{ form_widget(form.imgResponsable, {'attr': {'class': 'form-control-file'}}) }}
+                      <small id="emailHelp" class="form-text text-muted">L'image doit avoir 513px X 288px</small>
+                      {{ form_errors(form.imgResponsable) }}
+                      
+                        {% if form.imgResponsable.vars['value'].id is defined %}
+                            <img src="{{ asset('uploads/img-responsable/') }}{{ form.imgResponsable.vars['value'].id }}.{{ form.imgResponsable.vars['value'].url }}">
+                        {% endif %}
+                        
+                      
+
+                    </div>
+                     
+                </div>
+                
+                                 {{ form_widget(form.save, { 'label': 'Enregistrer' }) }}		
+
+            
+            </div>
+        </div>
+    
+    </div>
+
+
+
+</div>
+                                
+                                
+          						
+
+          {{ form_widget(form) }}
+
+    {{ form_end(form) }}

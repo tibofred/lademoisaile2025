@@ -1,0 +1,66 @@
+{% extends ":admin:layout.html.twig" %}
+
+{% block title %}
+
+    Soumission - {{ parent() }}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="sm-col-12">
+        <h2 style="margin-bottom:2em;">Les soumissions</h2>
+    </div>
+
+    <div class="sm-col-12">
+
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Tél.:</th>
+                    <th>Courriel</th>
+                    <th>Voir</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
+                </thead>
+
+
+                <tbody>
+
+                {% for soumission in listSoumission %}
+                    <tr>
+                        <td>
+                            {% if soumission.prenom is defined %}
+                                {{ soumission.prenom }} {{ soumission.nom }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if soumission.telephone is defined %}
+                                {{ soumission.telephone }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if soumission.courriel is defined %}
+                                {{ soumission.courriel }}
+                            {% endif %}
+                        </td>
+                        <td><a href="{{ path('viweb_admin_soumission_single', {'id': soumission.id}) }}" type="button"
+                               class="btn btn-success">Voir</a></td>
+                        <td><a href="{{ path('viweb_admin_soumission_edit', {'id': soumission.id}) }}" type="button"
+                               class="btn btn-primary">Modifier</a></td>
+                        <td><a href="{{ path('viweb_admin_soumission_delete', {'id': soumission.id}) }}" type="button"
+                               class="btn btn-danger">Effacer</a></td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+{% endblock %}

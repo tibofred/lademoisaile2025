@@ -1,0 +1,93 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+  {% block content %}
+
+
+    <!-- ====================================================
+		Content Wrapper
+		====================================================== -->
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Bonjour {{ user.prenom }}, vous pouvez modifier votre profil : <a href="{{ path('fos_user_profile_edit')}}" class="btn btn-primary">Modifier</a></h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-4">
+					  <div class="card">
+							<div class="card-img-overlap">
+                                {% if user.avatar.id is defined and user.avatar.id is not null %}
+								<img class="card-img-top" src="{{ absolute_url(asset('/uploads/users-avatar/')) }}{{ user.avatar.id }}.{{ user.avatar.url }}" alt="{{ user.prenom }} {{ user.nom }}" />
+                                {% endif %}
+                                
+							</div>
+							<div class="card-block padd-0 translateY-50 text-center">
+								<div class="card-avatar style-2" style="background:transparent; box-shadow: 0px 0 0px rgba(0,0,0,0.0);">
+									
+								</div>
+								<h5 class="font-normal mrg-bot-0 font-18 card-title">{{ user.prenom }} {{ user.nom }}</h5>
+								<p class="card-small-text">{{ user.email }}</p>
+                                <p class="card-small-text">Nom d'utilisateur : {{ user.username }}</p>
+							</div>
+						</div>
+                    </div> 
+                        
+                    <div class="col-md-8">
+					  <!-- About Me Box -->
+					  <div class="card">
+						<div class="card-header">
+						  <h4 class="box-title">À propos de moi</h4>
+						</div>
+						<!-- /.box-header -->
+						<div class="card-body">
+						  <strong> Titre</strong>
+
+						  <p class="text-muted">
+							{{ user.titre|raw }}
+						  </p>
+
+						  <hr>
+
+						  <strong> Courte description</strong>
+
+						  <p class="text-muted">{{ user.courteDescription|raw }}</p>
+
+						  <hr>
+
+						  <strong><i class="fa fa-pencil margin-r-5"></i> Description</strong>
+
+						  <p>{{ user.courteDescription|raw }}</p>
+
+						  <hr>
+
+						  
+						</div>
+						<!-- /.card-body -->
+					  </div>
+					  <!-- /.card -->
+					</div>
+					<!-- /.col-md-4 -->
+					
+					
+				</div>
+				<!-- /row -->
+			</div>  
+			<!-- /.content-wrapper-->
+
+
+
+              
+              
+              
+
+    
+
+  {% endblock %}
+  

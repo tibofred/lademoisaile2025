@@ -1,0 +1,14 @@
+
+viweb_inscription_merci:
+    path:     /inscription-en-ligne/merci
+    defaults: { _controller: ViwebInscriptionBundle:Default:merci }
+
+
+viweb_inscription_confirmation:
+    path:     /inscription-en-ligne/confirmation
+    defaults: { _controller: ViwebInscriptionBundle:Default:confirmation }
+
+viweb_inscription_new:
+    path:     /inscription-en-ligne
+    defaults: { _controller: ViwebInscriptionBundle:Default:index }
+

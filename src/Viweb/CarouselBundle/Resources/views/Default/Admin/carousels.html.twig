@@ -1,0 +1,29 @@
+{% extends ':admin:layout.html.twig' %}
+
+{% block content %}
+
+ <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for carousel in carousels %}
+            <tr>
+                <td>{{ carousel.id }}</td>
+                <td>{{ carousel.name }}</td>
+                <td><a href="{{ path('site_admin_carousel_edit', { 'carousel_id': carousel.id }) }}">Modifier</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+     
+</main>
+
+{% endblock %}

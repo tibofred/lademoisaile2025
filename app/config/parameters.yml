@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: lademoisaile_symfNew
+    database_user: lademoisaile_sym
+    database_password: 4SBhNre4KBVerLoH
+    mailer_transport: smtp
+    mailer_host: lademoisaile.ca
+    mailer_user: siteweb@lademoisaile.ca
+    mailer_password: QxeVM235d34E12
+    secret: ThisTokenIsNotSoSecretChangeIt
+    default_timezone: America/New_York

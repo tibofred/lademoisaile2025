@@ -1,0 +1,134 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %} Médias - La deMOIs’aile {% endblock %}
+{% block metaDescription %}La deMOIs’aile{% endblock %}
+{% block content %}
+    
+
+   <div class="container">
+      <header class="blog-header py-3">
+        <div class="row justify-content-between align-items-center" style="margin-top: 25px">
+          <div class="col-lg-4 col-md-12 col_med_1">
+            <a class="btn btn-sm btn-outline-secondary" href="#" data-toggle="modal" data-target="#modalInfoletter2">Inscrivez-vous à notre infolettre !</a>
+          </div>
+          <div class="col-lg-5 col-md-12 text-center  col_med_2">
+            <a class="blog-header-logo text-dark" href="#">On parle de nous!</a>
+          </div>
+          <div class="col-lg-3 col-md-12  col_med_3">
+            
+            <a class="btn btn-sm btn-outline-secondary" href="{{ path('viweb_soumission_new') }}">Inscrivez votre école</a>
+          </div>
+        </div>
+      </header>
+  </div>    
+ 
+
+      <div class="jumbotron p-3 text-white rounded bg-dark">
+        <div class="col-md-12 px-0">
+          <h1 class="display-4 text-center">Nous sommes fiers de vous les blogueuses </h1>
+
+        </div>
+      </div>
+
+   <div class="container">
+      <div class="row mb-2">
+          
+          <div class="col-lg-12"><h3 style="margin-top: 35px; text-align: center;">VIDÉOS</h3> </div>
+          {% for media in medias_tv %}
+          
+                  <div class="col-lg-6">
+                  <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                      <strong class="d-inline-block mb-2 text-primary">{{ media.categorie }}</strong>
+                      <h3 class="mb-0">
+                        <a class="text-dark" href="{{ media.lien }}">{{ media.titre }}</a>
+                      </h3>
+                      <div class="mb-1 text-muted">{{ media.date|date("m/d/Y") }}</div>
+                      <p class="card-text mb-auto">{{ media.description|raw }}</p>
+                      <a href="{{ media.lien }}" target="_balnk">En savoir plus</a>
+                    </div>
+                      
+                      <a href="{{ media.lien }}" target="_balnk">
+                        <img class="card-img-right img-fluid flex-auto" src="{{ absolute_url(asset('/uploads/images-media/')) }}{{ media.imageMedia.id }}.{{ media.imageMedia.url }}" alt="{{ media.titre }}">
+                      </a>
+                  </div>
+                </div>
+
+         {% endfor %}
+          
+          <div class="col-lg-12"><h3 style="margin-top: 35px; text-align: center;">JOURNAUX</h3></div>
+          {% for media in medias_journaux %}
+          
+                  <div class="col-lg-6">
+                  <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                      <strong class="d-inline-block mb-2 text-primary">{{ media.categorie }}</strong>
+                      <h3 class="mb-0">
+                        <a class="text-dark" href="{{ media.lien }}">{{ media.titre }}</a>
+                      </h3>
+                      <div class="mb-1 text-muted">{{ media.date|date("m/d/Y") }}</div>
+                      <p class="card-text mb-auto">{{ media.description|raw }}</p>
+                      <a href="{{ media.lien }}" target="_balnk">En savoir plus</a>
+                    </div>
+                      
+                      <a href="{{ media.lien }}" target="_balnk">
+                        <img class="card-img-right img-fluid flex-auto" src="{{ absolute_url(asset('/uploads/images-media/')) }}{{ media.imageMedia.id }}.{{ media.imageMedia.url }}" alt="{{ media.titre }}">
+                      </a>
+                  </div>
+                </div>
+
+         {% endfor %}
+          
+          <div class="col-lg-12"><h3 style="margin-top: 35px; text-align: center;">ENTREVUES RADIO</h3></div>
+          {% for media in medias_radio %}
+          
+                  <div class="col-lg-6">
+                  <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                      <strong class="d-inline-block mb-2 text-primary">{{ media.categorie }}</strong>
+                      <h3 class="mb-0">
+                        <a class="text-dark" href="{{ media.lien }}">{{ media.titre }}</a>
+                      </h3>
+                      <div class="mb-1 text-muted">{{ media.date|date("m/d/Y") }}</div>
+                      <p class="card-text mb-auto">{{ media.description|raw }}</p>
+                      <a href="{{ media.lien }}" target="_balnk">En savoir plus</a>
+                    </div>
+                      
+                      <a href="{{ media.lien }}" target="_balnk">
+                        <img class="card-img-right img-fluid flex-auto" src="{{ absolute_url(asset('/uploads/images-media/')) }}{{ media.imageMedia.id }}.{{ media.imageMedia.url }}" alt="{{ media.titre }}">
+                      </a>
+                  </div>
+                </div>
+
+         {% endfor %}
+          
+
+      </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalInfoletter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="corps_popup">
+            <div class="text_h2">Oui, je veux m’inscrire à l’infolettre de  </div>
+            <div class="text_h1">La deMOIs’aile</div>
+            <div class="tnp tnp-subscription-minimal ">
+                <form action="https://lademoisaile.us18.list-manage.com/subscribe/post?u=5401db14a70ddfd108a726c8c&amp;id=0c8d2eb40d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                
+                  <input type="email" value="" name="EMAIL" class="tnp-email" id="mce-EMAIL" placeholder="Inscrire votre courriel ici" required>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5401db14a70ddfd108a726c8c_0c8d2eb40d" tabindex="-1" value=""></div>
+                  <input type="submit" value="OK" name="subscribe" id="mc-embedded-subscribe" class="tnp-submit">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+     
+{% endblock %}

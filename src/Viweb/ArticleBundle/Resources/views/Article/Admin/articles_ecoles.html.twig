@@ -1,0 +1,70 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+
+		<!-- =================================================
+			Content Wrapper
+		================================================== -->
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Liste des articles</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h4><i class="ti i-cl-4 ti-plus"></i> <a href="{{ path('site_admin_article_new')}}">Ajouter un article</a></h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive"> 
+									{% for ecole in ecoles %}
+									<div class="ecole_art">
+										<h4 class="link_ecole" style="cursor: pointer; margin: 25px 0 5px ">{{ ecole.nom }}</h4>
+										<table class="table table-bordered" style="display: none;">
+
+											<thead>
+												<tr>
+													<th>Titre</th>
+	                                                <th>Prénom</th>
+	                                                <th></th>
+	                                                 <th></th>
+												</tr>
+											</thead>
+											<tbody>
+	                                            
+	                                             {% for article in ecole.articles %}
+												<tr>
+													<td>{{ article.titre }}</td>
+	                                                <td></td>
+	                                                
+	                                                    <td><a href="{{ path('site_blogueuse_article', { 'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug }) }}" class="btn btn-primary"  target="_blank">Voir</a>
+	                                                    </td>
+	                                                    <td><a href="{{ path('site_admin_article_edit', { 'article_id': article.id }) }}" class="btn btn-success">Modifier</a>
+	                                                    </td>
+	                                                    <td><a href="{{ path('site_admin_article_delete', { 'article_id': article.id }) }}" class="btn btn-danger">Supprimer</a></th>
+												</tr>
+	                                            {% endfor %}
+												
+											</tbody>
+										</table>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
+{% endblock %}

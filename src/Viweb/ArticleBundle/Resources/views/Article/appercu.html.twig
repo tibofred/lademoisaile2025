@@ -1,0 +1,54 @@
+
+
+<div class="col-md-4 lp_element elem_date anne_{{article.datePublication|date('Y')}}" data-date="{{article.datePublication|date('Y-m-d')}}">
+     <div class="wrap-article">
+                        
+              <h5 class="categorie">
+                <span>
+                {% set i = 0 %}
+                {% for item in article.categories %}
+                  {% if i > 0 %}, {% endif %}
+                    <a href="{{ path('site_articles_categorie', {'categorie_id': item.id, })}}">{{ item.nom }}</a>
+                   
+                  {% set i = 1 %} 
+                {% endfor %}
+                </span>
+              </h5>
+
+
+
+              <h3 class="article-title"><a href="{{ path('site_blogueuse_article', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug})}}">{{ article.titre }}</a></h3>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <a href="{{ path('site_blogueuse_article', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug})}}" >
+                          {{ article.coupdecoeur==1?'<i class="fa fa-heart faheart" aria-hidden="true"></i>':'' }}
+                          <img alt="{{ article.titre }}" src="{{ asset('uploads/photos-articles/mini/') }}{{ article.photo.id }}.{{  article.photo.url }}" style="width:100%;">
+                      </a>
+                  </div>
+              </div>
+
+              <div class="wrap-txt-profil">
+                  
+                  <div class="tp_button"><a href="{{ path('site_blogueuse_article', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug})}}" class="btn btn-primary">Lire plus</a></div>
+                  
+                          <div class="art_content">
+                              <p>{{ article.description|raw }}</p>
+                          </div>
+
+                              <a class="box_blog" href="{{ path('site_blogueuse_profil', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id })}}">
+                                  
+                                  
+                                      <img alt="{{ article.blogueuse.prenom }} {{ article.blogueuse.nom }} - {{ article.blogueuse.ecole.nom }}" src="{{ absolute_url(asset('/uploads/photos-blogueuses/avatar/')) }}{{ article.blogueuse.photo.id }}.{{ article.blogueuse.photo.url }}" class="img-fluid thumb">
+                                      <div class="box_btext">
+                                        <h7>{{ article.blogueuse.prenom }}</h7>
+                                        <h6>{{ article.blogueuse.ecole.nom }}</h6>
+                                      </div>  
+                                  
+                              </a>
+
+                          </div> 
+
+
+      </div>
+    
+  </div>

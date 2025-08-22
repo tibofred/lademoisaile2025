@@ -1,0 +1,6 @@
+viweb_infolettre_page:
+    path:     /infolettre
+    defaults: { _controller: ViwebMailchimpBundle:Default:infolettre }
+viweb_infolettre_merci:
+    path:     /infolettre/confirmation
+    defaults: { _controller: ViwebMailchimpBundle:Default:merci }

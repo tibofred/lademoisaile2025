@@ -1,0 +1,33 @@
+{% extends ":admin:layout.html.twig" %}
+
+{% block title %}
+
+    Soumission - {{ parent() }}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="sm-col-12">
+        <h2 style="margin-bottom:2em;">Soumission </h2>
+    </div>
+
+
+    <div class="sm-col-12">
+
+
+        {% if soumission is not null %}
+            <strong>Date</strong> : {{ soumission.date|date('Y-m-d') }}<br>
+            <strong>Client</strong> : {{ soumission.prenom }} {{ soumission.nom }}<br>
+            <strong>Courriel</strong> : {{ soumission.courriel }}<br>
+            <strong>Tél</strong>.: {{ soumission.telephone }}<br>
+            <strong>Type de projet</strong>.: {{ soumission.type }}<br>
+            <strong>Budget</strong>.: {{ soumission.budget }}<br>
+            <strong>Message</strong>.: {{ soumission.message }}<br>
+        {% endif %}
+
+
+
+    </div>
+
+{% endblock %}

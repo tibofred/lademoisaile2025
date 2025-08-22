@@ -1,0 +1,70 @@
+<body>
+
+
+<!-- Menu top -->
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse"
+            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{{ path('site_homepage') }}">La demoisaile</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('site_homepage') }}">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://viweb.ca" target="_blank">Contacter ViWeb</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+<!-- Menu gauche -->
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+
+
+
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><a class="nav-link" href="{{ path('site_admin_carousels') }}">Liste des
+                        carousels</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('site_admin_carousel_new') }}">Ajouter un
+                        carousel</a></li>
+            </ul>
+
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><a class="nav-link" href="{{ path('site_admin_realisation_realisations') }}">Liste
+                        des réalisations</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('site_admin_realisation_new') }}">Ajouter une
+                        réalisation</a></li>
+            </ul>
+
+
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><a class="nav-link" href="{{ path('viweb_admin_soumission_all') }}">Liste des
+                        soumissions</a></li>
+            </ul>
+
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><a class="nav-link" href="{{ path('fos_user_security_logout') }}">Se déconnecter</a></li>
+            </ul>
+        </nav>
+
+
+        {% block body %}
+            {% block main %}{% endblock %}
+            {% block footer %}{% endblock %}
+        {% endblock %}
+
+
+    </div>
+</div>

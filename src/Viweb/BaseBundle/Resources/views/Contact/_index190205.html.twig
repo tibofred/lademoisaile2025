@@ -1,0 +1,95 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 300px;
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container first-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>La deMOIs'aile</h1>
+                <span>Accueil / contact </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+
+<span class="ligne-deco"></span>
+        <div class="wrap-contactez-nous">
+        <span class="fleur"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <h3>Contactez-nous</h3>
+                            <p>Vous avez des questions concernant le projet?<br>
+                                Vous voulez nous faire part de vos commentaires ?<br>
+                                Vous aimeriez devenir partenaires ?<br>
+                                Vous désirez inscrire une école ?</p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="wrap-marie-mathieu">
+                                <img src="{{ absolute_url(asset('/assets/scss/images/marie-eve-mathieu-la-demoisaile.jpg')) }}">
+                                <h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>qui-est-la-demoisaile">Marie-Eve D'Amours et Mathieu Roy</a></h4>
+                                <div class="bloc-gris"></div>
+                            </div>
+                            
+                            
+                        </div>
+
+                    </div>
+                </div>
+        
+        </div>
+<span class="ligne-deco"></span>
+
+<div class="wrap-ecrivez-nous">
+    
+      <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-6 contact-form">
+                
+                <h5><span>Écrivez-nous</span></h5>
+                
+                {{ include('@ViwebBase/Contact/form.html.twig') }}
+            
+            </div>
+            
+            <div class="col-sm-6 bloc-fond text-center text">
+                <img src="{{ absolute_url(asset('/assets/scss//images/fleur-jinscris-mon-ecole-droite-la-demoisaile.png')) }}" class="fleur-droite">
+                <h4>Marie-Eve D’Amours</h4>
+
+                    <p>Fondatrice et coordonnatrice<br>
+                    des écoles secondaires<br>
+                        pour le projet la deMOIs’aile</p>
+                <br><br>
+                <a href="{{ path('site_page', {'page_slug': 'ressources'}) }}" class="btn btn-primary" style="color:white;">Ressources</a>
+
+            </div>
+            
+
+        </div>
+
+    </div>
+        
+</div>
+        
+        
+
+{% endblock %}

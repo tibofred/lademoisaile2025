@@ -1,0 +1,6 @@
+viweb_base_admin_messages:
+    path:     /messages
+    defaults: { _controller: ViwebBaseBundle:Admin\Contact:index }
+viweb_base_admin_message:
+    path:     /message/{message_id}
+    defaults: { _controller: ViwebBaseBundle:Admin\Contact:message }

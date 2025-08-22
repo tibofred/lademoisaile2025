@@ -1,0 +1,21 @@
+
+
+<div class="product-slider">
+    <div class="row">
+    {% for image in carousel.images %}
+        <div class="col-12 col-sm-3">
+            <a href="{{ asset('uploads/images/') }}{{ image.name }}" data-lightbox="img1">
+                <img src="{{ asset('uploads/images/') }}{{ image.name }}" alt="" class="img_lightb" />
+            </a>
+        </div>
+    {% endfor %}
+</div>
+    
+
+
+<script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+</script>

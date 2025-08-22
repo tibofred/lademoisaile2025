@@ -1,0 +1,33 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+ <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Ordre</th>
+            <th></th>
+             <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for realisation in realisations %}
+            <tr>
+                <td>{{ realisation.titre }}</td>
+                <td>{{ realisation.ordre }}</td>
+                <td><a href="{{ path('site_realisation', { 'realisation_type': realisation.type, 'realisation_slug': realisation.slug }) }}">Voir</a>
+                <td><a href="{{ path('site_admin_realisation_edit', { 'realisation_id': realisation.id, 'realisation_slug': realisation.slug }) }}">Modifier</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</main>
+{% endblock %}

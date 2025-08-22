@@ -1,0 +1,3 @@
+viweb_user_liste:
+    path:     /
+    defaults: { _controller: ViwebUserBundle:Default:liste }

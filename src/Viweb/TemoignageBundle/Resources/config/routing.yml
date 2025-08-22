@@ -1,0 +1,3 @@
+viweb_temoignage_homepage:
+    path:     /temoignages
+    defaults: { _controller: ViwebTemoignageBundle:Default:index }

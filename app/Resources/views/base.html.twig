@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head {% if article.ogtitle is defined %}prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"{% endif %}><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Required meta tags -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="google-site-verification" content="4Jq2xQXy0HyDVfcX67b5OFGzzddy41oL7xPU-bQMrDA" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    
+    
+    <!-- Meta de base -->
+    <title>{% block title %}{% endblock %}</title>
+    
+    <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3038616442837205');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3038616442837205&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+    
+    <meta name="description" content="{% block metaDescription %}{% endblock %}" />
+    <script data-ad-client="ca-pub-9434924238511829" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    {% if app.request.attributes.get('_route') == 'site_homepage' %}
+    <link rel="canonical" href="https://lademoisaile.ca{{ path('site_homepage') }}" />
+    {% endif %}
+
+    
+
+    {% block seo %}
+        <!-- Open Graph data  de base -->       
+        <meta property="fb:app_id" content="326654584432657" /> 
+        <meta property="og:url" content="{{ app.request.getSchemeAndHttpHost() }}{{ app.request.pathInfo }}"/>
+        <meta property="og:title"
+              content="{% if page.ogtitle is defined %}{{ page.ogtitle }}{% endif %}{% if article.ogtitle is defined %}{{ article.ogtitle }}{% endif %}"/>
+        <meta property="og:description"
+              content="{% if page.ogdescription is defined %}{{ page.ogdescription }}{% endif %}{% if article.ogdescription is defined %}{{ article.ogdescription }}{% endif %}"/>
+
+        <meta property="og:type" content="{% if article.ogtitle is defined %}article{% else %}website{% endif %}"/>
+
+        <meta property="og:locale" content="fr_CA"/>
+
+        <meta property="og:site_name" content="{{ compagnie }}"/>
+        <!-- Open Graph Image -->
+        {#<meta property="og:image"
+              content="https://lademoisaile.ca/{% if article.fbImg.renderPath is not empty %}{{ article.fbImg.renderPath }}{% else %}{% if article.photo.id is  not empty and article.photo.url is  not empty %}uploads/photos-articles{{ article.photo.id }}.{{ article.photo.url }}{% else %}{% if page.fbImg.renderPath is not empty %}{{ page.fbImg.renderPath }}{% else %}assets/scss/images/logo_LadeMOIsaile.jpg{% endif %}{% endif %}{% endif %}"/>     #}
+
+
+
+    {% endblock %}
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N4L9HL3B');</script>
+<!-- End Google Tag Manager -->
+    {% block stylesheets %}
+    
+        <link rel="stylesheet" href="{{ asset('assets/scss/app.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/scss/new.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            #adBlock{
+
+                display:none;
+
+            }
+        </style>
+    {% endblock %}
+</head>
+<body class="{{ app.request.attributes.get('_route') }}">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4L9HL3B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Messenger Plug-in Discussion Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plug-in Discussion code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "326654584432657");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    
+{% block body %}
+    {% block main %}{% endblock %}
+    {% block footer %}{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    
+ <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="{{ asset('assets/js/custom.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>

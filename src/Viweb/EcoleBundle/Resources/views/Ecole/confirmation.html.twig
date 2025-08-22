@@ -1,0 +1,61 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 300px;
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container first-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>La deMOIs'aile</h1>
+                <span>Accueil / contact / Confirmation d'envoi</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+
+<span class="ligne-deco"></span>
+        <div class="wrap-contactez-nous">
+        <span class="fleur"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <br><br>
+                            <h3 style="color:#5a5d61;">Merci {{ message.prenom }}</h3>
+                            <p>Votre message a bien été envoyé. <br>Nous allons vous répondre <br>dans les plus brefs délais.<br>Nous allons vous répondre à <br>l'adresse suivante : {{ message.courriel }}<br></p>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="col-sm-6">
+                            <div class="wrap-marie-mathieu">
+                                
+                                <img src="{{ asset('uploads/img-responsable/') }}{{ ecole.imgResponsable.id }}.{{ ecole.imgResponsable.url }}">
+
+                                 <h4>{{ ecole.responsable }}</h4>
+                                
+                                <div class="bloc-gris"></div>
+                            </div>
+                            
+                            
+                        </div>
+
+                    </div>
+                </div>
+        
+        </div>
+<span class="ligne-deco"></span>
+{% endblock %}

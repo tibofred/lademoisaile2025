@@ -1,0 +1,36 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %} Les témoignages - La deMOIs’aile {% endblock %}
+{% block metaDescription %}La deMOIs’aile - Liste des témoignages{% endblock %}
+{% block content %}
+
+   <div class="container">
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="breadcrump">
+            <a href="#">Accueil</a> | <span class="pink">Les témoignages</span>
+          </div>  
+          <h3 class="articles-recents">Les témoignages</h3>
+        </div>
+
+
+            {% for temoignage in temoignages %}
+            <div class="col-12">
+                <div class="tem_bloc">
+                    <div class="">{{ temoignage.contenu|raw }}</div>
+                    <h3 style="font-size: 1.2rem">{{ temoignage.personne }}</h3>
+                    <h4 style="font-size: 1rem">{{ temoignage.signature }}</h4>
+                    <hr/>
+                </div>
+            </div>    
+        {% endfor %}
+      </div>
+  </div>
+
+
+     
+{% endblock %}
+
+
+

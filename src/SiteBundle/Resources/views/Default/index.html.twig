@@ -1,0 +1,427 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}La deMOIs’aile - Laisse vivre la blogueuse en toi!{% endblock %}
+
+{% block metaDescription %}Plateforme de blog, regroupant différentes écoles secondaires du Québec, permettant aux adolescentes de 12-17 ans, de vivre l’expérience « blogueuse ».{% endblock %}
+
+{% block seo %}
+        <!-- Open Graph data  de base -->       
+        <meta property="fb:app_id" content="326654584432657" /> 
+        <meta property="og:url" content="https://lademoisaile.ca/"/>
+        <meta property="og:title" content="La deMOIs’aile - Laisse vivre la blogueuse en toi!"/>
+        <meta property="og:description" content="Plateforme de blog, regroupant différentes écoles secondaires du Québec, permettant aux adolescentes de 12-17 ans, de vivre l’expérience « blogueuse »."/>
+
+        <meta property="og:type" content="website"/>
+
+        <meta property="og:locale" content="fr_CA"/>
+
+        <meta property="og:site_name" content="La deMOIs’aile"/>
+        <!-- Open Graph Image -->
+        <meta property="og:image"
+              content="https://lademoisaile.ca/assets/css/images/lademoisaile.png"/>
+              
+        <link rel="stylesheet" href="https://lademoisaile.ca/assets/css/owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://lademoisaile.ca/assets/css/owlcarousel/owl.theme.default.min.css">
+  
+
+    {% endblock %}
+
+{% block content %}
+{% set dev = app.request.query.get("dev") %}
+
+        
+<div class="wrap-txt-home" style="margin: 45px 0 55px; padding-top:65px">
+    
+    <div class="container">
+        <div class="row  justify-content-md-center">
+            <div class="col-12 col-md-8" style="font-family: 'Glass Antiqua', cursive;">
+              <h2 style="font-size: 2.8rem; text-transform: none;">Laisse vivre la <br><span class="rose">blogueuse</span> en toi!</h2>
+              <p style="font-size: 1.4rem;">Le projet <span class="rose"> La deMOIs’aile </span>, c’est une plateforme de blog, regroupant
+                  différentes écoles secondaires du Québec, permettant aux adolescentes
+               de 12-17 ans, de vivre l’expérience « blogueuse ».</p>
+            </div>
+        </div>
+    </div>
+</div>            
+              
+
+    
+    <section class="text_exp">
+                    <h4>
+                        Vous voulez faire vivre l’expérience <span>La deMOIs’aile</span> à votre école ?<br>
+                        Nous vous invitons à vous inscrire dès maintenant. 
+                    </h4>
+                    <a href="{{ path('viweb_soumission_new') }}" class="btn btn-primary">J'inscris mon école</a>
+    </section>
+    {% if device == 'desktop' %}
+    <section class="sect_vid">      
+        <div class="container">
+            <div class="row owl-carousel">
+                <div class="bord2">
+                    <div class="bloc_svframe" style="background-color: #000">
+                        {#<div class="ttooltip">Sophie Grégoire soutient la mission de La deMOIs'aile!
+                        </div>#}
+                        <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1090977162?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                    </div>    
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">Jasette avec Gino Chouinard à Salut Bonjour!…</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/mwjWMPBKpIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">La fois où on a tenté de me couper les ailes…</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/oG0QOGyXbG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">En réponse à l'article "Cher Premier Ministre" de la blogueuse Laurie Bissonnette.</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/AWMEBG9tsVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>     
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">La deMOIs'aile Renouvelée "TEASER"</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/7Hb2QoDJtzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+            </div>
+        
+            <div class="bloc_capv">
+                <img src="{{ asset('assets/scss/images/motif5.png') }}" alt="">
+                <h2>Web Série</h2>
+                <div class="row  owl-carousel">
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1086500181?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1084321269?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1082277457?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1080217466?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1077602053?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1075333852?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1073333824?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1071909824?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    {#  <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1064671557?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1057627675?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                   <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1049040805?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                   <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1045041976?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1038984107?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/rqniOSC7L9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/mvhgJ8lwiuM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/XRDwNRVmMrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/aeXc3oxzwpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/JWdpyrWuji0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/QqkiWIC9kNI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/dgRtx36_d5M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/NofDp7VdQTU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gJ9VKcv3mwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/3CyggKUbJLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/4Ix7iS_hk3g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/qgB1IHqb948" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/uP5mFDnNw5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/Yu0By7g1Y1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/n51qCBlTtcs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>    
+                    </div>#}
+                </div> 
+                <br/><br/>
+            </div>   
+        </div>    
+    </section>
+    {% else %} 
+    <section class="sect_vid">      
+        <div class="container">
+        
+            
+            <div class="row owl-carousel">
+                <div class="bord2">
+                    <div class="bloc_svframe" style="background-color: #000">
+                        <div class="ttooltip">Sophie Grégoire soutient la mission de La deMOIs'aile!
+                        </div>
+                        <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1090977162?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                    </div>    
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">Jasette avec Gino Chouinard à Salut Bonjour!…</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/mwjWMPBKpIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">La fois où on a tenté de me couper les ailes…</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/oG0QOGyXbG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">En réponse à l'article "Cher Premier Ministre" de la blogueuse Laurie Bissonnette.</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/AWMEBG9tsVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>     
+                </div>
+                <div class="bord2">
+                    <div class="bloc_svframe">
+                        <div class="ttooltip">La deMOIs'aile Renouvelée "TEASER"</div>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/7Hb2QoDJtzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+            </div>
+        
+            <div class="bloc_capv">
+                <img src="{{ asset('assets/scss/images/motif5.png') }}" alt="">
+                <h2>Web Série</h2>
+                <div class="row  owl-carousel">
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1086500181?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1084321269?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                    <div class="bord2">
+                        <div class="bloc_svframe" style="background-color: #000">
+                           <iframe width="100%" height="300"  src="https://player.vimeo.com/video/1082277457?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="✨ Websérie saison 4 ✨ Épisode 1"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>    
+                    </div>
+                </div> 
+                <br/><br/>
+            </div>   
+        </div>    
+    </section>
+    {% endif %} 
+
+<div class="wrap-articles" style="padding-top: 0 !important;">    
+    <div class="container">    
+        <div class="row titre">                
+            <div class="col-sm-12 text-center">
+                <img src="{{ asset('assets/scss/images/fleur-derniers-articles-droite-la-demoisaile.png') }}" alt="Les derniers articles De nos blogueuses" class="fleur-art">
+                <h3 style="margin-top: 0 !important;"><span>Les derniers articles</span></h3>
+                <h4>De nos blogueuses</h4>
+            </div>
+        </div>
+    </div>      
+    <div class="container">    
+        <div class="row">            
+           {% for article in articles %}                        
+                {{ include('@ViwebArticle/Article/appercu.html.twig') }}                                            
+           {% endfor %}
+        </div>
+    </div>
+</div>
+
+<section class="text_exp">
+    <h4>
+        Consultez la liste des écoles secondaires inscrites,<br/>découvrez les blogueuses participantes et leurs textes 
+    </h4>
+    <a href="https://lademoisaile.ca/ecoles-participantes" class="btn btn-primary">Trouvez une école</a>
+</section>    
+
+
+<div class="wrap-merci">
+    
+    <div class="merci"><span>Merci</span> à nos blogueuses !</div>
+
+</div>
+<div class="wrap-logo">
+    <div class="container">
+        
+         <div class="row">
+            <div class="col-sm-12">
+        
+                <h4 class="h4_command">
+                    Merci à tous ceux qui ont permis à La deMOIs'aile de prendre son envol !
+                </h4>
+             </div>
+        </div>
+    
+                    <div class="commanditaire text-center">
+                        <a href="{{ path('viweb_base_contact')}}" class="btn btn-primary" style="color:white;">DEVENEZ PARTENAIRE !</a>
+                    </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalInfoletter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="corps_popup">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <div class="text_h2">Oui, je veux m’inscrire à l’infolettre de</div>
+            <div class="text_h1">&nbsp;La deMOIs’aile</div>
+            <div class="tnp tnp-subscription-minimal ">
+                <form action="https://lademoisaile.us18.list-manage.com/subscribe/post?u=5401db14a70ddfd108a726c8c&amp;id=0c8d2eb40d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                
+                  <input type="email" value="" name="EMAIL" class="tnp-email" id="mce-EMAIL" placeholder="Inscrire votre courriel ici" required>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5401db14a70ddfd108a726c8c_0c8d2eb40d" tabindex="-1" value=""></div>
+                  <input type="submit" value="OK" name="subscribe" id="mc-embedded-subscribe" class="tnp-submit">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{#
+<div class="modal fade" id="modalreseau" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="corps_popup">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <br/><br/>
+            <img src="/web/assets/scss/images/logo-lademoisaile.png" alt="">
+            <div class="tnp tnp-subscription-minimal ">
+                <br/><br/>
+                <div style=" text-align: center;">
+                    <a href="https://www.facebook.com/lademoisaile/" target="_blank" style="color: #FFF; list-style: none;">Suivez-nous sur Facebook <i class="fa fa-facebook-square" style="font-size:25px; margin-left:12px;" aria-hidden="true"></i></a><br><br>
+                    <a href="https://www.instagram.com/lademoisaile/" target="_blank" style="color: #FFF; list-style: none;">Suivez-nous sur Instagram <i class="fa fa-instagram" style="font-size:25px; margin-left:12px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+#}
+<div class="blocmailchim"></div>
+<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+<script src="https://lademoisaile.ca/assets/css/owlcarousel/owl.carousel.min.js"></script>
+<script>
+    jQuery(document).ready(function($){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                800:{
+                    items:2
+                },
+                1000:{
+                    items:3
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

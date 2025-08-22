@@ -1,0 +1,100 @@
+             
+		<div class="container-fluid">
+			<div class="row">
+				<div class="hidden-xs hidden-sm col-lg-6 col-md-6 gredient-bg">
+					<div class="clearfix">
+						<div class="logo-title-container text-center">
+							<h3 class="cl-white text-upper">Bienvenue sur</h3>
+							<span style="font-size:3em; color:white;">La deMOIs’aile</span>
+							 <div class="copy animated fadeIn">
+								<p class="cl-white">Une plateforme de blog, regroupant <br>différentes écoles secondaires du Québec</p>
+							</div>
+						</div> <!-- .logo-title-container -->
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 login-sidebar animated fadeInRightBig">
+
+					<div class="login-container animated fadeInRightBig">
+
+						<h2 class="text-center text-upper">Connectez-vous</h2>
+						
+                        
+                        
+                        
+                      
+                                            {% trans_default_domain 'FOSUserBundle' %}
+
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+
+    
+       
+    
+          <form action="{{ path("fos_user_security_check") }}" method="post">
+              {% if csrf_token %}
+                  <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+              {% endif %}
+            
+              
+            <div class="form-group row">
+              <label for="username" class="col-12 col-form-label">{{ 'security.login.username'|trans }}</label>
+              <div class="col-12">
+                  <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" required="required" />
+                </div>
+            </div>
+              
+              
+            
+            <div class="form-group row">
+              <label for="password" class="col-12 col-form-label">{{ 'security.login.password'|trans }}</label>
+                <div class="col-12">
+                    <input type="password" class="form-control" id="password" name="_password" required="required" />
+                </div>
+            </div>
+              
+              
+            	<div class="form-group">
+					<div class="flexbox align-items-center">
+                                    
+                        <span class="custom-checkbox">
+
+                            <input type="checkbox" class="col-2 col-form-label"id="remember_me" name="_remember_me" value="on" />
+                            
+                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                             
+
+                            
+                            
+                        </span>
+                    </div>
+				</div>
+
+              
+              
+              
+              <div class="form-group">
+					<div class="flexbox align-items-center">
+                
+                        <input type="submit" class="btn gredient-bg" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                        
+                        <p>Vous avez un problème de connexion <a href="#" data-toggle="tooltip" class="gredient-cl" data-original-title="Écrivez-nous">Écrivez-nous.</a></p>
+                	</div>
+				</div>
+              
+          </form>
+                        
+                        
+                        
+					</div> 
+					<!-- .login-container -->
+					
+				</div> <!-- .login-sidebar -->
+			</div> <!-- .row -->
+		</div>
+		
+
+
+

@@ -1,0 +1,52 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %} Articles - La deMOIs’aile {% endblock %}
+{% block metaDescription %}La deMOIs’aile - Liste des articles{% endblock %}
+{% block content %}
+
+   <div class="container">
+      <div class="row mb-2">
+
+        <div class="col-12">
+          <div class="breadcrump">
+            <a href="/">Accueil</a> | <span class="pink">Lire les lettres des blogueuses</span>
+          </div>
+          <h3 class="articles-recents">Lire les lettres des blogueuses</h3>
+
+
+
+        </div>
+
+          <div class="wrap-articles">
+
+                <div class="container">
+                    <div class="row">
+
+                       {% for article in articles %}
+
+                            {{ include('@ViwebArticle/Article/appercu.html.twig') }}
+
+                       {% endfor %}
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script>
+    $( document ).ready(function() {
+      //$(".form_ecole").prepend("<option value=''>Toutes</option>");
+      $(".form_ecole option:first").html('Toutes')
+    });
+  </script>
+
+
+
+{% endblock %}

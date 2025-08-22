@@ -1,0 +1,21 @@
+viweb_admin_soumission_all:
+    path:     /soumissions
+    defaults: { _controller: ViwebSoumissionBundle:Admin\Default:all }
+    
+viweb_admin_soumission_single:
+    path:     /soumission/{id}
+    defaults: { _controller: ViwebSoumissionBundle:Admin\Default:view }
+
+viweb_admin_soumission_delete:
+    path:      /soumission/delete/{id}
+    defaults:
+        _controller: ViwebSoumissionBundle:Admin\Default:delete
+    requirements:
+        id: \d+
+
+viweb_admin_soumission_edit:
+    path:      /soumission/edit/{id}
+    defaults:
+        _controller: ViwebSoumissionBundle:Admin\Default:edit
+    requirements:
+        id: \d+

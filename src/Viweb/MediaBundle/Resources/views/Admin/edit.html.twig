@@ -1,0 +1,35 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Modifier le media</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- .row -->
+				<div class="row">
+                    
+                   {{ include('@ViwebMedia/Admin/form.html.twig') }}
+                    
+				</div>
+				<!-- /.row -->
+					
+				
+				
+			
+				
+			</div>  
+			<!-- /.content-wrapper-->
+
+
+{% endblock %}

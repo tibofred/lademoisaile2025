@@ -1,0 +1,154 @@
+<div class="well container">
+
+     {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+     {# Les erreurs générales du formulaire. #}
+     {{ form_errors(form) }}
+
+     <div class="row">
+         
+         
+         
+         
+          <div class="col-sm-6">
+              
+              
+              
+               <div class="col-12">
+                   
+               </div>
+              
+              <div class="col-12">
+               </div>
+              
+               
+          </div>
+
+         
+     </div>
+    
+    <div class="row form_insc">
+        <div class="col-12">
+            
+            
+          <div class="row">
+
+                  <div class="col-6">
+                   {# Champ prenom #}
+                     <div class="form-group">
+                       {{ form_label(form.prenom, "Votre prénom", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.prenom) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+                </div>
+
+                <div class="col-6">
+                   {# Champ nom #}
+                     <div class="form-group">
+                       {{ form_label(form.nom, "Votre nom", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.nom) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+               </div>
+
+          </div>
+            
+            
+          <div class="row">
+
+                <div class="col-6">
+                   
+                   {# Champ courriel #}
+                     <div class="form-group">
+                       {{ form_label(form.courriel, "Courriel", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.courriel) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.courriel, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+               </div>
+
+          </div>
+            
+          <div class="row">
+
+                  <div class="col-6">
+                   {# Champ facebook #}
+                     <div class="form-group">
+                       {{ form_label(form.facebook, "Profil Facebook ( si applicable )", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.facebook) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.facebook, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+                </div>
+
+                <div class="col-6">
+                   {# Champ instagram #}
+                     <div class="form-group">
+                       {{ form_label(form.instagram, "Profil Instagram ( si applicable )", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.instagram) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.instagram, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+               </div>
+
+          </div>
+            
+            
+            {# Champ Nom École #}
+              <div class="form-group">
+                {{ form_label(form.nomEcole, "Nom de l'école", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                {{ form_errors(form.nomEcole) }}
+                <div class="col-sm-12">
+                  {{ form_widget(form.nomEcole, {'attr': {'class': 'form-control'}}) }}
+                </div>
+              </div>
+            
+            
+            
+             {# Champ Description #}
+             <div class="form-group">
+               {{ form_label(form.description, "Fournir une courte description afin d'apprendre à te connaître davantage", {'label_attr': {'class': 'col-12 control-label'}}) }}
+               {{ form_errors(form.description) }}
+               <div class="col-sm-12">
+                 {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+                 <div><i>À travers celle-ci, on aimerait également y lire la raison pour laquelle tu aimerais faire partie de La deMOIs'aile.<br/>(inscrire ton nom, ton âge et ton niveau). (50 à 100 mots)</i></div>
+               </div>
+               
+               
+             </div>
+            
+             {# Champ Article #}
+             <div class="form-group">
+               {{ form_label(form.article, "À toi de rédiger un article sur ce qui te touche ou encore ce qui te passionne", {'label_attr': {'class': 'col-12 control-label'}}) }}
+               {{ form_errors(form.article) }}
+               <div class="col-sm-12">
+                 {{ form_widget(form.article, {'attr': {'class': 'form-control'}}) }}
+                 <div><i>Bref, sois libre de créer un texte qui te ressemble et que tu aimerais partager.<br/>(Environ 300 mots)</i></div>
+               </div>
+             </div>
+            
+            {# Champ date #}
+             <div class="form-group" style="display:none;">
+               {{ form_label(form.date, "Date", {'label_attr': {'class': 'col-12 control-label'}}) }}
+               {{ form_errors(form.date) }}
+               <div class="col-sm-12">
+                 {{ form_widget(form.date, {'attr': {'class': 'form-control'}}) }}
+               </div>
+             </div>
+            
+        </div>
+    </div>
+    
+    
+    {{ form_rest(form) }}
+     {# Fermeture de la balise form du formulaire HTML #}
+     {{ form_end(form) }}
+
+ </div>

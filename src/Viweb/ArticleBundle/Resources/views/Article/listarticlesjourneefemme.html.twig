@@ -1,0 +1,72 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %} Articles - La deMOIs’aile {% endblock %}
+{% block metaDescription %}La deMOIs’aile - Liste des articles{% endblock %}
+{% block content %}
+
+   <div class="container">
+      <div class="row mb-2">
+
+        <div class="col-12">
+          <div class="breadcrump">
+            <a href="/">Accueil</a> | <span class="pink">Journée de la femme</span>
+          </div>
+          <h3 class="articles-recents">Journée de la femme</h3>
+
+
+          <section class="sect_capsul">
+
+
+              <div class="row justify-content-center">
+                  <div class="col-md-10" style="margin-top:10px; margin-bottom:55px; ">
+                      Dans le cadre de la Journée internationale de la femme, en collaboration avec la <a target="_blank" href="https://www.fadoq.ca/laurentides/adherez-maintenant/votre-bureau-regional">FADOQ des Laurentides</a> , les blogueuses de l’école secondaire Augustin Norbert-Morin ont eu la chance de participer à un échange de lettres intergénérationnelles.
+                      <div style="text-align:center; margin-top:45px">
+                          <a style="display: inline-block; margin-bottom:10px" class="btn btn-primary" href="https://lademoisaile.ca/lire-les-lettres-des-ainees">Lire les lettres des aînées</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a class="btn btn-primary" href="lire-les-lettres-des-blogueuses">Lire les lettres des blogueuses</a>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="row justify-content-center">
+                    <div class="col-md-6" style="margin-top:10px; margin-bottom:5px; ">
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/65O1vTMQk2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+          </section>
+
+        </div>
+
+          <div class="wrap-articles">
+
+                <div class="container">
+                    <div class="row">
+
+                       {% for article in articles %}
+
+                            {{ include('@ViwebArticle/Article/appercu.html.twig') }}
+
+                       {% endfor %}
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script>
+    $( document ).ready(function() {
+      //$(".form_ecole").prepend("<option value=''>Toutes</option>");
+      $(".form_ecole option:first").html('Toutes')
+    });
+  </script>
+
+
+
+{% endblock %}

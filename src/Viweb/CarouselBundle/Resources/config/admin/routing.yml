@@ -1,0 +1,9 @@
+site_admin_carousels:
+    path:     /carousels
+    defaults: { _controller: ViwebCarouselBundle:Admin\Default:carousels }
+site_admin_carousel_new:
+    path:     /carousel/ajouter
+    defaults: { _controller: ViwebCarouselBundle:Admin\Default:ajouter }
+site_admin_carousel_edit:
+    path:     /carousel/{carousel_id}/edit
+    defaults: { _controller: ViwebCarouselBundle:Admin\Default:carousel }

@@ -1,0 +1,140 @@
+viweb_temoignage:
+    resource: "@ViwebTemoignageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+viweb_inscription:
+    resource: "@ViwebInscriptionBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /admin/profil
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /admin/inscription
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /reinitialiser 
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /admin/profil
+    
+
+    
+
+    
+viweb_ecole:
+    resource: "@ViwebEcoleBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+
+viweb_soumission:
+    resource: "@ViwebSoumissionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+    
+viweb_user:
+    resource: "@ViwebUserBundle/Resources/config/routing.yml"
+    prefix:   /admin/user/
+
+
+    
+viweb_infolettre:
+    resource: "@ViwebMailchimpBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+viweb_realisation_admin:
+    resource: "@ViwebRealisationBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+
+viweb_realisation:
+    resource: "@ViwebRealisationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+viweb_article_admin:
+    resource: "@ViwebArticleBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+
+viweb_article:
+    resource: "@ViwebArticleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+viweb_media:
+    resource: "@ViwebMediaBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+viweb_region_admin:
+    resource: "@ViwebEcoleBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+
+viweb_region:
+    resource: "@ViwebEcoleBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+#viweb_commission_admin:
+    #resource: "@ViwebEcoleBundle/Resources/config/admin/routing.yml"
+   #prefix:   /admin
+
+viweb_commission:
+    resource: "@ViwebEcoleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+viweb_carousel_admin:
+    resource: "@ViwebCarouselBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+
+viweb_carousel:
+    resource: "@ViwebCarouselBundle/Resources/config/routing.yml"
+    prefix:   /
+
+viweb_soumission_admin:
+    resource: "@ViwebSoumissionBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+    
+
+viweb_inscription_admin:
+    resource: "@ViwebInscriptionBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+
+    
+viweb_blogueuse:
+    resource: "@ViwebBlogueuseBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+viweb_blogueuse_admin:
+    resource: "@ViwebBlogueuseBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+
+viweb_base_admin:
+    resource: "@ViwebBaseBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+    
+site_admin:
+    resource: "@SiteBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+    
+    
+viweb_base:
+    resource: "@ViwebBaseBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+site:
+    resource: "@SiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+viweb_temoignage_admin:
+    resource: "@ViwebTemoignageBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin
+    
+    
+viweb_media_admin:
+    resource: "@ViwebMediaBundle/Resources/config/admin/routing.yml"
+    prefix:   /admin

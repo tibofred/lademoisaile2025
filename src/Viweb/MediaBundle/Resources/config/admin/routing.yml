@@ -1,0 +1,20 @@
+site_admin_media:
+    path:     /medias
+    defaults: { _controller: ViwebMediaBundle:Admin\Media:medias }
+    
+
+
+site_admin_media_new:
+    path:     /media/ajouter
+    defaults: { _controller: ViwebMediaBundle:Admin\Media:ajouter }
+
+site_admin_media_edit:
+    path:     /media/edit/{media_id}
+    defaults: { _controller: ViwebMediaBundle:Admin\Media:edit }
+    
+site_admin_media_delete:
+    path:      /media/delete/{media_id}
+    defaults:
+        _controller: ViwebMediaBundle:Admin\Media:delete
+    requirements:
+        id: \d+

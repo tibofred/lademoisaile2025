@@ -1,0 +1,35 @@
+site_admin_article:
+    path:     /articles
+    defaults: { _controller: ViwebArticleBundle:Admin\Article:articles }
+    
+site_admin_articles_ecole:
+    path:     /articles/{ecole_id}
+    defaults: { _controller: ViwebArticleBundle:Admin\Article:ecole }
+
+site_admin_article_new:
+    path:     /article/ajouter
+    defaults: { _controller: ViwebArticleBundle:Admin\Article:ajouter }
+
+site_admin_article_edit:
+    path:     /article/{article_id}/edit
+    defaults: { _controller: ViwebArticleBundle:Admin\Article:edit }
+    
+site_admin_article_delete:
+    path:      /article/{article_id}/delete
+    defaults:
+        _controller: ViwebArticleBundle:Admin\Article:delete
+    requirements:
+        id: \d+
+    
+    
+site_admin_categorie:
+    path:     /categories
+    defaults: { _controller: ViwebArticleBundle:Admin\Categorie:blogueuses }
+
+site_admin_categorie_new:
+    path:     /categorie/ajouter
+    defaults: { _controller: ViwebArticleBundle:Admin\Categorie:ajouter }
+
+site_admin_categorie_edit:
+    path:     /categorie/{categorie_id}/edit
+    defaults: { _controller: ViwebArticleBundle:Admin\Categorie:edit }

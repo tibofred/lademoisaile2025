@@ -1,0 +1,52 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %} Catégories d'articles - La deMOIs’aile {% endblock %}
+{% block metaDescription %}La deMOIs’aile - Liste catégories des articles{% endblock %}
+{% block content %}
+
+   <div class="container">
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="breadcrump">
+            <a href="#">Accueil</a> | <span class="pink">Les catégories</span>
+          </div>  
+          <h3 class="articles-recents">Les catégories</h3>
+        </div>
+        <div class="col-md-4 img_cat">
+          <a href="{{ path('site_articles_categorie_groupe', {'group': 'çavabienaller', })}}" class="show_smc">
+            <img src="{{ asset('assets/css/images/cavabienaller.jpg') }}" alt="">
+            <span>#çavabienaller</span></a>
+        </div>  
+        <div class="col-md-4 img_cat">
+          <a href="{{ path('site_articles_categorie_groupe', {'group': 'Ilfautenparler', })}}" class="show_smc">
+            <img src="{{ asset('assets/css/images/ilfautenparler.jpg') }}" alt="">
+            <span>#Ilfautenparler</span></a>
+        </div>    
+        <div class="col-md-4 img_cat">
+          <a href="{{ path('site_articles_categorie_groupe', {'group': 'unmondeàdécouvrir', })}}" class="show_smc">
+            <img src="{{ asset('assets/css/images/unmondeadecouvrir.jpg') }}" alt="">
+            <span>#unmondeàdécouvrir</span></a>
+        </div>  
+        <div class="col-md-4 img_cat">
+          <a href="{{ path('site_articles_categorie_groupe', {'group': 'lenvironnementtatouésurlecœur', })}}" class="show_smc">
+            <img src="{{ asset('assets/css/images/lenvironnementtatouesurlecoeur.jpg') }}" alt="">
+            <span>#lenvironnementtatoué surlecœur</span></a>
+        </div>  
+        <div class="col-md-4 img_cat">
+          <a href="{{ path('site_articles_categorie_groupe', {'group': 'tunespasseule', })}}" class="show_smc">
+            <img src="{{ asset('assets/css/images/tunespasseule.jpg') }}" alt="">
+            <span>#tunespasseule</span></a>
+        </div>  
+        <div class="col-md-4 img_cat">
+          <a href="{{ path('site_articles_categorie_groupe', {'group': 'vasytescapable', })}}" class="show_smc">
+            <img src="{{ asset('assets/css/images/vasytescapable.jpg') }}" alt="">
+            <span>#vasytescapable</span></a>
+        </div>
+
+      </div>
+  </div>
+
+
+     
+{% endblock %}

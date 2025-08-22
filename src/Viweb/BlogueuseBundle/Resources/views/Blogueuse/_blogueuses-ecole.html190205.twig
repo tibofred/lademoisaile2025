@@ -1,0 +1,92 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Écoles participantes{% endblock %}
+{% block metaDescription %}Meta description{% endblock %}
+
+
+{% block content %}
+
+
+
+    {{ include("::header.html.twig") }}
+        
+
+    <div class="wrap-menu-ecole">
+        {{ include("::menu.html.twig") }}
+    </div>
+     
+
+    <div class="container vos-demoisailes">
+        <div class="row">
+            
+            <div class="col-sm-12">
+                
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main">
+                        <h1><span>Vos deMOIs’ailes</span></h1>
+                        <h3>{{ ecole.nom }}</h3>
+                        
+                        <div class="container list-user">
+                            <div class="row">
+                                    
+                                
+                                                                    
+
+                                        {% for blogueuse in blogueuses %}
+                                       
+                                            <div class="col-sm-4 user-id annee-{{ blogueuse.annee }}">
+                                                <div class="wrap-user">
+                                               
+                                                <h4>
+                                                    <a href="#">
+                                                        
+                                                        {{ blogueuse.prenom}} {{ blogueuse.nom}}
+                                                    </a>
+                                                </h4>
+                                                
+                                                <a href="{{ path('site_blogueuse_profil', {'ecole_slug': blogueuse.ecole.slug, 'blogueuse_id': blogueuse.id} )}}">
+                                                    
+                                                    
+                                                    <img src="{{ asset('uploads/photos-blogueuses/mini/') }}{{ blogueuse.photo.id }}.{{ blogueuse.photo.url }}" alt="{{ blogueuse.prenom}} {{ blogueuse.nom}}">
+                                                    
+                                                    </a>
+                                                    
+
+
+                                                    <p class="nbarticles">
+                                                        <a href="{{ path('site_blogueuse_profil', {'ecole_slug': blogueuse.ecole.slug, 'blogueuse_id': blogueuse.id} )}}">
+                                                        Voir les articles ( {{ blogueuse.countarticle }} )
+                                                        </a></p> 
+                                                    
+                                                  
+                                                    
+                                                 </div>
+                                            </div>
+                                
+
+                                       {% endfor %}
+                        
+                        </div>
+                        </div>
+                      
+                            
+                        
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+            
+            </div>
+            
+
+        
+        </div>
+
+    </div>
+
+
+
+
+
+    
+ 
+{% endblock %}
+

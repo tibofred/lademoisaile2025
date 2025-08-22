@@ -1,0 +1,52 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %} Archives des Articles - La deMOIs’aile {% endblock %}
+{% block metaDescription %}La deMOIs’aile - Archives des articles{% endblock %}
+{% block content %}
+
+   <div class="container">
+      <div class="row mb-2">
+          
+          <div class="wrap-articles">
+    
+                <div class="container">
+                
+                    <div class="row titre">
+                            
+                        <div class="col-sm-12 text-center">
+                            <img alt="Les derniers articles De nos blogueuses" src="{{ asset('assets/scss/images/fleur-derniers-articles-droite-la-demoisaile.png') }}" class="fleur-art">
+                            <h1 class="art_h1"><span>Les derniers articles</span></h1>
+                            <h4>De nos blogueuses</h4>
+                        </div>
+
+                    </div>
+
+                </div>  
+                
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-12"><a class="nav-link uneligne button_art btn btn-primary" href="{{ path('site_liste_articles') }}">Articles récents</a><br/><br/></div>
+                  </div>
+                    <div class="row">
+                        
+                       {% for article in articles %}
+                                    
+                            {{ include('@ViwebArticle/Article/appercu.html.twig') }}
+                                                        
+                       {% endfor %}
+
+                    </div>
+                </div>
+                
+
+            </div>
+          
+          
+
+      </div>
+  </div>
+
+
+     
+{% endblock %}

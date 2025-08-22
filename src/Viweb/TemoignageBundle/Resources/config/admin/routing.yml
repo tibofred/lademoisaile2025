@@ -1,0 +1,11 @@
+site_admin_temoignages:
+    path:     /temoignages
+    defaults: { _controller: ViwebTemoignageBundle:Admin\Temoignage:temoignages }
+
+site_admin_temoignage_new:
+    path:     /temoignage/ajouter
+    defaults: { _controller: ViwebTemoignageBundle:Admin\Temoignage:ajouter }
+
+site_admin_temoignage_edit:
+    path:     /temoignage/{temoignage_id}/edit
+    defaults: { _controller: ViwebTemoignageBundle:Admin\Temoignage:edit }

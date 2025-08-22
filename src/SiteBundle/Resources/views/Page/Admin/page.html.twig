@@ -1,0 +1,277 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+{% block content %}
+
+<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Modifier la page</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+                 {{ form_start(form) }}
+                
+                
+                <!-- .row -->
+				<div class="row">
+					
+                    <!--.col-md-6 -->
+					<div class="col-md-12 col-lg-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Général</h4>
+							</div>
+							
+							<div class="card-body">
+								    
+     
+                                   <div class="form-group">
+									{{ form_label(form.titre, "Titre") }}
+                                    
+                                    {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le titre de l'annone Facebook</small>
+                                    {{ form_errors(form.titre) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.slug, "Adresse") }}
+                                    
+                                    {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Exemple : https://lademoisaile.ca/<strong>votre-nouvelle-page</strong> - Ne pas mettre https://lademoisaile.ca/, ne pas mettre d'espace ou de caractères spéciaux.</small>
+                                    {{ form_errors(form.slug) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.ordre, "Ordre") }}
+                                    
+                                    {{ form_widget(form.ordre, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">L'ordre de la page. Mettre 0.</small>
+                                    {{ form_errors(form.ordre) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.image, "Image") }}
+                                    
+                                    {{ form_widget(form.image, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">L'image doit avoir 1200px X 630px</small>
+                                    {{ form_errors(form.image) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.parent, "Parent") }}
+                                    
+                                    {{ form_widget(form.parent, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Si c'est une page enfant, veuillez choisir la page parent</small>
+                                    {{ form_errors(form.parent) }}
+                                    
+								  </div>
+                                
+
+     
+							</div>
+						</div>
+					</div>
+					<!-- /.col-md-6 -->
+                    
+                    
+                    <!--.col-md-6 -->
+					<div class="col-md-12 col-lg-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>SEO</h4>
+							</div>
+							
+							<div class="card-body">
+								    
+                                
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.metaTitle, "Meta title") }}
+                                    
+                                    {{ form_widget(form.metaTitle, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le tire que l'on apperçoit lorsqu'on fait une recherche. Il doit y avoir entre 50 et 60 caractères</small>
+                                    <h6 class="pull-right" id="count_message_title"></h6>
+                                    {{ form_errors(form.metaTitle) }}
+                                    
+								  </div>
+                                
+                                <div class="form-group">
+									{{ form_label(form.metaDescription, "Meta description") }}
+                                    
+                                    {{ form_widget(form.metaDescription, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">La description que l'on apperçoit lorsqu'on fait une recherche. Elle doit être entre 230 et 320 caractères.</small>
+                                     <h6 class="pull-right" id="count_message"></h6>
+                                    
+                                    {{ form_errors(form.metaDescription) }}
+                                    
+                                    
+                                    
+								  </div>
+                                   
+
+     
+							</div>
+						</div>
+					</div>
+					<!-- /.col-md-6 -->
+					
+					
+				</div>
+				<!-- /.row -->
+                
+                
+
+                
+                
+                <!-- .row -->
+				<div class="row">
+					<!--.col-md-6 -->
+					<div class="col-md-12 col-lg-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4><i class="ti i-cl-3 ti-facebook"></i> Facebook</h4>
+							</div>
+							
+							<div class="card-body">
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.ogtitle, "Titre") }}
+                                    
+                                    {{ form_widget(form.ogtitle, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le titre de l'annone Facebook</small>
+                                    {{ form_errors(form.ogtitle) }}
+                                    
+								  </div>
+                                
+                                
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.ogdescription, "Courte description") }}
+                                    
+                                    {{ form_widget(form.ogdescription, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Description de votre annonce Facebook</small>
+                                    
+                                    {{ form_errors(form.ogdescription) }}
+                                    
+								  </div>
+                                
+                                
+
+                                
+                                <div class="form-group">
+									{{ form_label(form.fbImg, "Image") }}
+                                    
+                                    {{ form_widget(form.fbImg, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">L'image doit avoir 1200px X 630px</small>
+                                    {{ form_errors(form.ogdescription) }}
+                                    
+								  </div>
+								    
+                        
+
+							</div>
+						</div>
+					</div>
+					<!-- /.col-md-6 -->
+                    
+                    
+                    <!--.col-md-6 -->
+					<div class="col-md-12 col-lg-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Courte description</h4>
+							</div>
+							
+							<div class="card-body">
+								    
+                                 <div class="form-group">
+									{{ form_label(form.mini_description, "Courte d'escription") }}
+                                    
+                                    {{ form_widget(form.mini_description, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">L'image doit avoir 1200px X 630px</small>
+                                    {{ form_errors(form.mini_description) }}
+                                    
+								  </div>
+
+                                   
+							</div>
+						</div>
+					</div>
+					<!-- /.col-md-6 -->
+					
+					
+				</div>
+				<!-- /.row -->
+                
+                
+                <!-- .row -->
+				<div class="row">
+					<!--.col-md-6 -->
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h4> Contenu de la page</h4>
+							</div>
+							
+							<div class="card-body">
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.contenu, "Contenu") }}
+                                    
+                                    {{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Contenu</small>
+                                    {{ form_errors(form.contenu) }}
+                                    
+								  </div>
+                                
+               
+
+							</div>
+						</div>
+					</div>
+					<!-- /.col-md-6 -->
+                    
+
+					
+					
+				</div>
+				<!-- /.row -->
+                {{ form_widget(form.save, { 'label': 'Enregistrer vos modifications' }) }}
+                 {{ form_widget(form) }}
+                 {{ form_end(form) }}
+				
+			</div>  
+			<!-- /.content-wrapper-->
+
+
+{% endblock %}

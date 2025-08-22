@@ -1,0 +1,122 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Ajouter un témoignage</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- .row -->
+				<div class="row">
+					
+                    
+                    <!-- .col-md-6 -->
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+                                <h4><i class="ti i-cl-4 ti-arrow-left"></i> <a href="{{ path('site_admin_temoignages')}}">Revenir</a></h4>
+							</div>
+							
+							<div class="card-body">
+                                
+                                {{ form_start(form) }}
+                                
+                                 <div class="form-group">
+									{{ form_label(form.personne, "Nom de la personne'") }}
+                                    
+                                    {{ form_widget(form.personne, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le nom de la personne qui a fait le témoignage</small>
+                                    {{ form_errors(form.personne) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.contenu, "Témoignage") }}
+                                    
+                                    {{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le témoignage</small>
+                                    {{ form_errors(form.contenu) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.lien, "Lien") }}
+                                    
+                                    {{ form_widget(form.lien, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Lien</small>
+                                    {{ form_errors(form.lien) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.signature, "Signature") }}
+                                    
+                                    {{ form_widget(form.signature, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Signature</small>
+                                    {{ form_errors(form.signature) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.ordre, "Ordre") }}
+                                    
+                                    {{ form_widget(form.ordre, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Ordre</small>
+                                    {{ form_errors(form.ordre) }}
+                                    
+								  </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                 {{ form_widget(form.save, { 'label': 'Enregistrer' }) }}	
+                                
+                                  {{ form_widget(form) }}
+                                
+								
+							</div>
+						</div>
+                        
+
+                            
+                          
+
+                            
+                            {{ form_end(form) }}
+                        
+                        
+					</div>
+					<!-- /.col-md-6 -->
+				</div>
+				<!-- /.row -->
+					
+				
+				
+			
+				
+			</div>  
+			<!-- /.content-wrapper-->
+
+
+{% endblock %}

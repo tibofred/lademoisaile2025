@@ -1,0 +1,86 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Écoles participantes{% endblock %}
+{% block metaDescription %}Meta description{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+    <ul class="wrap-jjjj soum">
+    
+        <li class="large jecris">
+             <img src="{{ asset('assets/scss/images/groupe-bandeau-1.jpg') }}" class="fleur-droite">
+            <p>J'écris</p>
+        </li>
+         <li class="small jassume">
+             <img src="{{ asset('assets/scss/images/jassume-bandeau-2.jpg') }}" class="fleur-droite">
+            <p>J'assume</p>
+        </li>
+        <li class="small javance">
+             <img src="{{ asset('assets/scss/images/javance-bandeau-3.jpg') }}" class="fleur-droite">
+            <p>J'avance</p>
+        </li>
+         <li class="large jesuis">
+             <img src="{{ asset('assets/scss/images/je-suis-bandeau-4.jpg') }}" class="fleur-droite">
+            <p>Je suis</p>
+        </li>
+  </ul>
+
+  <div class="clear"></div>
+    <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-12">
+                
+                
+                
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main">
+                        
+                        
+                        <div class="breadcrump">
+                                
+                            
+                                 <a href="#">Accueil</a> | <span class="pink">Inscrivez votre école</span></div>
+                        
+  			
+                            <h3 class="articles-recents">Inscrivez votre école</h3>
+                        
+                        <div class="row">
+
+                           {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+                            {{ include('@ViwebSoumission/Soumission/form.html.twig') }}
+
+                            
+                        </div>
+                            
+                        
+                        
+                        
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                <div class="img_soum">
+                  <h2>OSE VIVRE L'EXPERIENCE !</h2>
+                  <h2 class="pink">Laisse vivre la blogueuse en toi !</h2>
+                  <img src="{{ asset('assets/scss/images/coeurs-ligne-bandeau-trouver-une-ecole-la-demoisaile.png') }}">
+                </div>
+            
+            </div>
+            
+            
+        
+        </div>
+
+    </div>
+	
+
+ 
+{% endblock %}
+
+

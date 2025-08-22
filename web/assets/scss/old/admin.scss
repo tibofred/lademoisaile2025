@@ -1,0 +1,152 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+padding-left: 0;
+  padding-right: 0;
+    
+        .nav-pills {
+          background-color:#ccc;
+        }
+    
+        .nav {
+          margin-bottom: 20px;
+        }
+    
+        .nav-item {
+          width: 100%;
+        }
+    
+            .nav-item + .nav-item {
+          margin-left: 0;
+        }
+    
+        .nav-link {
+          border-radius: 0;
+        }
+
+}
+
+
+
+ /* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+    
+        img {
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+}
+
+
+/*  Sign in Form 
+_________________________________________________________ */
+
+.wrap-sign-in{
+    
+    width: 100%;
+    height: 100vh;
+    position:relative;
+        top: -1em;
+      background-image: url(../img/sign-in.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color: #464646;
+    margin-bottom: -3em;
+    margin-top: -2.5em;
+    
+        img.bg {
+            position: absolute;
+            top: 0;
+            width:100%; 
+            
+        }
+}
+
+
+
+.form-signin {
+    max-width: 330px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    background-color: rgba(255,255,255,0.65);
+    margin-left: -150px;
+    
+        .form-signin-heading {
+          margin-bottom: 10px;
+          width:100%;
+          background-color: black;
+          color:white;
+          line-height: 2;
+         font-family:"Futura LT W01 Light";
+        }
+    
+    .wrap-sign{
+        
+        padding:15px;
+    }
+    
+    .checkbox {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    
+    .form-control {
+      position: relative;
+      height: auto;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    .form-control:focus {
+      z-index: 2;
+    }
+    
+    input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+}

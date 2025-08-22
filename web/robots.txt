@@ -1,0 +1,3 @@
+Sitemap: https://lademoisaile.ca/sitemap.xml
+User-agent: *
+Disallow: /login

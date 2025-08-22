@@ -1,0 +1,48 @@
+<div class="col-md-4 lp_element">
+                       <div class="wrap-article">
+                        
+              <h5 class="categorie">
+                  <span>{{ article.categorie.nom }}</span>
+              </h5>
+
+
+
+              <h3 class="article-title">{{ article.titre }}</h3>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <a href="{{ path('site_blogueuse_article', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug})}}" >
+                          <img alt="{{ article.titre }}" src="{{ asset('uploads/photos-articles/mini/') }}{{ article.photo.id }}.{{  article.photo.url }}" style="width:100%;">
+                      </a>
+                  </div>
+              </div>
+
+              <div class="wrap-txt-profil">
+                  
+                  <a href="{{ path('site_blogueuse_article', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug})}}" class="btn btn-primary">Lire plus</a>
+                  
+                  <div class="row">
+                          <div class="col-sm-8 art_content">
+                              <p>{{ article.description|raw }}</p>
+                          </div>
+
+                          <div class="col-sm-4">
+<a href="{{ path('site_blogueuse_profil', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id })}}">
+                                  
+                                  
+                                  <div class="wrap-blogueuse">
+                                      <img alt="{{ article.blogueuse.prenom }} {{ article.blogueuse.nom }} - {{ article.blogueuse.ecole.nom }}" src="{{ absolute_url(asset('/uploads/photos-blogueuses/avatar/')) }}{{ article.blogueuse.photo.id }}.{{ article.blogueuse.photo.url }}" class="img-fluid thumb">
+                                      <h7>{{ article.blogueuse.prenom }}</h7>
+                                      <h6>{{ article.blogueuse.ecole.nom }}</h6>
+                                  </div>
+                              </a>
+
+                          </div> 
+
+                      </div>
+
+                  </div>
+
+
+      </div>
+    
+  </div>

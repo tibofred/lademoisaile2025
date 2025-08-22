@@ -1,0 +1,84 @@
+site_homepage:
+    path:     /
+    defaults: { _controller: SiteBundle:Default:index }
+    
+site_rapport:
+    path:     /rapport
+    defaults: { _controller: SiteBundle:Page:rapport }
+    
+site_wserie:
+    path:     /wserie
+    defaults: { _controller: SiteBundle:Page:wserie }   
+    
+site_journeefemme:
+    path:     /journeefemme
+    defaults: { _controller: SiteBundle:Page:journeefemme }  
+    
+site_lettreainees:
+    path:     /lettreainees
+    defaults: { _controller: SiteBundle:Page:lettreainees }   
+    
+site_lettreblogueuses:
+    path:     /lettreblogueuses
+    defaults: { _controller: SiteBundle:Page:lettreblogueuses }
+    
+site_promotions:
+    path:     /promotions
+    defaults: { _controller: SiteBundle:Promotion:index }
+
+
+site_contact:
+    path:     /contact
+    defaults: { _controller: SiteBundle:Contact:index }   
+    
+
+site_ecole_quiestlademoisaile:
+    path:     /qui-est-la-demoisaile
+    defaults: { _controller: SiteBundle:Page:qui }
+
+#site_page_child:
+    #path:     /{parent_page_slug}/{page_slug}
+    #defaults: { _controller: SiteBundle:Page:index }
+    #requirements:
+        #parent_page_slug: .*$
+
+site_ecole_participantes:
+    path:     /ecoles-participantes
+    defaults: { _controller: ViwebEcoleBundle:Ecole:participantes }
+
+    
+site_inscript:
+    path:     /inscription
+    defaults: { _controller: SiteBundle:Page:inscription }    
+    
+    
+site_partenaires:
+    path:     /partenaires
+    defaults: { _controller: SiteBundle:Page:partenaires }    
+    
+site_partenaires_confirmation:
+    path:     /partenaires-confirmation
+    defaults: { _controller: SiteBundle:Page:partenairesconfirm } 
+    
+site_search:
+    path:     /search
+    defaults: { _controller: SiteBundle:Default:search }
+    
+site_searcht:
+    path:     /searcht
+    defaults: { _controller: SiteBundle:Default:searcht }
+    
+site_capsule:
+    path:     /capsule-video
+    defaults: { _controller: SiteBundle:Page:capsule }
+    
+site_bookzine:
+    path:     /bookzine
+    defaults: { _controller: SiteBundle:Page:bookzine }
+    
+site_page:
+    path:     /{page_slug}
+    defaults: { _controller: SiteBundle:Page:index }
+    requirements:
+        page_id: \d+
+

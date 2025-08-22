@@ -1,0 +1,19 @@
+site_admin_blogueuses:
+    path:     /blogueuses
+    defaults: { _controller: ViwebBlogueuseBundle:Admin\Blogueuse:blogueuses }
+
+site_admin_blogueuse_new:
+    path:     /blogueuse/ajouter
+    defaults: { _controller: ViwebBlogueuseBundle:Admin\Blogueuse:ajouter }
+
+site_admin_blogueuse_edit:
+    path:     /blogueuse/edit/{blogueuse_id}
+    defaults: { _controller: ViwebBlogueuseBundle:Admin\Blogueuse:edit }
+    
+site_admin_blogueuse_delete:
+    path:      /blogueuse/delete/{blogueuse_id}
+    defaults:
+        _controller: ViwebBlogueuseBundle:Admin\Blogueuse:delete
+    requirements:
+        id: \d+
+    

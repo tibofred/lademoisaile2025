@@ -1,0 +1,75 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}La deMOIs’aile - Écoles participantes{% endblock %}
+{% block metaDescription %}La deMOIs’aile : Liste des écoles participantes au site La deMOIs’aile{% endblock %} 
+
+
+{% block content %}
+
+
+<div class="wrap-ecole-participante">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!--h3>La deMOIs'aile</h3-->
+                    <br/><br/><br/>
+                    <span>Accueil / Écoles participantes</span>
+                    <h5 class="tac" style="display: block; margin: 25px 0; text-align: center; font-size: 1.5em;">Projet de mémoire d’une étudiante de maîtrise<br/> en psychoéducation de l’UQO</h5>
+                </div>
+            
+            </div>
+                
+        </div>
+        
+</div>
+
+    <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-12">
+                
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main ecole-participantes">
+                        <h1>Écoles participantes</h1>
+                        <div style="text-align:center; margin:25px 0 45px;"><a class="btn btn-primary" href="{{ path('site_liste_articles_archive') }}">Archives de toutes les écoles participantes</a></div>
+                        <div class="row">
+
+                            {% for ecole in ecoles %}
+                                   <div class="col-sm-4">
+                                      <div class="wrap-ecole text-center">
+                                           <a href="{{ path('site_ecole_single', {'slug': ecole.slug}) }}">
+                                                <img alt="Logo {{ ecole.nom }}" src="{{ asset('uploads/logos-ecoles/') }}{{ ecole.logo.id}}.{{ ecole.logo.url}}">
+                                                <h4>{{ ecole.nom }}</h4>
+                                                <h5>{{ ecole.region.nom }}</h5>
+                                               
+                                               
+                                               
+                                            </a>
+                                       </div>
+                                   </div>
+                            {% endfor %}
+                    
+                            </div><!-- row -->
+                        <div class="inscri_bas">                            
+                            <h4>Ton école ne s'y retrouve pas ?</h4>
+                            <br/>
+                            <a href="{{ path('viweb_soumission_new') }}" class="btn btn-primary">J'inscris mon école</a>
+                        </div>
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+            
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+
+
+    
+ 
+{% endblock %}
+

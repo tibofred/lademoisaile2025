@@ -1,0 +1,71 @@
+ 
+                <div class="container">
+                        
+
+                
+                       {% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
+
+                         <div class="well">
+                          {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+                             <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Votre prénom</label>
+                                        {{ form_widget(form.prenom, {'attr': {'class': ''}}) }}
+                                    </div>
+                                </div>    
+                                <div class="col-sm-6"> 
+                                    <div class="form-group">
+                                        <label>Votre nom</label>
+                                        {{ form_widget(form.nom, {'attr': {'class': 'orm-control'}}) }}
+                                    </div>    
+                                </div>
+                             </div><!-- row -->
+
+                        <div class="row">
+
+                        <div class="col-6">
+                             <div class="form-group"> 
+                                <label>Votre courriel</label>
+                                 {{ form_widget(form.courriel, {'attr': {'class': 'form-control'}}) }}
+                                 {{ form_errors(form.courriel) }}
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+
+                           <div class="form-group">
+
+                               <label>Votre téléphone</label>
+                                 {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+
+                                 {{ form_errors(form.telephone) }}
+
+                            </div>
+                        </div>
+
+                       </div><!-- row -->
+
+                        <div class="row">
+
+
+                            <div class="col-12">
+                                <label>Votre message</label>
+                                {{ form_widget(form.message) }}
+                            </div>
+
+                            <div class="col-12">
+                                <br>
+                                {{ form_widget(form.send, { 'label': 'Envoyer' }) }}
+                                <br>
+                            </div>
+                            
+                            {{ form_end(form) }}
+                            
+                         </div><!-- row -->
+                             
+                    </div>
+                </div>
+    
+    

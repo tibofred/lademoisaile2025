@@ -1,0 +1,61 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+{% block content %}
+
+
+
+		<!-- =================================================
+			Content Wrapper
+		================================================== -->
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Liste des medias</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h4><i class="ti i-cl-4 ti-plus"></i> <a href="{{ path('site_admin_media_new')}}">Ajouter un media</a></h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive"> 
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>Titre</th>
+                                                 <th></th>
+											</tr>
+										</thead>
+										<tbody>
+                                            
+                                             {% for media in medias %}
+											<tr>
+												<td>{{ media.titre }}</td>
+                                                
+                                                
+                                                    <td><a href="{{ path('site_admin_media_edit', { 'media_id': media.id}  ) }}" class="btn btn-success">Modifier</a>
+                                                    </td>
+                                                    
+                                                    <th><a href="{{ path('site_admin_media_delete', { 'media_id': media.id}  ) }}" class="btn btn-danger">Supprimer</a></th>
+											</tr>
+                                            {% endfor %}
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
+
+{% endblock %}

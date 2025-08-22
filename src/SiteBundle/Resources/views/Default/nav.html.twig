@@ -1,0 +1,18 @@
+{% for menu in parent_menu %}
+    {% if menu.childs|length > 0 %}
+        <li class="nav-item dropdown {% if page is not null and page.slug == menu.slug %}active{% endif %}">
+            <a class="nav-link dropdown-toggle" href="{{ path('site_page', { 'page_slug': menu.slug }) }}"
+               id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ menu.titre }}</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                {% for child in menu.childs %}
+                    <a class="dropdown-item"
+                       href="{{ path('site_page_child', { 'parent_page_slug': menu.slug, 'page_slug': child.slug }) }}">{{ child.titre }}</a>
+                {% endfor %}
+            </div>
+        </li>
+    {% else %}
+        <li class="nav-item {% if page is not null and page.slug == menu.slug %}active{% endif %}">
+            <a class="nav-link" href="{{ path('site_page', { 'page_slug': menu.slug }) }}">{{ menu.titre }}</a>
+        </li>
+    {% endif %}
+{% endfor %}

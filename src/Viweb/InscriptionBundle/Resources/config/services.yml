@@ -1,0 +1,4 @@
+services:
+#    viweb_inscription.example:
+#        class: Viweb\SoumissionBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

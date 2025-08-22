@@ -1,0 +1,62 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+
+		<!-- =================================================
+			Content Wrapper
+		================================================== -->
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Liste des utilisateurs</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h4><i class="ti i-cl-4 ti-plus"></i> <a href="#">Ajouter un utilisteur</a></h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive"> 
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>Nom</th>
+                                                <th>École</th>
+                                                <th>Role</th>
+                                           
+											</tr>
+										</thead>
+										<tbody>
+                                            
+                                             {% for user in users %}
+											<tr>
+												<td>{{ user.prenom }} {{ user.nom }} </td>
+                                                <td>{{ user.ecole.nom }}</td>
+                                                <td>{{ user.roles|join(', ') }}</td>
+                               
+											</tr>
+                                            {% endfor %}
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+                            
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
+
+{% endblock %}

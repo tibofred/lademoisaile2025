@@ -1,0 +1,108 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Blogueuse {{ blogueuse[0].prenom }}  {{ blogueuse[0].nom }}{% endblock %}
+{% block metaDescription %}La deMOIs’aile : voir tous les articles de la blogueuse {{ blogueuse[0].prenom }} {{ blogueuse[0].nom }} de l'école {{ ecole.nom}} {% endblock %}
+
+
+{% block content %}
+
+
+
+    {{ include("::header.html.twig") }}
+        
+
+    <div class="wrap-menu-ecole">
+        {{ include("::menu.html.twig") }}
+    </div>
+     
+
+     <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-12">
+
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main">
+                        
+                        <div class="wrap-user-arvhive">
+                        
+                            <div class="row">
+                            
+                                <div class="col-sm-8">
+
+                                    
+                                    
+                                    <h5>Tous les articles de</h5>
+                                    <h1 class="h1_prof"><span>{{ blogueuse[0].prenom }} {{ blogueuse[0].nom }}</span></h1>
+                                    <p>{{ blogueuse[0].description|raw }}</p>
+                                    <h4>Voir tous les articles de la : <a href="{{ path('site_ecole_single', {'slug': blogueuse[0].ecole.slug }) }}">{{ blogueuse[0].ecole.nom }}</a></h4>
+                    
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    
+                                    <img alt="{{ blogueuse[0].prenom }} {{ blogueuse[0].nom }}" src="{{ absolute_url(asset('/uploads/photos-blogueuses/mini/')) }}{{ blogueuse[0].photo.id }}.{{ blogueuse[0].photo.url }}" class="auteur"> 
+                                    
+                                </div>
+    
+                            
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+           <div class="container">
+                        
+                 <div class="row archive-author">
+                     {% set month = "now"|date("m") %}
+                     {% set year = "now"|date("Y") %}
+                     {% if(month < 9) %}
+                        {% set actual = (year-1)~"-"~year %}
+                     {% else %}
+                        {% set actual = year~"-"~(year+1) %}
+                     {% endif %}
+                     
+                     {% for article in articles %}
+                        {% set month_art = article.datePublication|date("m") %}
+                        {% set year_art = article.datePublication|date("Y") %}   
+                        
+                        {% if(month_art < 9) %}
+                            {% set actual_art = (year_art-1)~"-"~year_art %}
+                        {% else %}
+                            {% set actual_art = year_art~"-"~(year_art+1) %}
+                        {% endif %}
+                        
+                        {% if actual_art != actual %}
+                            <div class="col-md-12"><h4>{{ actual_art }}</h4></div>
+                            {% set actual = actual_art %}
+                        {% endif %}
+                        
+                        {{ include('@ViwebArticle/Article/appercu.html.twig') }}
+
+                     {% endfor %}
+            
+                     
+              </div>       
+                        
+          </div>
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                
+
+            </div>
+            
+            
+        
+        </div>
+
+    </div>
+
+
+
+    
+ 
+{% endblock %}
+

@@ -1,0 +1,205 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %}{{ page.metaTitle }}{% endblock %}
+{% block metaDescription %}{{ page.metaDescription }}{% endblock %}
+{% block content %}
+
+<div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-9">
+                
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main padd">
+                        <h1>{{page.titre|raw}}</h1>
+                        {{ page.contenu|raw }}
+                        <p><br/></p>
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+            
+            </div>
+            
+            <!-- ################################################
+                                      SIDE BAR
+                 ################################################  -->
+            
+            
+            <div class="col-sm-3">
+                <aside id="secondary" class="widget-area widget-fondateurs">
+                    
+                
+                <span class="widget-title" style="font-size: 1.4rem;">Mot de la fondatrice et directrice générale</span>
+                 <!-- Marie-Eve 
+                _______________________________________________________________________________
+                --> 
+                 
+
+                    {% if marie.avatar.id is defined and marie.avatar.id is not null %}
+					<img alt="{{ marie.prenom }} {{ marie.nom }}" class="card-img-top" src="{{ absolute_url(asset('/uploads/users-avatar/')) }}{{ marie.avatar.id }}.{{ marie.avatar.url }}" alt="{{ marie.prenom }} {{ marie.nom }}" />
+                    {% endif %}
+
+               
+
+                <h4>Marie-Eve D’Amours</h4>
+                <p>{% if  marie.courteDescription is defined and  marie.courteDescription is not null %}
+                    
+						Je suis ME, une femme de coeur, conjointe, maman, humaine, passionnée, conférencière, auteure … qui a eu une simple idée. Une idée de grandeur comme on l’appelle - La deMOIs’aile.
+                    
+                     {% endif %}</p>
+
+
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bd-marie-eve-modal-lg">En savoir plus</button>
+
+
+                <div class="modal fade bd-marie-eve-modal-lg" tabindex="-1" role="dialog" aria-labelledby="marie-eve-modal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+						<span style="position: absolute; right: 30px;cursor: pointer;" onClick="$('.modal.fade').click()">✖</span>
+						  <p>En passant par éducatrice spécialisée auprès des jeunes, pour me rendre en animation télévisuelle et par la suite, me diriger vers le monde du Blog en fondant MoiME.ca (oct.2015), mon chemin professionnel ne cesse d’avancer en mettant toujours de l’avant mes nombreuses passions comme les communications, l’écriture expressive, les humains.</p>
+						  
+						  
+						  <p>Dans le tourbillon de la vie, prendre le temps de m’arrêter, de mettre des mots de façon spontanée sur une plateforme, tout à mon image, a été la pierre angulaire du « guts » afin de poursuivre vers une vie professionnelle qui me ressemble.</p>
+						  
+						  <p>En créant La deMOIs’aile (sept. 2017), je me retrouve sur le terrain des écoles, à offrir à notre belle jeunesse une voix et des ailes. Tout ce qui m’apporte également du bien-être au quotidien. C’est de loin ce que j’ai toujours voulu aspirer!</p>
+						  
+						  <p>Démontrant persévérance et résilience, en tant que propriétaire d’une entreprise individuelle pendant 5 ans, en 2023, j’ai pris la décision de poursuivre différemment en passant de la phase « JE » à « Nous » format OBNL, en croyant pertinemment que tous ensemble, vers une mission commune, on irait encore + loin.</p>
+						  <p>Voilà un parcours d’entrepreneure sociale qui ne cesse de grandir en étant connectée avec qui je suis.</p>
+						  <p><strong>ME</strong></p>
+                      
+                    </div>
+                  </div>
+                </div>   
+
+
+
+                </aside><!-- #secondary -->
+            </div>
+        
+        </div>
+
+    </div>
+
+    <div class="wrap-inscris">
+        <span class="ligne-top"></span>
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscrs-mon-ecole-la-demoisaile.png') }}" class="fleur-gauche-gros">
+        
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscrit--mon-ecole-gauche-la-demoisaile.png') }}" class="fleur-gauche">
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscris-mon-ecole-droite-la-demoisaile.png') }}" class="fleur-droite">
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-12 text-center">
+                    <h4>
+                        Rapport d'activités 2024-2025 de l'organisme 
+                    </h4>
+                    <a href="{{ path('site_rapport') }}" class="btn btn-default " style="color: black !important; background-color: white !important;">Voir le rapport</a>
+                    
+                    
+                    <div class="modal fade modalpdf" tabindex="-1" role="dialog" aria-labelledby="marie-eve-modal" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+        						<span style="position: absolute; right: 10px;top:10px; cursor: pointer;" onClick="$('.modal.fade').click()">✖</span>
+        						<iframe src="/web/uploads/RapportDactivite2024.pdf" style="width:100%; height:600px; border:0"></iframe>
+                              
+                            </div>
+                          </div>
+                        </div> 
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <span class="ligne-bottom"></span>
+
+        
+    </div>
+    
+    <div class="container style84 mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="mt-5">Mission</h3>      
+                <div class="text-center">Donner une voix et des ailes à la jeunesse féminine. </div>
+            </div>
+            <div class="col-md-6">
+                <h3 class="mt-5">Vision</h3>       
+                <div class="text-center">Entrer dans tous les établissements secondaires du Québec afin d’atteindre un maximum de jeunes filles. Devenir une plateforme référence expressive pour les ados, par les ados.</div>   
+            </div>    
+            <div class="col-12">
+                <h3 class="mt-5">Objectifs</h3>  
+                <ul>
+                    <li>Implantation du programme d’écriture favorisant l’estime de soi (Conférence, activités sociales, artistiques, multimédias…)</li>
+                    <li>Promotion de la gestion saine des émotions;</li>
+                    <li>Déstigmatiser la santé mentale;</li>
+                    <li>Mettre la persévérance scolaire de l’avant, en outillant les adolescentes durant leur parcours; </li>
+                    <li>Promouvoir le français écrit et la lecture via l’utilisation adéquate du Web. (Programme numérique afin d’expérimenter de nouvelle approche)</li>
+                </ul>
+                <h3 class="mt-5">Valeurs</h3>  
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Authenticité</h5>
+                                <p class="card-text">Avec l'expérience La deMOIs'aile, nous valorisons le "Oser être soi" et nous misons sur une approche humaine de qualité et personnalisée en mettant l'adolescente de l'avant.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Partage</h5>
+                                <p class="card-text">Le fait de pouvoir partager leur vécu avec autrui apporte un sentiment d'appartenance et un respect mutuel palpable puisque souvent, plusieurs vivent des situations similaires. Les deMOIs'ailes deviennent des modèles!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Épanouissement</h5>
+                                <p class="card-text">La deMOIs'aile donne des ailes par la découverte des richesses intrinsèques que les participantes possèdent. Des outils qui demeureront présents toute la vie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="text-center"><strong>ME D’Amours, <span style="color:#E83E8C">fondatrice et directrice générale</span></strong></div>
+                    <h5 class="my-3 text-center">Les administrateurs<br/>Membres du C.A. 2024-2025</h5>
+                    <ul class=" text-center">
+                        <li style="list-style: none;">Isabelle Marineau – <span style="color:#E83E8C">Présidente</span></li>
+                        <li style="list-style: none;">Sylvie Laganière – <span style="color:#E83E8C">Vice-présidente</span></li>
+                        <li style="list-style: none;">Sonya Éthier – <span style="color:#E83E8C">Trésorière</span></li>
+                        <li style="list-style: none;">Marilou Séguin – <span style="color:#E83E8C">Secrétaire</span></li>
+                        <li style="list-style: none;">Shanna Fournier – <span style="color:#E83E8C">Administratrice</span></li>
+                        <li style="list-style: none;">Danica Abdel-Wahed (membre jeunesse) – <span style="color:#E83E8C">Administratrice</span></li>
+                        <li style="list-style: none;">Élisabeth Archambault (membre jeunesse) – <span style="color:#E83E8C">Administratrice</span></li>
+                    </ul>
+                    <div class="style88">Merci pour votre précieuse présence et pour votre engagement envers notre mission.</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    
+    <div class="wrap-inscris">
+        <span class="ligne-top"></span>
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscrs-mon-ecole-la-demoisaile.png') }}" class="fleur-gauche-gros">
+        
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscrit--mon-ecole-gauche-la-demoisaile.png') }}" class="fleur-gauche">
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscris-mon-ecole-droite-la-demoisaile.png') }}" class="fleur-droite">
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-12 text-center">
+                    <h4>
+                        Vous voulez faire vivre l’expérience « La deMOIs’aile » à votre école ?<br>
+                        Nous vous invitons à vous inscrire dès maintenant. 
+                    </h4>
+                    <a href="{{ path('viweb_soumission_new') }}" class="btn btn-default ">J'inscris mon école</a>
+                </div>
+            </div>
+        </div>
+        <span class="ligne-bottom"></span>
+
+        
+    </div>
+{% endblock %}

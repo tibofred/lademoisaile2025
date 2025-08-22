@@ -1,0 +1,139 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+	<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Modifier la ressource</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- .row -->
+				<div class="row">
+					
+                    
+                    <!-- .col-md-6 -->
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+                                <h4><i class="ti i-cl-4 ti-arrow-left"></i> <a href="{{ path('site_admin_ressources')}}">Revenir</a></h4>
+							</div>
+							
+							<div class="card-body">
+        
+        
+        
+
+                                {{ form_start(form) }}
+                                
+                                <div class="form-group">
+									{{ form_label(form.titre, "Titre") }}
+                                    
+                                    {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le titre de l'annone Facebook</small>
+                                    {{ form_errors(form.titre) }}
+                                    
+								  </div>
+                                
+                                
+                                 <div class="form-group">
+									{{ form_label(form.mini_description, "Mini description") }}
+                                    
+                                    {{ form_widget(form.mini_description, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Si c'est une page enfant, veuillez choisir la page parent</small>
+                                    {{ form_errors(form.mini_description) }}
+                                    
+								  </div>
+                                
+                                
+                                 <div class="form-group">
+									{{ form_label(form.contenu, "Contenu") }}
+                                    
+                                    {{ form_widget(form.contenu, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Si c'est une page enfant, veuillez choisir la page parent</small>
+                                    {{ form_errors(form.contenu) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.slug, "Adresse url (slug)") }}
+                                    
+                                    {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Exemple : https://lademoisaile.ca/<strong>votre-nouvelle-page</strong> - Ne pas mettre https://lademoisaile.ca/, ne pas mettre d'espace ou de caractères spéciaux.</small>
+                                    {{ form_errors(form.slug) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.ordre, "Ordre") }}
+                                    
+                                    {{ form_widget(form.ordre, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">L'ordre de la page. Mettre 0.</small>
+                                    {{ form_errors(form.ordre) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.image, "Image") }}
+                                    
+                                    {{ form_widget(form.image, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">L'image doit avoir 1200px X 630px</small>
+                                    {{ form_errors(form.image) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.parent, "Parent") }}
+                                    
+                                    {{ form_widget(form.parent, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Si c'est une page enfant, veuillez choisir la page parent</small>
+                                    {{ form_errors(form.parent) }}
+                                    
+								  </div>
+                                
+                                
+                                
+
+                                
+                                
+                                 {{ form_widget(form.save, { 'label': 'Enregistrer' }) }}								
+
+                                  {{ form_widget(form) }}
+                                
+                                
+                                
+								
+							</div>
+						</div>
+                        
+
+                            
+                          
+
+                            
+                            {{ form_end(form) }}
+                        
+                        
+					</div>
+					<!-- /.col-md-6 -->
+				</div>
+
+{% endblock %}

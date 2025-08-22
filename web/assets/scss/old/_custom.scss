@@ -1,0 +1,2836 @@
+//font-family: 'Open Sans', sans-serif; 300,400,600
+
+
+
+
+//    font-family: 'Open Sans', sans-serif;
+
+  //  font-family: 'Glass Antiqua', cursive;
+
+@import url("https://fonts.googleapis.com/css?family=Glass+Antiqua|Open+Sans+Condensed:300,700");
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fontawesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("fontawesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("fontawesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+
+/* Show it is fixed to the top */
+
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #222222 !default;
+$black:  #000 !default;
+
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+) !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #ed3c6f;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: (
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-600,
+  gray-dark: $gray-900
+) !default;
+
+$theme-colors: (
+  primary: $pink,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-900
+) !default;
+
+a:visited{
+    
+    color:black;
+}
+
+a {
+    color: black;
+}
+
+a:hover{
+    
+    text-decoration:none;
+}
+
+.pink{
+    
+    color:$pink;
+}
+
+
+
+body{
+    
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing:0.05em;
+    padding-top:70px;
+    font-weight:300;
+    
+}
+
+.btn-primary:hover {
+    background-color: black;
+
+}
+
+.navbar-inverse .navbar-toggler {
+    z-index: 9999999;
+    background:black;
+}
+
+h1{
+        
+        font-family: 'Glass Antiqua', cursive;
+        color:$pink;
+        font-size:2em;
+        font-size:2em;
+    }
+
+
+span.ligne-deco{
+    
+
+    width:100%;
+    height:2px;
+    background-color: #ccc;
+    margin:2px 0;
+    display: block;
+}
+
+#secondary{
+    
+    margin-top:5em;
+    margin-bottom:2em;
+}
+
+input.form-control{    
+    font-family: FontAwesome;    
+}
+
+
+.annee-2017-2018{
+
+    display:none;
+}
+
+body.logged-in{
+    
+    .fixed-top {
+
+        top: 30px;
+        border-top:solid thin white;
+       
+        }   
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $pink;
+    border-color: transparent;
+    border-radius:12px;
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+
+p{
+    
+   color: $gray-900;
+}
+
+
+
+.rose{
+    
+    color:$pink;
+}
+
+h1.entry-title{
+    
+    color:$pink;
+    font-family: 'Glass Antiqua', cursive;
+    font-size:2.4em;
+}
+
+.widget-title{
+    
+    
+    color:$pink;
+    font-family: 'Glass Antiqua', cursive;
+    font-size:1.8em;
+    text-align:center;
+}
+
+
+
+
+.widget-area{
+    
+    background:#ccc;
+    padding: 1.4em;
+}
+
+.navbar-inverse .navbar-nav .active > .nav-link, .navbar-inverse .navbar-nav .nav-link.active, .navbar-inverse .navbar-nav .nav-link.open, .navbar-inverse .navbar-nav .open > .nav-link {
+    color: #fff;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link {
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+}
+ul.navbar-nav {
+    margin-left: 50px;
+}
+
+.bg-inverse {
+    background-color: #292b2c!important;
+}
+
+
+.main-navigation ul ul {
+
+    top: 1em;
+
+}
+
+.navbar-brand{
+    
+    font-size:2em;
+    color: $pink !important;
+    font-family: 'Glass Antiqua', cursive;
+}
+
+.navbar{
+    
+   border-bottom:solid thin $pink; 
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+    color: white;
+    font-size:0.95em;
+    text-align: center;
+    font-weight: 300;
+    font-variant: small-caps;
+    
+}
+
+.navbar-inverse .navbar-nav .nav-link.disabled {
+    color: white;
+}
+
+.form-inline{
+    
+   
+}
+.navbar-nav li{
+    margin:0 0.3em;
+}
+
+.uneligne{
+    margin-top:0.7em;
+}
+
+.connexion{
+    
+    margin-top:1.2em;
+    font-variant: small-caps;
+    color: #FFF !important;
+}
+
+.search_con {
+    .search_form {
+        margin: 0 0 0 0;
+        float: left;
+        text-align: center;
+        padding: 3px 0;
+        input {
+            height: 30px;
+        }
+    }
+    .bloc_connect {
+        float: right;
+        width: 180px;
+        text-align: center;
+        a {
+            color: #FFF;
+            margin: 0;
+        }
+    }
+}
+.bloc_connect {
+    text-align: right;
+    a {
+        color: #FFF;
+        margin: 0;
+    }
+}
+.fa-2x {
+    font-size: 2em;
+}
+ul.social{
+    
+    /*background: #343A40;*/
+    margin: 0 0 0em 0;
+    padding:0;
+
+        
+    li{
+        display: inline-block;
+        list-style:none;
+        margin-left:0.4em;
+        margin-top:0.2em;
+        
+        a{
+            color:$pink;
+        }
+    }
+    
+}
+
+[type=button] {
+    -webkit-appearance: none !important;
+}
+
+.first-container{
+    
+    margin-top:2.3em;
+}
+@media (max-width: 1400px) {       
+    ul.social{
+        
+        float:right;
+        margin: 0.5em 0 0em 0;
+        width: 40px;            
+        li{            
+            a{
+                color:$pink;
+                width: 100%;
+            }
+        }        
+    } 
+    .search_con {
+        width: 200px;
+        .search_form {
+            width: 180px;
+            margin: 0 15px 5px 0;
+            float: none;
+        }
+        .bloc_connect {
+            float: none;
+            width: 180px;
+            text-align: center;
+            a {
+                color: #FFF;
+                margin: 0;
+            }
+        }
+    }
+    .first-container {
+        margin-top: 120px;
+    }
+}
+@media (max-width: 1150px) {   
+    ul.navbar-nav {
+        margin-left: 0;
+        li {
+            margin: 0;
+        }
+        a {
+            font-size: 0.9rem;
+        }
+    } 
+}
+@media (max-width: 1100px) {       
+    ul.social{
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {       
+    .first-container {
+        margin-top: 0;
+    }
+}    
+/*  Home 
+_________________________________________________________ */
+
+
+#imageAccueil {
+    width: 100%;
+    height: 80vh;
+    position:relative;
+    background: url(images/slider-la-demoisaile.jpg) no-repeat;
+    background-size: cover;
+    
+    
+    .wrap-txt-home{
+        
+        position:absolute;
+        top:20%;
+        left:12%;
+    }
+    
+    h1{
+        
+        color:$pink;
+        font-size:3.9rem;
+        font-family: 'Glass Antiqua', cursive;
+    }
+    
+    
+    
+    h2{
+        
+        
+        font-size:2.8rem;
+        text-transform:uppercase;
+    }
+
+    h2::first-letter{
+            
+            font-size:130%;
+        }
+    p{        
+        
+        font-size: 1.4rem;
+        width:40%;
+        font-family: 'Glass Antiqua', cursive;
+    }
+    
+    .logo{
+        
+        position:absolute;
+        right:10%;
+        bottom:15%;
+        font-size:8em;
+    }
+    
+    .visible{
+        
+    }
+    
+    span.line{
+        
+        position:absolute;
+        left:15%;
+        top:20%;
+        font-size:4em;
+        color:#fff;
+        text-transform:uppercase;
+
+        
+    }
+}
+@media (max-height: 800px) and (min-width: 1000px) {
+    #imageAccueil {
+
+        height: 110vh;
+    }    
+}
+@media (max-height: 600px) and (min-width: 1000px) {
+    #imageAccueil {
+        height: 120vh;
+    }    
+}
+@media (max-width: 1300px) {
+    #imageAccueil {
+        background-image: url(images/slider-la-demoisaile-l.jpg);
+    }    
+}
+@media (max-width: 1050px) {
+    #imageAccueil {
+        background-image: url(images/slider-la-demoisaile-m.jpg);
+    }    
+}
+@media (max-width: 990px) {
+    #imageAccueil {
+        background-image: url(images/slider-la-demoisaile-s.jpg);
+    }    
+} 
+@media (max-width: 768px) {
+    #imageAccueil {
+        background-image: url(images/slider-la-demoisaile-xs.jpg);
+    }    
+}
+.wrap-inscris{
+    
+    background:$pink;
+    padding:1.8em 0;
+    position:relative;
+    
+    .fleur-droite{
+        
+        position:absolute;
+        right:5%;
+        bottom:16%;
+    }
+    
+    
+    .fleur-gauche{
+        
+        position:absolute;
+        left:17%;
+        bottom:16%;
+    }
+    
+    .fleur-gauche-gros{
+        
+        position:absolute;
+        left:0%;
+        bottom:0%;
+    }
+    
+   
+    .ligne-top{
+        
+       position:absolute;
+        width:100%;
+        height:3px;
+        top:1px;
+        left:0;
+        border-top:solid thin #ccc;
+        border-bottom:solid thin #ccc;
+        float:left;
+        background:$pink;
+    }
+    
+    .ligne-bottom{
+        
+        position:absolute;
+        width:100%;
+        height:3px;
+        bottom:1px;
+        left:0;
+        border-top:solid thin #ccc;
+        border-bottom:solid thin #ccc;
+    }
+        
+    h4{
+        
+        color:white;
+        font-size:1.8rem;
+        font-weight:300;
+    }
+    
+    a:visited {
+                color: white;
+            }
+            
+        a{
+            color:white;
+            font-size:2.4em;
+            border-radius:0;
+            margin-top:0.7em;
+            padding:0.1em 1.3em;
+        }
+    
+    .btn-default{
+        
+        background-color:black;
+        /*width:24rem;*/
+        font-family: 'Glass Antiqua', cursive;
+         transition: background-color 0.5s ease;
+        
+    }
+    
+    .btn-default:hover{
+        background:white;
+        color:black;
+    }
+}
+
+.site_homepage{
+    
+    .navbar-brand {
+        color: $pink !important;
+    }
+}
+
+ul.wrap-jjjj{
+    
+    width:100%;
+    float:left;
+    margin:0;
+    padding:0;
+    
+    li{
+        position:relative;
+        float:left;
+        list-style:none;
+        
+        img{
+            
+            width:100%;
+            height:auto;
+        }
+        
+        p{
+            position:absolute;
+            color:#a01940;
+            text-transform: uppercase;
+            font-family: 'Glass Antiqua', cursive;
+            font-size:1.7rem;
+        }
+    }
+        
+    li.small{
+        width:22%;
+    }
+    
+    li.large{
+        
+        width:28%;
+    }
+    
+    li.jecris{
+        
+        p{
+            
+            left: 9%;
+            bottom: -5%;
+
+        }
+    }
+    
+    li.jassume{
+        
+        p{
+            
+            left: 33%;
+            top: 31%;
+
+        }
+    }
+    
+    li.javance{
+        p{
+            
+            left: 2%;
+            bottom: -5px;
+
+        }
+        
+    }
+    
+    li.jesuis{
+        p{
+            
+            left: 37%;
+                bottom: 13%;
+
+        }
+        
+    }
+}
+
+ul.wrap-jjjj.soum {
+    margin-top: 30px;
+}
+@media (max-width: 1400px) {
+    ul.wrap-jjjj.soum {
+        margin-top: 80px;
+    }
+}
+@media (max-width: 1024px) {
+    ul.wrap-jjjj.soum {
+        margin-top: 60px;
+    }
+}
+@media (max-width: 780px) {
+    ul.wrap-jjjj.soum {
+        margin-top: 0;
+    }
+}
+
+.wrap-video{
+    
+    background-color: #e4e4e4;
+    padding:3em 0;
+}
+
+
+
+.wrap-menu-ecole{
+    
+    background-color: #ed3c6f;
+    border-top:solid thin white;
+}
+
+nav#nav-ecole{
+    
+    ul{
+        padding: 0.4em 0;
+        float: left;
+        width: 100%;
+        float:left;
+        margin: 0 0 0em 0em;
+
+
+    
+        li{
+            float:left;
+            list-style:none;
+            font-size:1em;
+            padding:0 1em;
+            font-variant: small-caps;
+            position:relative;
+
+            
+            a{
+                color:white;
+            }
+
+            span{
+            position:absolute;
+                
+                height:1px;
+                background-color:black;
+                width:23px;
+                top:58%;
+                right:-8%;
+
+
+            }
+
+        }
+
+            
+        li.blogueuses{
+                margin-left:0.5em;
+                font-weight:700;
+            }
+
+        li.contact{
+                
+                font-weight:700;
+            }
+       
+
+
+
+    }
+}
+
+.banniere-haut{
+    
+  background: url(images/rectangle-pour-photo-ecole.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    
+    .logo{
+        
+        position:absolute;
+        right:50px;
+        top:120px;
+    }
+    
+    
+    h4{
+        
+        color:$pink;
+        font-size:3.6em;
+        font-family: 'Glass Antiqua', cursive;
+        margin-top:0.2em;
+        
+    }
+    
+    h3{
+        text-align:center;
+        font-weight:700;
+        font-size:3em;
+        margin-top:0.3em;
+        
+    }
+    
+    h5{
+        
+        text-align:center;
+        
+        margin-to:1.8em;
+    }
+    
+    padding:6em 0;
+        
+        color:white;
+}
+
+.vos-demoisailes{
+    
+    h3{
+        
+        text-align:center;
+        margin-bottom:1em;
+    }
+    
+    h1{
+        
+        
+        font-size: 3em;
+        margin-top: 1em;
+        position: relative;
+        z-index: 1;
+        text-align:center;
+    }
+    
+    h1:before{
+        
+        border-top: 2px solid #dfdfdf;
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+    
+    h1 span{
+        
+        background: #fff;
+        padding: 0 15px;
+    }
+    
+}
+
+
+.wrap-user{
+    
+    p.description{
+            
+            padding:0.4em;
+        }
+    
+     p.nbarticles{
+            
+            text-align:center;
+            a{
+                color:$pink; 
+            }
+        }
+    
+    img{
+        
+         border:solid thin #ccc;
+        margin:0.1em;
+        max-width: 100%;
+    }
+    
+    border:solid thin #ccc;
+    -webkit-box-shadow: 2px 2px 1px 1px rgba(117,117,117,0.36);
+    -moz-box-shadow: 2px 2px 1px 1px rgba(117,117,117,0.36);
+    box-shadow: 2px 2px 1px 1px rgba(117,117,117,0.36);
+     margin-bottom:2em;
+        
+    h4{
+        
+        text-align:center;
+        font-family: 'Glass Antiqua', cursive;
+        margin-top:1.1em;
+        a{
+            
+          color:$pink;  
+        }
+         
+        
+    }
+   
+}
+
+/*  Article  
+_________________________________________________________ */
+
+.wrap-txt-profil{
+    
+    border: solid thin #ccc;
+    padding: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 3em;
+    height: 380px;
+    position: relative;
+    
+        
+    .lire{
+        
+        position: absolute;
+        bottom:3px;
+        left:50%;
+        margin-left:-25px;
+    }
+    
+    .btn{
+        
+        position:absolute;
+        bottom:10px;
+        left:50%;
+        margin-left:-52px;
+    }
+    
+    p{
+        
+        font-size:0.9em;
+    }
+    
+    
+        
+    a.btn:visited{
+        
+        color:white;
+    }
+}
+
+.wrap-articles{
+    
+    .container{
+        position: relative;
+    }
+    
+    img.thumb{
+        margin-bottom:1em;    
+    }
+    
+    .fleur-art{
+        
+        position:absolute;
+        right: 31%;
+        top: 47%;
+        
+    }
+    
+    .wrap-img-text{
+        border:solid thin #555;
+    }
+    
+    .wrap-article:hover h7{
+        
+        color:white;
+    }
+   
+    
+    .wrap-article{
+        
+        h5{
+    
+                position: relative;
+                z-index: 1;
+                font-size: 1em;
+                text-align: center;
+
+                span{
+
+                    background: #fff;
+                    padding: 0 15px;
+                    
+                }
+
+            }
+
+            h5:before{
+
+                border-top: 2px solid #dfdfdf;
+                content: "";
+                margin: 0 auto;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 95%;
+                z-index: -1;
+        }
+            
+
+        
+        h3{
+            text-align:center;
+            color:$pink;
+            font-size: 1.2em;
+            margin-bottom:1.4em;
+            height:60px;
+            margin-top:1em;
+        }
+        
+        .btn-primary{
+            
+            background-color:black;
+            border-radius: 0px !important;
+            margin-top:1em;
+        }
+        
+        h7{
+            font-size:0.9em;
+            font-family: 'Glass Antiqua', cursive;
+            color:$pink;
+        }
+        
+        h6{
+            
+            font-size:0.8em;
+            
+        }
+        
+    }
+    
+    .wrap-blogueuse{
+            
+     background-color:white;
+     transition: background-color 0.5s ease;
+        
+    }
+    
+    .wrap-blogueuse:hover{
+        
+        background-color:$pink;
+        color:white;
+
+    }
+    
+    
+    .wrap-blogueuse{
+        
+        border:solid thin #666;
+        padding:0.2em;
+        text-align:center;
+        h5{
+            
+            
+        }
+        
+        h6{
+            
+            
+        }
+    }
+    
+    width:100%;
+    float:left;
+    
+    .titre{
+        
+        h3{
+            
+            text-transform: uppercase;
+            font-size: 3em;
+            margin-top: 1em;
+            position: relative;
+            z-index: 1;
+            
+            span{
+        
+                    background: #fff;
+                    padding: 0 15px;
+                }
+        }  
+        
+        h3:before{
+    
+                border-top: 2px solid #dfdfdf;
+                content: "";
+                margin: 0 auto;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 95%;
+                z-index: -1;
+            }
+        
+        h4{
+            
+            text-transform:uppercase;
+            font-size:2em;
+            color:#a01940;
+            font-family: 'Glass Antiqua', cursive;
+            margin-bottom:2em;
+
+        }
+        h1.art_h1 {
+
+            
+            text-transform: uppercase;
+            font-size: 3em;
+            margin-top: 1em;
+            position: relative;
+            z-index: 1;
+            
+            span{
+        
+                    background: #fff;
+                    padding: 0 15px;
+                    color : #212529;
+                    font-family: 'Open Sans', sans-serif;
+                }
+        }
+        
+        h1.art_h1:before{
+    
+                border-top: 2px solid #dfdfdf;
+                content: "";
+                margin: 0 auto;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 95%;
+                z-index: -1;
+            }
+    }
+}
+@media (max-width: 580px) {
+    .wrap-articles {
+        .wrap-blogueuse{
+            border:none;
+        }
+    }
+}
+.wrap-merci{
+    
+    
+    position:relative;
+    background: url(images/bandeau-merci-a-nos-blogueuses-la-demoisaile.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+        width: 100%;
+    height: 400px;
+    float: left;
+    border-top:solid thin #ccc;
+    border-bottom:solid thin #ccc;
+    text-align: center;
+        
+    .merci{
+        
+        /*float:left;*/
+        font-size:2.2em;
+        font-family: 'Glass Antiqua', cursive;
+        color:white;
+        padding:0.2em 0.8em;
+        margin-top:1.3em;
+        text-transform: uppercase;
+            
+        span{
+            font-size:120%;
+        }
+    }
+}
+
+.wrap-commanditaire{
+    
+    padding:0.3em;
+    border:solid thin whitesmoke;
+    -webkit-box-shadow: 4px 3px 5px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 3px 5px -6px rgba(0,0,0,0.75);
+box-shadow: 4px 3px 5px -6px rgba(0,0,0,0.75);
+        
+}
+
+.article-ecole{
+    
+    h5{
+        
+        font-size:0.7em;
+        margin-top:0.2em;
+        text-align:center;
+    }
+    h7{        
+        font-size:1em;
+        margin-top:0.2em;
+        text-align:center;
+        display: block;
+    }
+    
+    .wrap-blogueuse{
+        
+        border:solid thin #ccc;
+    }
+}
+
+.video {
+
+
+
+
+
+.btn-video-principal {
+    
+    
+    position:relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    
+    
+        
+    .fa-5x {
+        font-size: 10em;
+        color:black;
+    }
+    
+     .fa-play-circle{
+    
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-62px;
+        margin-top:-62px;
+        z-index:99;
+    
+    }
+
+    }
+}
+
+
+    
+
+.vertical{
+    
+    margin-bottom:1em;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.btn-video_img{
+    
+    position:relative;
+    
+    
+        
+        .fa-5x {
+            font-size: 5em;
+            color:black;
+        }
+    
+     .fa-play-circle{
+    
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-35px;
+        margin-top:-35px;
+        z-index:99;
+    
+    }
+}   
+
+#navbarFooter{
+    
+    ul{
+        
+        background-color:$pink;
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin: 0.8em 0;
+        
+        li{
+            list-style:none;
+            float:left;
+            margin:0 0;
+            
+            a{
+                
+                color: white;
+                text-align: center;
+                font-size: 1em;
+                
+            }
+            
+        }
+    }
+}
+
+
+
+.wrap-social{
+    
+    margin-top:2em;
+    
+    .fb-root{
+        
+        margin-top:2em;
+    }
+    
+    background-image:url("images/bg-tissu.jpg");
+    float:left;
+    width: 100%;
+    height: auto;
+    padding:2em 0;
+    
+    .insta{
+        
+        width: 100%;
+        float:left;
+        display: block;
+        text-align: center;
+        color:white;
+        font-family: 'Glass Antiqua', cursive;
+        font-size: 2em;
+    }
+}
+.entry-content a{
+    
+    color:$pink;
+}
+body.home .wrap-social {
+    margin-top: 0em;
+    
+}
+
+.wrap-logo{
+    
+    float:left;
+    width:100%;
+    padding:2em 0;
+    
+    h4{
+        
+        float:left;
+        width:100%;
+        text-align:center;
+        margin-bottom:1.7em;
+    }
+}
+.logo_part {
+    img {
+        width: 100%;
+    }
+}
+.wrap-footer{
+    
+    float:left;
+    width:100%;
+    background-color:black;
+    color:white;
+    border-top:solid thin #ccc;
+    
+    
+    .site-info{
+    
+    p{
+        color:white;
+        margin-top:0.4em;
+        margin-bottom: 0.5em;
+        
+        a{
+                color:white;
+            }
+        
+    }
+}
+    
+}
+
+body.page-id-6 .modal-content, .site_ecole_quiestlademoisaile .modal-content{
+    
+    padding:2em;
+    line-height:1.6;
+}
+
+
+
+.widget-fondateurs{
+    
+    img{
+    
+    margin-top:2.6em;
+    }
+    
+    h4{
+        
+        font-size:0.9em;
+        font-weight:700;
+        margin-top:0.8em;
+        
+        a{
+            
+            color:$pink;
+        }
+    }
+    
+}
+
+.wrap-ecole-participante{
+    
+    background-image: url(images/slider-la-demoisaile.jpg);
+    background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+   
+    h3{
+        
+        color:$pink;
+        font-family: 'Glass Antiqua', cursive;
+        margin-top:1em;
+        font-size:3em;
+    }
+    
+    span{
+        
+        font-weight:700;
+    }
+    
+    h4{
+        
+        margin-top:4em;
+        
+    }
+    
+    .inscris{
+        
+        padding:0.4em 1.6em;
+        color:white;
+        background-color: $pink;
+        margin-bottom:2em;
+        margin-top:2em;
+        float:left;
+        font-size:1.6em;
+        font-family: 'Glass Antiqua', cursive;
+        transition: background-color 0.5s ease;
+        -webkit-box-shadow: 3px 3px 3px 3px #454345;
+        box-shadow: 3px 3px 3px 3px #adadad;
+
+    }
+    
+    .inscris:hover{
+        
+        background:black;
+
+    }
+}
+@media (max-width: 1400px) {
+    .wrap-ecole-participante{    
+        margin-top: 80px;
+    }
+}
+@media (max-width: 1100px) {
+    .wrap-ecole-participante{ 
+        margin-top: 60px;
+    }
+}
+@media (max-width: 780px) {
+    .wrap-ecole-participante{ 
+        margin-top: 0;
+        h4 {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.ecole-participantes{
+    
+    h1{
+        
+        text-align:center;
+        font-family: 'Glass Antiqua', cursive;
+        color:$pink;
+        font-size:2em;
+        margin-top: 15px;
+    }
+}
+
+.wrap-ecole:hover{
+    
+    background-color: #f7f7f7;
+}
+
+.wrap-ecole{
+    
+    padding-top:0.8em;
+    float:left;
+    width:100%;
+    transition: background-color 0.5s ease;
+    -webkit-box-shadow: 3px 3px 3px 3px #454345;
+    box-shadow: 3px 3px 3px 3px #adadad;
+    background-color: white;
+    transition: background-color 0.5s ease;
+    min-height: 400px;
+    
+    img{
+        
+        width:80%;
+    }
+        
+    h4{
+        color:$pink;
+        font-size:1em;
+        font-weight: 700;
+        margin-top:0.4em;
+        
+    }
+    
+    h5{
+        
+        margin-top:0.8em;
+        font-family: 'Glass Antiqua', cursive;
+    }
+    
+    h5::first-letter{
+        
+        
+        text-transform:uppercase;
+    }
+}
+
+.wrap-contactez-nous{
+    
+    border-top:solid thin #ccc;
+    border-bottom:solid thin #ccc;
+    padding:1em 0;
+    position: relative;
+    background-color: rgba(103, 91, 75, 0.1);
+    
+    h3{
+        
+
+        margin-left:22%;
+        text-transform:uppercase;
+        margin-bottom:0.5em;
+        font-size:2.4em;
+
+    }
+    h1.h1_contact {
+
+        margin-left:22%;
+        text-transform:uppercase;
+        margin-bottom:0.5em;
+        font-size:2.4em;
+        color : #212529;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    p{
+        
+        color:$pink;
+        line-height:1.6;
+        margin-left:20%;
+        font-size:1.2em;
+    }
+    
+    .fleur{
+        
+        position:absolute;
+        left:0;
+        bottom:-13%;
+        background-image: url(images/contact-fleur.png);
+        background-repeat: no-repeat;
+        width:300px;
+        height:300px;
+    }
+}
+
+.wrap-ecole-bienvenue{
+    
+    background-image: url(images/bg-bienvenu-ecole-la-demoisaile.jpg);
+    background-position: center center;
+    
+    background-size:  cover;
+    padding-bottom:0em;
+        
+    h1{
+        
+        color:black;
+        font-size:2.5em;
+        line-height: 2;
+        text-shadow: 1px 1px #fff;
+    }
+    
+    p{
+        
+        font-size:1.4em;
+        text-transform:uppercase;
+        margin-bottom:1.8em;
+    }
+}
+.wrap-ecole-bienvenue.soumission {
+    margin-top: 30px;
+}
+
+.articles-recents{
+    
+    text-align:center;
+    border-bottom:solid thin #ccc;
+    margin-bottom:2em;
+    text-transform: uppercase;
+    font-size:1.8em;
+    color:$pink;
+    margin-top:1.8em;
+    line-height:2;
+}
+h1.articles-recents.h1_rc {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h5.categorie{
+    
+    position: relative;
+    z-index: 1;
+    
+    span{
+        
+        background: #fff;
+        padding: 0 15px;
+    }
+
+}
+
+h5.categorie:before{
+    
+    border-top: 2px solid #dfdfdf;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+}
+
+h3.article-title{
+    
+    color:$pink;
+    font-size:1.2em;
+    text-align:center;
+    height:60px;
+}
+
+.wrap-marie-mathieu{
+    
+    h4{
+        
+        color:$pink;
+        text-align: center;
+        line-height: 2;
+        font-family: 'Glass Antiqua', cursive;
+        font-size:1.6em;
+        a{
+            color:$pink;
+        }
+
+    }
+    
+    position:relative;
+    
+    .bloc-gris{
+        position:absolute;
+        width:105%;
+        left:-5%;
+        height:95%;
+        top:5%;
+        background:#0c0c0c;
+        z-index:-99;
+        
+    }
+        
+    img{
+        
+        
+        /*width: 95%;*/
+        width: 270px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.bloc-fond{
+    
+    h4{
+        
+    }
+}
+
+.modal-sm {
+    max-width: 600px;
+}
+
+
+
+
+.wrap-consultez{
+    
+    /*background-image: url(images/bg-bienvenu-ecole-la-demoisaile.jpg);*/
+    background-image: url(images/like_face.png);    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 2em 0;
+    position:relative;
+    float:left;
+    width:100%;
+
+    
+    span.motif{
+        
+        position:absolute;
+        background-image: url(images/motif.png);
+        right: 29%;
+        bottom: 10%;
+        width:341px;
+        height:98px;
+    }
+    
+    .btn-trouver{
+        
+        background:#f3f3f3;
+        border:solid thin #262626;
+        padding:0.6em 3em;
+        margin-left:20%;
+        font-size:1.4em;
+        margin-top:1.4em;
+        float:left;
+        transition: background-color 0.5s ease;
+
+
+    }
+    
+     .btn-trouver:hover{
+        
+        background:$pink;
+        color:white;
+        
+    }
+    
+    h5{
+        font-size:1.7em;
+        font-family: 'Glass Antiqua', cursive;
+        padding:0 4em;
+        line-height: 1.8;
+    }
+}
+
+#field_2_5, #field_2_6, #field_2_7, #field_2_8{
+    
+    width:50%;
+    float:left;
+}
+
+.gform_wrapper ul li.gfield {
+    clear: none !important;
+}
+
+.gform_wrapper .top_label input.medium, .gform_wrapper .top_label select.medium {
+    width: calc(100% - 8px) !important;
+}
+
+body.page-template-contact #field_2_2, body.page-template-contact #field_2_4 {
+    
+    display:none;
+}
+
+.contact-form{
+        
+    background-color: rgba(210, 210, 210, 0.1);
+    
+    #gform_submit_button_2{
+    
+    font-size: 1em;
+    width: 100%;
+    margin: 0 16px 0 0;
+    border:solid thin #ccc;
+    background-color: white;
+    transition: background-color 0.5s ease;
+    }
+
+    #gform_submit_button_2:hover{
+
+        background-color: $pink;
+        color:white;
+    }
+
+    #field_2_9{
+
+        margin-top: 1em;
+        float: left;
+        width:100%;
+    }
+    
+    h5 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top:1.3em;
+    font-size:2.6em;
+    font-family: 'Glass Antiqua', cursive;
+    }
+    
+    h5 span {
+        background: #efeeec;
+        padding: 0 15px;
+    }
+    
+    h5:before {
+            border-top: 2px solid #dfdfdf;
+            content: "";
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 95%;
+            z-index: -1;
+        }
+    
+}
+
+.single-article{
+    
+    
+    .single-article-img{
+        margin-top:2em;
+    }
+    
+    h5::before {
+        font-family: 'Glass Antiqua', cursive;
+        border-top: 2px solid #dfdfdf;
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+    
+    h5 {
+        font-family: 'Glass Antiqua', cursive;
+        position: relative;
+        z-index: 1;
+        font-size: 2.2em;
+        text-align: center;
+        margin-top:1em;
+        
+            span {
+            background: #fff;
+            padding: 0 15px;
+        }
+    }
+    
+
+}
+
+
+.auteur-single{
+    
+    h3{
+        
+        a{
+            
+                color: $pink;
+                line-height: 2;
+                margin-top: 1em;
+                float: left;
+                width: 100%;
+                    }
+    }
+    
+    p{
+        
+        font-size:0.9em;
+    }
+}
+
+.wrap-ecrivez-nous{
+    
+    background-color: rgba(103, 91, 75, 0.1);
+    padding-top:2em;
+    padding-bottom:2em;
+    
+    
+    .text{
+        
+        .fleur-droite{
+            
+            position:absolute;
+            right:0%;
+            bottom:20%;
+        }
+        
+        h4{
+            color:$pink;
+            margin-top:3em;
+            font-family: 'Glass Antiqua', cursive;
+            font-size:2.6em;
+            margin-bottom:1em;
+        }
+        
+        p{
+            
+            color:$pink;
+            font-size:1.4em;
+            line-height:1.8;
+        }
+    }
+    
+    
+    
+    
+}
+
+
+.titre-cat{
+    
+    .breadcrump{
+        
+        margin-top:0.8em;
+        float:left;
+    }
+    
+    h1{
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        margin-top:1em;
+        
+        span{
+            text-transform:uppercase;
+            font-weight:700;
+            text-align: center;
+ 
+        }
+    }
+    
+    h5 {
+    position: relative;
+    z-index: 1;
+    text-align:center;
+    margin-bottom:2em;
+    }
+    
+    h5:before {
+        border-top: 2px solid #dfdfdf;
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+    
+    h5 span {
+        background: #fff;
+        padding: 0 15px;
+    }
+}
+
+.breadcrump{
+    
+    margin-top:2em;
+}
+
+.wrap-user-arvhive{
+    
+    background:#e9e9e9;
+    padding:2em;
+    margin-bottom:3em;
+    margin-top:2em;
+    
+    .auteur{
+        
+        padding:0.5em;
+        background-color: darkgray;
+        border: solid thin #666;
+        max-width: 100%;
+    }
+    
+    h5{
+        
+        color:$pink;
+        font-size: 2em;
+        margin-top:1em;
+        margin-bottom:1em;
+    }
+    
+    h3{
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color:$pink;
+        font-size: 3em;
+        font-family: 'Glass Antiqua', cursive;
+        margin-bottom:1em;
+    }
+        
+    h3:before{
+        border-top: 2px solid #727272;
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 95%;
+        z-index: -1;
+
+    }
+    
+    h3 span {
+        background: #e9e9e9;
+        padding: 0 15px;
+    }
+    
+    h1.h1_prof{
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color:$pink;
+        font-size: 3em;
+        font-family: 'Glass Antiqua', cursive;
+        margin-bottom:1em;
+    }
+        
+    h1.h1_prof:before{
+        border-top: 2px solid #727272;
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 95%;
+        z-index: -1;
+
+    }
+    
+    h1.h1_prof span {
+        background: #e9e9e9;
+        padding: 0 15px;
+    }
+    
+    h4{
+        
+        a{
+            
+            color:$pink;
+        }
+    }
+}
+
+.deconnection{
+    
+        color: white;
+    line-height: 1;
+    margin-right: 0.5em;
+    margin-top: 1.2em;
+    font-size: 0.9em;
+}
+.archive-author{
+    
+    .wrap-txt-profil{
+        
+        height: 380px;
+    }
+    
+    
+    h5.categorie {
+        position: relative;
+        z-index: 1;
+        font-size: 0.7em;
+        margin-top: 0.2em;
+        text-align: center;
+    }
+    
+}
+
+
+
+
+.wrap-blogueuse h6{
+    
+    font-size:0.8em;
+    text-align: center;
+}
+
+.img-single{
+    
+    width:100%;
+    display: block;
+    margin-bottom:2em;
+    margin-top:2em;
+    
+}
+
+ul#auteur-info{
+    
+    float: left;
+width: 50%;
+margin-right: 50%;
+padding: 1em;
+background-color: #fafafa;
+    
+        
+    li{
+        
+        float:left;
+        width:100%;
+        list-style:none;
+        border-bottom:solid thin white;
+            
+        a{
+            
+            color:$pink;
+        }
+    }
+}
+
+.single{
+    
+    h1{
+        
+        font-family: 'Glass Antiqua', cursive;
+        text-align:center;
+        font-size: 2.8em;
+        color:black;
+    }
+    
+     h5{
+    
+         font-family: 'Glass Antiqua', cursive;
+         position: relative;
+         z-index: 1;
+         font-size: 2.2em;
+         text-align: center;
+
+         span{
+
+             background: #fff;
+             padding: 0 15px;
+             
+         }
+
+     }
+
+     h5:before{
+
+         font-family: 'Glass Antiqua', cursive;border-top: 2px solid #dfdfdf;
+         content: "";
+         margin: 0 auto;
+         position: absolute;
+         top: 50%;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: 95%;
+         z-index: -1;
+     }
+}
+
+.btn-circle {
+    border-radius: 50%;
+	width: 60px;
+	height: 60px;
+    background-color: #3b5998;
+    float:left;
+    text-align: center;
+    
+    
+    .fa{
+        
+        color:white;
+        margin-top:14px;
+    }
+}
+
+.partagez{
+    
+    margin-top:16px;
+    margin-left:10px;
+    float:left;
+    font-weight:700;
+}
+
+
+a.btn-auteur{
+    background:black;
+    color:white;
+    transition: background-color 0.5s ease;
+    padding: 1em 2em;
+
+}
+
+a.btn-auteur:hover{
+    
+    background:$pink;
+
+}
+
+
+.list-user{
+    
+    .user-9, .user-13, .user-12{
+        
+        display:none;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+## Media Queries
+--------------------------------------------------------------*/
+
+
+
+
+.logo_local {
+	position: absolute;
+	right: 100px;
+	top: 35px;
+	z-index: 11;
+}
+
+
+.fancybox-slide--iframe .fancybox-content {
+	width  : 500px !important;
+	height : 300px !important;
+	margin: 0;
+}
+
+.class_news .tnp-subscription label {
+	display: none;
+}
+.class_news .tnp-subscription input[type="email"] {
+	width: 220px;
+	height: 35px;
+}
+.class_news .tnp-field.tnp-field-email, .tnp-field.tnp-field-button {
+	display: inline-block;
+}
+.class_news .tnp-subscription {
+	margin: 0 0 0 40px;
+}
+.wrap-social .class_news .insta {
+	text-align: left;
+}
+.fa.fa-envelope-square {
+	font-size: 40px;
+}
+.class_news_merci {
+	font-size: 0.6em;
+	margin: 0 0 0 15px;
+	vertical-align: top;
+}
+
+
+
+
+.like_face {
+	width: 100%;
+	background: #797979;
+	padding: 12px 0 18px;
+	text-align: center;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	color: #FFF;
+	font-size: 20px;
+	font-family: 'Glass Antiqua', cursive;
+}
+.like_face .fb-like {
+	margin-right: 35px;
+}
+.like_face .fa {
+	color: #CB1E22;
+	font-size: 30px;
+	vertical-align: -5px;
+}
+nav.fixed-top {
+	top: 53px;
+}
+@media (max-width: 780px) {
+    .like_face {
+        position: relative;
+        margin-top: -30px;
+    }
+}
+@media (max-width: 600px) {
+    .like_face {
+        margin-top: -50px;
+    }
+}
+body {
+    padding-top: 105px !important;
+}
+.iframe_tube {
+	margin-bottom: -10px;
+}
+#imageAccueil .carousel {
+	position: absolute;
+	top: 70%;
+	left: 12%;
+	width: 76%;
+	background: rgba(255,255,255,0.18);
+	font-family: 'Glass Antiqua', cursive;
+}
+#imageAccueil .carousel .car_text {
+	width: 100%;
+	display: block;
+	float: none;
+	font-weight: bold;
+}
+#imageAccueil .carousel .car_title {
+	width: 100%;
+	display: block;
+	float: none;
+	margin-top: 25px;
+	font-style: italic;
+}
+.carousel-control-next {
+    width: 25px;
+    color: #939393;
+    text-align: center;
+    opacity: .5;
+    right: -35px;
+}
+.carousel-control-prev {
+    width: 25px;
+    color: #939393;
+    text-align: center;
+    opacity: .5;
+    left: -35px;
+}
+.carousel-control-next .fa, .carousel-control-prev .fa {
+    color: #292B2C;
+    font-size: 30px;
+}
+
+
+
+
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /*font-family: "Playfair Display", Georgia, "Times New Roman", serif;*/
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  /*height: 100%;*/
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.viweb_media_homepage .card-body {
+    width: 70%;
+}
+.viweb_media_homepage .card-body h5 {
+    max-width: 100%;
+}
+.viweb_media_homepage .card > a {
+    width: 30%;
+}
+@media (max-width: 990px) { 
+    .viweb_media_homepage .card-body {
+        width: inherit;
+    }   
+
+    .viweb_media_homepage .card > a {
+        width: inherit;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/*
+ * Blog name and description
+ */
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+#mc_embed_signup input.email {
+    width: 220px !important;
+}
+#mc_embed_signup .button {
+    background-color: #444 !important;
+}
+#mc_embed_signup {
+    background: inherit !important;
+}
+#mc_embed_signup form {
+    text-align: left !important;
+}
+.fa.fa-envelope-square {
+    text-align: center;
+    color: white;
+    margin-right: 5px;
+    font-size: 35px;
+}
+
+.corps_popup {
+    text-align: center;
+    background: url(images/back_popup.jpg) no-repeat;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+    .text_h1 {
+        color: #ed3c6f;
+        font-size: 60px;
+        line-height: 58px;
+        font-family: 'Glass Antiqua', cursive;
+        margin: 0 0 35px 0;
+    }
+    .text_h2 {
+        color:#f0f0f0;
+        font-size: 24px; 
+        line-height: 22px;
+        font-family: 'Glass Antiqua', cursive;
+        padding: 55px 0 55px 0;
+        margin: 0;
+    }
+    .tnp-subscription-minimal input.tnp-email {
+        width: 255px;
+        background: rgba(255,255,255,0.5);
+        border: none;
+        height: 35px;
+
+    }
+    .tnp-subscription-minimal input.tnp-submit {
+        width: 50px;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 10px;
+        border: 1px;
+            border-top-color: currentcolor;
+            border-right-color: currentcolor;
+            border-bottom-color: currentcolor;
+            border-left-color: currentcolor;
+        border-color: #ddd;
+        background-color: #444;
+        background-image: none;
+        text-shadow: none;
+        color: #fff;
+        font-size: 14px;
+        line-height: 20px;
+        box-sizing: border-box;
+        border-radius: 0px;
+    }
+}        
+@media (max-width:540px) {
+    .corps_popup {
+        .tnp-subscription-minimal input.tnp-email {
+            width: 80%;
+            background: rgba(255,255,255,0.5);
+
+        }
+        .tnp-subscription-minimal input.tnp-submit {
+            width: 10%;
+        }
+
+    }
+}  
+.site-main.padd {
+    padding-top: 95px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #FFF !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,.75) !important;
+}
+
+.list_posts .lp_element {
+    display: none;
+}
+.loadmore {
+    margin:10px 0 25px;
+    text-align: center;
+    a.btn {
+        padding-left: 55px;
+        padding-right: 55px; 
+    }
+}
+.clear {
+    clear: both;
+}
+
+.img_soum {
+    width: 100%;
+    min-height: 600px;
+    text-align: center;
+    padding: 20% 0 0 0;
+    position: relative;
+    margin: 25px 0 0 0;
+    h2 {
+        font-family: 'Glass Antiqua', cursive;
+        font-size: 45px;
+    }
+    img {
+        margin-left: 250px;
+    }
+}
+.img_soum::after {
+
+  content: "";
+  background: url(images/soumission.png) no-repeat center center; 
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+@media (max-width: 990px) {
+    .img_soum {
+        h2 {
+            font-size: 35px;
+        }
+        img {
+            margin-left: 0;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .img_soum {
+        h2 {
+            font-size: 22px;
+        }
+        img {
+            margin-left: 0;
+            width: 60%;
+        }
+    }
+}
+.article_search {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #CCC;
+}
+h4.h4_command {
+    text-align: left;
+    margin-bottom: 45px;
+    span {
+        display: inline-block;        
+        width: -moz-calc(100% - 250px);
+        width: -webkit-calc(100% - 250px);
+        width: calc(100% - 250px);
+
+        font-size: 1.3rem;
+    }
+    .commanditaire {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 240px;
+    }
+}    
+@media (max-width: 780px) {
+    h4.h4_command {
+
+        text-align: center;
+        margin-bottom: 25px;
+        span {
+            display: inline-block;        
+            width: 100%;
+        }
+        .commanditaire {
+            margin: 25px 0 0 0;
+            position: relative;
+            width: 100%;
+        }
+    }    
+}
+.col_med_1 {
+    
+}
+.col_med_2 {
+    text-align: center;
+}
+.col_med_3 { 
+    text-align: right;   
+}
+@media (max-width: 990px) {
+    .col_med_1 {     
+        text-align: center;      
+    }
+    .col_med_2 {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .col_med_3 { 
+        text-align: center;
+        margin-bottom: 5px;  
+    }    
+    .jumbotron.jumbotron_media {
+        margin-bottom: 0;
+    }
+}
+.navbar-dark .navbar-nav .nav-link.button_art.btn-primary {
+    /*background: #797979;*/
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navbar-dark .navbar-nav .nav-link.button_art.btn-primary:hover {
+    background: #000; 
+}
+
+.share_button {
+    a {
+        margin: 0 10px 0 0
+    }
+    a.fa-facebook {
+        background: #3B5998;
+        color: white;
+
+    }
+    a.fa-envelope {
+    }
+    .fa {
+        padding: 5px 0 0;
+        font-size: 30px;
+        line-height: 30px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+    .fa:hover {
+        color: white;
+        opacity: 0.8;
+    }
+}
+.art_content {
+    p {
+        font-size:15px !important;
+        font-family:Georgia,serif;
+        background-color:white;
+        color:#212121;
+        span {
+            font-size:15px !important;
+        }
+    }
+}
+.submenu_ecole {
+    display: none;
+    position: absolute;
+    background: #343A40;
+    padding: 0 10px 10px;
+    li {
+        list-style: none;
+        a {
+            color: #FFF;
+        }
+    }
+}
+.dernier_articles {
+    h3 {
+        color: #ed3c6f;
+    }
+    img {
+        width: 120px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .da_bloc {
+        border-bottom: 1px solid #ed3c6f;
+        padding: 5px 0 25px;
+        margin: 0 0 0 0;
+    }
+    .da_descript {
+
+        display: inline-block;
+        width: -moz-calc(100% - 140px);
+        width: -webkit-calc(100% - 140px);
+        width: calc(100% - 140px);
+        font-size: 13px;
+
+        span {
+            font-size: 13px !important;
+        }
+
+    }    
+
+}
+.logo_mira {
+    text-align: center;
+    margin: 20px 0 0;
+    img {
+        height: 80px;
+        margin: 0 20px 0 20px;
+    }
+}
+.iframe_y {
+    display: none;
+}
+.div_ifry {
+    height: 450px;
+    background: url(images/photo-video-lademoisaile.png) no-repeat center center; 
+    background-size: cover;
+    cursor: pointer;
+}

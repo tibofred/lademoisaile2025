@@ -1,0 +1,412 @@
+		<!-- ===============================
+			Navigation Start
+		====================================-->
+		<nav class="navbar navbar-expand-lg bb-1 navbar-light theme-bg br-theme fixed-top" id="mainNav">
+			
+			<!-- Start Header -->
+			<header class="header-logo theme-bg bb-1 br-1 br-light">
+				<a class="nav-link cl-white text-center mr-lg-3 hidden-xs" id="sidenavToggler"><i class="ti-align-left"></i></a>
+				<a class="cl-white navbar-brand" href="{{ path('site_homepage')}}">DeMois'aile</a>
+			</header>
+			<!-- End Header -->
+			
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="ti-align-left"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				 
+				<!-- =============== Start Side Menu ============== -->
+				<div class="navbar-side">
+				  <ul class="navbar-nav navbar-sidenav bg-light-dark" id="exampleAccordion">
+				  
+				   
+					
+					
+                      
+                      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+                        
+					  <a class="nav-link" href="{{ path('site_admin') }}">
+						<i class="ti i-cl-1 ti-dashboard"></i>
+						<span class="nav-link-text">Tableau de bord</span>
+					  </a>
+					</li>
+                      
+                        <!-- Ressource -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+                        
+					  <a class="nav-link" href="{{ path('site_admin_ressources') }}">
+						<i class="ti i-cl-2 ti-layers"></i>
+						<span class="nav-link-text">Ressources</span>
+					  </a>
+					</li>
+					<!-- End Pages -->
+                      
+  
+
+                        
+                          <!-- Ressource -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+                        
+					  <a class="nav-link" href="{{ path('site_admin_blogueuses') }}">
+						<i class="ti i-cl-2 ti-layers"></i>
+						<span class="nav-link-text">Blogueuse</span>
+					  </a>
+					</li>
+					<!-- End Pages -->
+                      
+
+					      
+                    <!-- Ressource -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+                        
+					  <a class="nav-link" href="{{ path('site_admin_article') }}">
+						<i class="ti i-cl-2 ti-layers"></i>
+						<span class="nav-link-text">Articles</span>
+					  </a>
+					</li>
+					<!-- End Pages -->
+                      
+                      
+                      
+					{% if is_granted('ROLE_ADMIN') %}
+					<!-- Pages -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+                        
+					  <a class="nav-link" href="{{ path('site_admin_pages') }}">
+						<i class="ti i-cl-2 ti-layers"></i>
+						<span class="nav-link-text">Pages</span>
+					  </a>
+					</li>
+					<!-- End Pages -->
+                      
+                      <!-- Écoles -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+					  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Components" data-parent="#exampleAccordion">
+						<i class="ti i-cl-6 ti-home"></i>
+						<span class="nav-link-text">Écoles</span>
+					  </a>
+					  <ul class="sidenav-second-level collapse" id="Components">
+					   
+                          
+                          
+                         <li>
+						  <a href="{{ path('site_admin_ecoles')}}">Liste</a>
+						</li>
+                          
+						<li>
+						  <a href="{{ path('site_admin_regions')}}">Régions</a>
+						</li>
+                          
+                          <li>
+						  <a href="{{ path('site_admin_commissions')}}">Centre de services</a>
+						</li>
+                          
+                          
+						
+						
+					  </ul>
+					</li>
+					<!-- End écoles -->
+                      
+                      <!-- Témoignage -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="navTemoignage">
+					  <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#navTemoignage" data-parent="#navtemoignage">
+						<i class="ti i-cl-6 ti-home"></i>
+						<span class="nav-link-text">Témoignages</span>
+					  </a>
+					  <ul class="sidenav-second-level collapse" id="navTemoignage">
+					   
+                          
+                          
+                         <li>
+						  <a href="{{ path('site_admin_temoignages')}}">Liste</a>
+						</li>
+                          
+						
+						
+					  </ul>
+					</li>
+					<!-- End écoles -->
+                      
+                      
+                     <!-- Ressource -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+                        
+					  <a class="nav-link" href="{{ path('viweb_user_liste') }}">
+						<i class="ti i-cl-2 ti-layers"></i>
+						<span class="nav-link-text">Utilisateurs</span>
+					  </a>
+					</li>
+					<!-- End Pages -->
+                      
+                      
+                      <!-- Ressource -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Projects">
+                        
+					  <a class="nav-link" href="{{ path('site_admin_media') }}">
+						<i class="ti i-cl-2 ti-layers"></i>
+						<span class="nav-link-text">Médias</span>
+					  </a>
+					</li>
+					<!-- End Pages -->
+                      
+                      
+                      <!-- Ressource -->
+					<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Inscriptions">
+                        
+					  <a class="nav-link" href="{{ path('viweb_admin_inscription_all') }}">
+						<i class="ti i-cl-2 ti-layers"></i>
+						<span class="nav-link-text">Inscriptions</span>
+					  </a>
+					</li>
+					<!-- End Pages -->
+					
+					<!-- Start Advance Pages -->
+                      
+                    {% endif %}
+                      
+                      
+                  
+ 
+					
+					
+                   
+					
+				
+				  </ul>
+			  </div>
+			 <!-- =============== End Side Menu ============== -->
+			  
+			  <!-- =============== Search Bar ============== -->
+			  <ul class="navbar-nav ml-left">
+				<li class="nav-item">
+				  <form class="form-inline my-2 my-lg-0 mr-lg-2">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="button">
+							  <i class="ti-search"></i>
+							</button>
+						</span>
+					  <input class="form-control" type="text" placeholder="Type In TO Search">
+					</div>
+				  </form>
+				</li>
+			  </ul>
+			  <!-- =============== End Search Bar ============== -->
+			  
+			  <!-- =============== Header Rightside Menu ============== -->
+			  <ul class="navbar-nav ml-auto">
+			  
+				<!-- Messages -->
+				<li class="nav-item dropdown">
+					 <a class="nav-link dropdown-toggle mr-lg-3 a-topbar__nav a-nav" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="cl-white ti-email"></i>
+						<span class="a-nav__link-badge a-badge bg-white theme-cl">3</span>
+						<span class="hidden-lg hidden-md mrg-l-10">New Notification</span>
+					 </a>
+					 <div class="dropdown-menu animated flipInX" aria-labelledby="messagesDropdown">
+						<div class="dropdown-header text-center pink-bg">
+							<span class="a-dropdown__header-title">3 New</span>
+							<span class="a-dropdown__header-subtitle">User Messages</span>
+						</div>
+						<div class="ground-list ground-list-hove" id="message-box">
+							<div class="ground ground-single-list">
+								<a href="#">
+									<img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
+									<span class="profile-status bg-online pull-right"></span>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Co-Founder</small>
+								</div>
+
+								<div class="ground-right">
+									<span class="small">Online</span>
+								</div>
+							</div>
+							
+							<div class="ground ground-single-list">
+								<a href="#">
+									<img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
+									<span class="profile-status bg-offline pull-right"></span>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Co-Founder</small>
+								</div>
+
+								<div class="ground-right">
+									<span class="small">10 Min Ago</span>
+								</div>
+							</div>
+							
+							<div class="ground ground-single-list">
+								<a href="#">
+									<img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
+									<span class="profile-status bg-working pull-right"></span>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Co-Founder</small>
+								</div>
+
+								<div class="ground-right">
+									<span class="small">20 Min Ago</span>
+								</div>
+							</div>
+							
+							<div class="ground ground-single-list">
+								<a href="#">
+									<img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
+									<span class="profile-status bg-busy pull-right"></span>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Co-Founder</small>
+								</div>
+
+								<div class="ground-right">
+									<span class="small">18 Min Ago</span>
+								</div>
+							</div>
+							
+							<div class="ground ground-single-list">
+								<a href="#">
+									<img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
+									<span class="profile-status bg-online pull-right"></span>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Co-Founder</small>
+								</div>
+
+								<div class="ground-right">
+									<span class="small">Online</span>
+								</div>
+							</div>
+						</div>
+						 <a class="dropdown-item view-all" href="#">View all Messages</a>
+					</div>
+				</li>
+				<!-- End Messages -->
+				
+				<!-- Notification -->
+				<li class="nav-item dropdown">
+				
+					<a class="nav-link dropdown-toggle mr-lg-3 a-topbar__nav a-nav" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="cl-white ti-bell"></i>
+						<span class="a-nav__link-badge a-badge bg-white theme-cl a-animate-blink">6</span>
+						<span class="hidden-lg hidden-md mrg-l-10">New Notification</span>
+					</a>
+					  
+					<div class="dropdown-menu animated flipInX" aria-labelledby="alertsDropdown">
+						<div class="dropdown-header text-center accent-bg">
+							<span class="a-dropdown__header-title">6 New</span>
+							<span class="a-dropdown__header-subtitle">User Notifications</span>
+						</div>
+						
+						<div class="ground-list ground-list-hove" id="notification-box">
+							<div class="ground ground-single-list">
+								<a href="#">
+									<div class="btn-circle-40 btn-success"><i class="ti-calendar"></i></div>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Check New Admin Dashboard..</small>
+									<span class="small">Just Now</span>
+								</div>
+							</div>
+								
+							<div class="ground ground-single-list">
+								<a href="#">
+									<div class="btn-circle-40 btn-danger"><i class="ti-calendar"></i></div>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">You can Customize..</small>
+									<span class="small">02 Min Ago</span>
+								</div>
+							</div>
+								
+							<div class="ground ground-single-list">
+								<a href="#">
+									<div class="btn-circle-40 btn-info"><i class="ti-calendar"></i></div>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Need Responsive Business Tem...</small>
+									<span class="small">10 Min Ago</span>
+								</div>
+							</div>
+								
+							<div class="ground ground-single-list">
+								<a href="#">
+									<div class="btn-circle-40 btn-warning"><i class="ti-calendar"></i></div>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">Next Meeting on Tuesday..</small>
+									<span class="small">15 Min Ago</span>
+								</div>
+							</div>
+								
+							<div class="ground ground-single-list">
+								<a href="#">
+									<div class="btn-circle-40 btn-purple"><i class="ti-calendar"></i></div>
+								</a>
+
+								<div class="ground-content">
+									<h6><a href="#">Maryam Amiri</a></h6>
+									<small class="text-fade">You can Change Your Pass..</small>
+									<span class="small">18 Min Ago</span>
+								</div>
+							</div>
+						</div>
+						<a class="dropdown-item view-all" href="#">View all Notifications</a>
+					</div>
+				</li>
+				<!-- End Notification -->
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle mr-lg-0 user-img a-topbar__nav a-nav" id="userDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
+						<b class="f-size-17">{{ app.user.username }}</b>
+					</a>
+				  
+                    
+					<ul class="dropdown-menu dropdown-user animated flipInX" aria-labelledby="userDropdown">
+						<li class="dropdown-header green-bg">
+							<div class="header-user-pic">
+								<img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
+							</div>
+							<div class="header-user-det">
+								<span class="a-dropdown__header-title">{{ app.user.username }}</span>
+								<span class="a-dropdown__header-subtitle">UI / UX Expert</span>
+							</div>
+						</li>
+						<li><a class="dropdown-item" href="{{ path('fos_user_profile_show') }}"><i class="ti-user"></i> Mon profil</a></li>
+						<li><a class="dropdown-item" href="#"><i class="ti-email"></i> Courriel</a></li>
+						
+                        <li><a class="dropdown-item" href="{{ path('fos_user_security_logout')}}"><i class="fa fa-power-off"></i> Déconnexion</a></li>
+					</ul>
+                    
+                    
+				</li>
+                  
+			  </ul>
+			  <!-- =============== End Header Rightside Menu ============== -->
+			</div>
+		</nav>
+		<!-- =====================================================
+		                    End Navigations
+		======================================================= -->

@@ -1,0 +1,11 @@
+site_ecole_single:
+    path:     /ecole/{slug}
+    defaults: { _controller: ViwebEcoleBundle:Ecole:single }
+
+site_ecole_contact:
+    path:     /ecole/{slug}/contact
+    defaults: { _controller: ViwebEcoleBundle:Ecole:contact }
+    
+site_ecole_articles_categorie:
+    path:     /ecole/{slug}/articles/categorie/{categorie_id}
+    defaults: { _controller: ViwebEcoleBundle:Ecole:articlescategorie }

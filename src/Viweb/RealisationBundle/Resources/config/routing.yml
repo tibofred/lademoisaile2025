@@ -1,0 +1,5 @@
+site_realisation:
+    path:     /realisation-{realisation_type}/{realisation_slug}
+    defaults: { _controller: ViwebRealisationBundle:Realisation:index }
+    requirements:
+        realisation_id: \d+

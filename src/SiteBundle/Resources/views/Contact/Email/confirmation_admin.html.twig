@@ -1,0 +1,6 @@
+<p>Vous avez reçu un nouveau message de {{ message.prenom }} {{ message.nom }}.</p>
+<p><a href="{{ absolute_url(path('site_admin_message', {'message_id': message.id})) }}">Aller voir le message</a></p>
+
+<p>Courriel: {{ message.courriel }}</p>
+<p>Téléphone: {{ message.telephone }}</p>
+<p>Message: {{ message.message }}</p>

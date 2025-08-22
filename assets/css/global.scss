@@ -1,0 +1,10 @@
+$brand-primary: darken(#428bca, 20%);
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+// set if you're also including font-awesome
+// $fa-font-path: "~font-awesome/fonts";
+//@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,300,900');
+//@import '../../web/assets/css/front-v2.css';
+@import "~bootstrap/scss/bootstrap";

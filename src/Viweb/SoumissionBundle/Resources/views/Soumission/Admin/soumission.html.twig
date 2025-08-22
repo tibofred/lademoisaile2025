@@ -1,0 +1,28 @@
+{% extends ":admin:layout.html.twig" %}
+
+{% block content %}
+
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+    <div class="row">
+
+        <div class="well container">
+
+            {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+            {# Les erreurs générales du formulaire. #}
+            {{ form_errors(form) }}
+
+            <div class="row">
+                <div class="col-sm-12">
+                    {{ form_rest(form) }}
+                </div>
+            </div>
+
+
+            {# Fermeture de la balise form du formulaire HTML #}
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+{% endblock %}

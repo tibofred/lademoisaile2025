@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Admin La deMois'aille </title>
+
+    {% block stylesheets %}
+    
+        <!-- Bootstrap core CSS -->
+		<link href="{{ asset('assets/admin/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+		<!-- Custom fonts for this template -->
+		<link href="{{ asset('assets/admin/assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+		<!-- Custom fonts for this template -->
+		<link href="{{ asset('assets/admin/assets/plugins/themify/css/themify.css') }}" rel="stylesheet" type="text/css">
+
+		<!-- Angular Tooltip Css -->
+		<link href="{{ asset('assets/admin/assets/plugins/angular-tooltip/angular-tooltips.css') }}" rel="stylesheet">
+		
+		<!-- Morris Charts CSS -->
+		<link href="{{ asset('assets/admin/assets/plugins/morris.js/morris.css') }}" rel="stylesheet">
+
+		<!-- Page level plugin CSS -->
+		<link href="{{ asset('assets/admin/css/animate.css') }}" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+        <link href="{{ asset('assets/admin/css/glovia.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/admin/css/glovia-responsive.css') }}" rel="stylesheet">
+            
+        
+
+		<!-- Custom styles for Color -->
+		<link href="{{ asset('assets/admin/css/skins/default.css') }}" rel="stylesheet">
+    
+    
+    {% endblock %}
+</head>
+
+<body class="fixed-nav sticky-footer" id="page-top">
+	
+            {{ include(":admin:menu.html.twig") }}
+            
+	  
+		     {% block body %}
+                {% block main %}{% endblock %}
+                {% block footer %}{% endblock %}
+            {% endblock %}
+
+{% block javascripts %}
+   <!-- Bootstrap core JavaScript-->
+			<script src="{{ asset('assets/admin/assets/plugins/jquery/jquery.min.js') }}"></script>
+			<script src="{{ asset('assets/admin/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+			
+			<!-- Core plugin JavaScript-->
+			<script src="{{ asset('assets/admin/assets/plugins/jquery-easing/jquery.easing.min.js') }}"></script>
+			
+			 <!-- Slick Slider Js -->
+			<script src="{{ asset('assets/admin/assets/plugins/slick-slider/slick.js') }}"></script>
+			
+			<!-- Slim Scroll -->
+			<script src="{{ asset('assets/admin/assets/plugins/slim-scroll/jquery.slimscroll.min.js') }}"></script>
+			
+			<!-- Angular Tooltip -->
+			<script src="{{ asset('assets/admin/assets/plugins/angular-tooltip/angular.js') }}"></script>
+			<script src="{{ asset('assets/admin/assets/plugins/angular-tooltip/angular-tooltips.js') }}"></script>
+			<script src="{{ asset('assets/admin/assets/plugins/angular-tooltip/index.js') }}"></script>
+			
+			<!-- Morris.js charts -->
+		    <script src="{{ asset('assets/admin/assets/plugins/raphael/raphael.min.js') }}"></script>
+		    <script src="{{ asset('assets/admin/assets/plugins/morris.js/morris.min.js') }}"></script>
+			
+			<!-- Custom Chart JavaScript -->
+		    <script src="{{ asset('assets/admin/js/custom/dashboard/dashboard-2.js') }}"></script>
+			
+			<!-- Custom scripts for all pages -->
+			<script src="{{ asset('assets/admin/js/glovia.js') }}"></script>
+			<script src="{{ asset('assets/admin/js/custom.js') }}"></script>
+			
+			<script>
+			  $('.dropdown-toggle').dropdown()
+			</script>
+    
+            <script>
+              
+                  var text_max = 320;
+                  $('#count_message').html(text_max + ' remaining');
+
+                  $('#site_bundle_page_type_metaDescription').keyup(function() {
+                    var text_length = $('#site_bundle_page_type_metaDescription').val().length;
+                    var text_remaining = text_max - text_length;
+
+                    $('#count_message').html(text_remaining + ' restant');
+                  });
+              
+              </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.0/moment.min.js"></script>
+    
+
+
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/jquery.datetimepicker.min.css') }}"/>
+	<script src="{{ asset('assets/admin/js/jquery.datetimepicker.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            /*$('input[type="datetime"]').datetimepicker({
+                format: 'YYYY-MM-DD',
+                locale: 'fr'
+            });*/
+            $('input.date_time').datetimepicker({
+				    format:'Y-m-d H:i'
+				});
+        });
+    </script>
+    
+    
+                <script>
+              
+                  var text_max = 60;
+                  $('#count_message_title').html(text_max + ' remaining');
+
+                  $('#site_bundle_page_type_metaTitle').keyup(function() {
+                    var text_length = $('#site_bundle_page_type_metaTitle').val().length;
+                    var text_remaining = text_max - text_length;
+
+                    $('#count_message_title').html(text_remaining + ' restant');
+                  });
+              
+              </script>
+    
+
+{% endblock %}
+</body>
+</html>

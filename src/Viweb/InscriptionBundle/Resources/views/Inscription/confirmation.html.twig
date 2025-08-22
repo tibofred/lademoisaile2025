@@ -1,0 +1,59 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Écoles participantes - Inscrivez votre école - Confirmation{% endblock %}
+{% block metaDescription %}Confirmation d'inscription de votre école sur le site La deMOIs'aile {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 300px;
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container first-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>La deMOIs'aile</h1>
+                <span>Accueil / contact / Confirmation d'envoi</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+
+<span class="ligne-deco"></span>
+        <div class="wrap-contactez-nous">
+        <span class="fleur"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <h3>Merci {{ soumission.prenom }}</h3>
+                            <p>Votre message a bien été envoyé. <br>Nous allons vous répondre <br>dans les plus brefs délais.<br></p>
+                            
+                        </div>
+                        
+                        
+
+                        <div class="col-sm-6">
+                            <div class="wrap-marie-mathieu">
+                                <img src="{{ absolute_url(asset('/assets/scss/images/marie-eve-mathieu-la-demoisaile.jpg')) }}">
+                                <h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>qui-est-la-demoisaile">Marie-Eve D'Amours et Mathieu Roy</a></h4>
+                                <div class="bloc-gris"></div>
+                            </div>
+                            
+                            
+                        </div>
+
+                    </div>
+                </div>
+        
+        </div>
+<span class="ligne-deco"></span>
+{% endblock %}

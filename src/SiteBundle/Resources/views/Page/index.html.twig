@@ -1,0 +1,22 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %}{{ page.metaTitle }}{% endblock %}
+{% block metaDescription %}{{ page.metaDescription }}{% endblock %}
+{% block content %}
+    <div class="jumbotron jumbotron1">
+        <div class="container inner">
+            <div>
+                <h1>{{page.titre}}</h1>
+                {#<h1>{{ page.h1 }}</h1>
+                <h2>{{ page.h2 }}</h2>#}
+                <p>{{ page.contenu|raw }}</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+    
+
+
+     
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}{{ ecole.nom}} - Contact{% endblock %}
+{% block metaDescription %}La deMOIs’aile : Contact de l'école {{ ecole.nom}}{% endblock %} 
+
+
+{% block content %}
+
+        {{ include("::header.html.twig") }}
+
+
+              <div class="wrap-menu-ecole">
+                {{ include("::menu.html.twig") }}
+            </div>
+
+
+<div class="wrap-ecole-contact">
+                    
+
+
+
+                    <div class="wrap-contactez-nous">
+                        <span class="fleur"></span>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <span>Accueil / Écoles participantes</span>
+                                        <h1 class="h1_contact">Contactez-nous</h1>
+                                        <p>{{ ecole.adresse }},<br>
+                                            {{ ecole.ville }}<br>
+                                            {{ ecole.codepostal }}<br>
+                                            Téléphone : {{ ecole.telephone }}</p>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="wrap-marie-mathieu">
+                                            <img alt="{{ ecole.responsable }}" src="{{ asset('uploads/img-responsable/') }}{{ ecole.imgResponsable.id }}.{{ ecole.imgResponsable.url }}">
+
+                                            <h4>{{ ecole.responsable }}</h4>
+                                            
+                                            <div class="bloc-gris"></div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                    
+                    </div>
+                    <span class="ligne-deco"></span>
+                    <div class="wrap-ecrivez-nous">
+    
+                      <div class="container">
+                        
+                        <div class="row"><!-- form + pres -->
+                            <div class="col-sm-6 contact-form">
+                                <h5><span>Écrivez-nous</span></h5>
+                                
+                                   {{ include('@ViwebEcole/Ecole/form.html.twig') }}
+                                
+                            </div> <!-- col -->         
+                            
+                            <div class="col-sm-6 bloc-fond text-center text">
+                                <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscris-mon-ecole-droite-la-demoisaile.png') }}" class="fleur-droite">
+                                <h4>{{ ecole.responsable }}</h4>
+                                <p>{{ ecole.titreResponsable }}</p>
+                                <br><br>
+                                <a href="{{ path('site_page', {'page_slug': 'ressources'}) }}" class="btn btn-primary" style="color:white;">Ressources</a>
+
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+                        
+                </div>
+        
+</div>
+
+    
+    
+ 
+{% endblock %}
+

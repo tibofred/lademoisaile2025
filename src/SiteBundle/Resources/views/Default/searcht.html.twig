@@ -1,0 +1,76 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Recherche{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container first-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>La deMOIs'aile</h1>
+                <span>Accueil / Recheche "{{search}}" </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+
+<span class="ligne-deco"></span>
+        <div class="">
+        <span class="fleur"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {% if blogueuses|length == 0 and articles|length == 0 %}
+                                <div style="margin:25px 0; text-align:center">Aucun résultat pour votre recherche !</div>
+                            {% endif %}
+                            {% if blogueuses|length > 0 %}
+                            <h2 class="title_search">Blogueuses</h2>
+                                {% for bl in blogueuses %}
+                            <div class="search_blog">
+                                <a href="{{ path('site_blogueuse_profil', {'ecole_slug': bl.ecole.slug, 'blogueuse_id': bl.id} )}}">
+                                    <img src="{{ asset('uploads/photos-blogueuses/mini/') }}{{ bl.photo.id }}.{{ bl.photo.url }}" alt="{{ bl.prenom}} {{ bl.nom}}">
+                                </a>    
+                                <div class="text_sb">
+                                    <h3><a href="{{ path('site_blogueuse_profil', {'ecole_slug': bl.ecole.slug, 'blogueuse_id': bl.id} )}}">{{ bl.prenom }} {{ bl.nom }}</a></h3>
+                                    <div class="text_sb2">{{ bl.description|striptags|slice(0, 300)|raw }}...</div>
+                                </div>   
+                                
+                            </div>
+                                {% endfor %}
+                            {% endif %}
+                            {% if articles|length > 0 %}
+                            <h2 class="title_search">Articles</h2>
+                                {% for article in articles %}
+                            <div class="search_blog">
+                                <a href="{{ path('site_blogueuse_article', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug})}}">
+                                    <img alt="{{ article.titre }}" src="{{ asset('uploads/photos-articles/mini/') }}{{ article.photo.id }}.{{  article.photo.url }}" />
+                                </a>    
+                                <div class="text_sb">
+                                    <h3><a href="{{ path('site_blogueuse_article', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug})}}">{{ article.titre }}</a></h3>
+                                    <h4>{{ article.blogueuse.prenom }} {{ article.blogueuse.nom }} - {{ article.blogueuse.ecole.nom }}</h4>
+                                    <div class="text_sb2">{{ article.description|striptags|slice(0, 300)|raw }}...</div>
+                                </div>   
+                                
+                            </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </div>
+        
+        </div>
+        
+        
+
+{% endblock %}

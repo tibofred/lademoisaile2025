@@ -1,0 +1,62 @@
+{% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+     <div class="row">
+         
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label>Votre prénom <span class="gfield_required">*</span></label>
+                {{ form_widget(form.prenom, {'attr': {'class': ''}}) }}
+            </div>
+        </div>    
+         
+     </div><!-- row -->
+
+    <div class="row">
+        
+        <div class="col-sm-12"> 
+            <div class="form-group">
+                <label>Votre nom <span class="gfield_required">*</span></label>
+                {{ form_widget(form.nom, {'attr': {'class': 'orm-control'}}) }}
+            </div>    
+        </div>
+        
+     </div><!-- row -->
+
+    <div class="row">
+        
+        <div class="col-12">
+             <div class="form-group"> 
+                <label>Votre courriel <span class="gfield_required">*</span></label>
+                 {{ form_widget(form.courriel, {'attr': {'class': 'form-control'}}) }}
+                 {{ form_errors(form.courriel) }}
+            </div>
+        </div>
+        
+        <div class="col-12">
+           <div class="form-group">
+               <label>Votre téléphone <span class="gfield_required">*</span></label>
+                 {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+                 {{ form_errors(form.telephone) }}
+            </div>
+        </div>
+        
+    </div><!-- row -->
+
+    <div class="row">
+    
+        <div class="col-12">
+            <label>Votre messages  <span class="gfield_required">*</span></label>
+            {{ form_widget(form.message) }}
+        </div>
+
+        <div class="col-12">
+            
+        </div>
+        {{ form_end(form) }}
+    
+    </div><!-- row -->
+
+</div><!-- well -->

@@ -1,0 +1,89 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Écoles participantes{% endblock %}
+{% block metaDescription %}Meta description{% endblock %}
+
+
+{% block content %}
+
+
+
+    {{ include("::header.html.twig") }}
+        
+
+    <div class="wrap-menu-ecole">
+        {{ include("::menu.html.twig") }}
+    </div>
+     
+
+     <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-12">
+
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main">
+                        
+                        <div class="wrap-user-arvhive">
+                        
+                            <div class="row">
+                            
+                                <div class="col-sm-8">
+
+                                    
+                                    
+                                    <h5>Tous les articles de</h5>
+                                    <h3><span>{{ blogueuse[0].prenom }} {{ blogueuse[0].nom }}</span></h3>
+                                    <p>{{ blogueuse[0].description|raw }}</p>
+                                    <h4>Voir tous les articles de la : <a href="{{ path('site_ecole_single', {'slug': blogueuse[0].ecole.slug }) }}">{{ blogueuse[0].ecole.nom }}</a></h4>
+                    
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    
+                                    <img src="{{ absolute_url(asset('/uploads/photos-blogueuses/mini/')) }}{{ blogueuse[0].photo.id }}.{{ blogueuse[0].photo.url }}" class="auteur"> 
+                                    
+                                </div>
+    
+                            
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+           <div class="container">
+                        
+                 <div class="row archive-author">
+               
+                        
+                     {% for article in articles %}
+
+                            {{ include('@ViwebArticle/Article/appercu.html.twig') }}
+
+                     {% endfor %}
+            
+                     
+              </div>       
+                        
+          </div>
+
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+                
+
+            </div>
+            
+            
+        
+        </div>
+
+    </div>
+
+
+
+    
+ 
+{% endblock %}
+

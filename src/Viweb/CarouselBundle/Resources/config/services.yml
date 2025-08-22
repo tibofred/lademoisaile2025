@@ -1,0 +1,4 @@
+services:
+#    viweb_carousel.example:
+#        class: Viweb\CarouselBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

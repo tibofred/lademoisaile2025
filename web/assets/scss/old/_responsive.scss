@@ -1,0 +1,667 @@
+
+
+/* Android (Nexus 4) portrait · width: 384px */
+
+@media only screen and (min-width: 376px) and (max-width: 384px){
+
+    body {
+
+        padding-top: 0px;
+    }
+    
+    .navbar {
+        
+        padding: .05rem 1rem;
+    }
+    
+    .navbar-inverse .navbar-toggler {
+        
+        margin-top: 0.2em;
+    } 
+    
+    #imageAccueil {
+    width: 100%;
+    height: 500px;
+    } 
+    
+    #imageAccueil img.oeil {
+
+    height: auto;
+
+    }
+    
+    #imageAccueil h1 {
+        
+        top: 29%;
+        left: 6%;
+        font-size: 2.8rem;
+    }
+    
+    #imageAccueil h2 {
+        top: 46%;
+        left: 5%;
+        font-size: 1.6rem;
+        width: 80%;
+        
+    }
+    
+    
+    
+    #imageAccueil p {
+       top: 64%;
+        left: 7%;
+        font-size: 1rem;
+        width: 80%;
+      
+        }
+    
+    .wrap-txt-profil {
+
+        height: auto;
+    
+    }
+    
+        .wrap-inscris .fleur-gauche-gros {
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            width: 50%;
+        }
+    
+            .wrap-inscris .btn-default {
+
+            width: 12rem;
+
+        }
+    
+            .wrap-inscris a {
+            font-size: 1em;
+
+        }
+    
+            .wrap-inscris h4 {
+            font-size: 1.2rem;
+        }
+    
+            ul.wrap-jjjj li.large, ul.wrap-jjjj li.small  {
+            width: 100%;
+        }
+    
+            .wrap-articles .titre h3 {
+            font-size: 1.4em;
+        }
+    
+        .wrap-articles .titre h4 {
+            font-size: 1.2em;
+
+        }
+    
+    .wrap-article h3{
+        
+        font-size:1em;
+    }
+    
+    .wrap-consultez h5 {
+        font-size: 1.4em;
+        padding: 0 0em;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .wrap-consultez .btn-trouver {
+
+            padding: 0.6em 1em;
+            margin-left: 12%;
+            font-size: 1.2em;
+        
+        }
+    
+    .wrap-merci .merci {
+        font-size: 1.8em;
+
+    }
+    
+    .wrap-ecole-participante h4 {
+    margin-top: 2em;
+    }
+    
+    .h4{
+        font-size: 1.3rem;
+    }
+    
+    #navbarFooter ul li {
+
+    width: 100%;
+    }
+ 
+
+}
+
+/* iPhone 6 Plus portrait · width: 414px */
+
+@media only screen and (min-width: 385px) and (max-width: 414px){
+
+ 
+    body {
+
+        padding-top: 0px;
+    }
+    
+    .navbar {
+        
+        padding: .05rem 1rem;
+    }
+    
+    .navbar-inverse .navbar-toggler {
+        
+        margin-top: 0.2em;
+    } 
+    
+    #imageAccueil {
+    width: 100%;
+    height: 500px;
+    } 
+    
+    #imageAccueil img.oeil {
+
+    height: auto;
+
+    }
+    
+    #imageAccueil h1 {
+        
+        top: 29%;
+        left: 6%;
+        font-size: 2.8rem;
+    }
+    
+    #imageAccueil h2 {
+        top: 46%;
+        left: 5%;
+        font-size: 1.6rem;
+        width: 80%;
+        
+    }
+    
+    
+    
+    #imageAccueil p {
+       top: 64%;
+        left: 7%;
+        font-size: 1rem;
+        width: 80%;
+      
+        }
+    
+    .wrap-txt-profil {
+
+        /*height: 458px;*/
+    
+    }
+    
+        .wrap-inscris .fleur-gauche-gros {
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            width: 50%;
+        }
+    
+            .wrap-inscris .btn-default {
+
+            width: 12rem;
+
+        }
+    
+            .wrap-inscris a {
+            font-size: 1em;
+
+        }
+    
+            .wrap-inscris h4 {
+            font-size: 1.2rem;
+        }
+    
+            ul.wrap-jjjj li.large, ul.wrap-jjjj li.small  {
+            width: 100%;
+        }
+    
+            .wrap-articles .titre h3 {
+            font-size: 1.4em;
+        }
+    
+        .wrap-articles .titre h4 {
+            font-size: 1.2em;
+
+        }
+    
+    .wrap-article h3{
+        
+        font-size:1em;
+    }
+    
+    .wrap-consultez h5 {
+        font-size: 1.4em;
+        padding: 0 0em;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .wrap-consultez .btn-trouver {
+
+            padding: 0.6em 1em;
+            margin-left: 12%;
+            font-size: 1.2em;
+        
+        }
+    
+    .wrap-merci .merci {
+        font-size: 1.8em;
+
+    }
+    
+    .wrap-ecole-participante h4 {
+    margin-top: 2em;
+    }
+    
+    .h4{
+        font-size: 1.3rem;
+    }
+    
+    #navbarFooter ul li {
+
+    width: 100%;
+    }
+
+}
+
+
+
+@media(max-width: 768px) {	
+    
+	#imageAccueil {
+        height: 500px !important;
+	}
+	#imageAccueil .carousel {
+		display: block;
+	}
+	#imageAccueil p {
+	    top: 200px !important;
+	}
+	#imageAccueil h2 {
+	    top: 120px !important;
+	}
+	#imageAccueil h1 {
+	    top: 15px !important;
+	}
+    
+    .wrap-social .class_news .insta {
+		text-align: center;
+	}
+    
+    .link_yout {
+		display: block;
+	}
+	nav.fixed-top {
+		top: 0px;
+	}
+}
+
+
+
+
+
+@media(max-width: 1150px) { 
+    
+    #imageAccueil {
+        min-height: 800px !important;
+    }
+}
+
+
+
+@media(max-width: 1280px) { 
+    
+    #imageAccueil {
+        min-height: 800px !important;
+    }
+    #imageAccueil .carousel {
+        top: inherit;
+        bottom: 20px;
+        left: 30px;
+        width: 90%;     
+        width: -moz-calc(100% - 60px);
+        width: -webkit-calc(100% - 60px);
+        width: calc(100% - 60px);
+    }
+}
+
+@media only screen and (max-width: 375px) and (min-width: 321px)
+
+ { 
+
+
+}
+@media (max-width:780px) {
+	body .wrap-ecrivez-nous .text h4 {
+	    margin-top: 0;
+	}
+}
+
+@media (max-width:1400px) {  
+    .logo_local {
+        top: 100px;
+    }
+}
+@media (max-width:990px) {  
+    .logo_local {
+        width: 75px;
+        right: 70px;
+        top: 100px;
+    }
+}
+@media (max-width:600px) {	
+	.logo_local {
+		right: 10px;
+		top: 55px;
+		/*display: none;*/
+	}
+}
+
+@media (max-width:540px) {
+ .fancybox-slide--iframe .fancybox-content {
+	width  : 100% !important;
+	height : 300px !important;
+	margin: 0;
+}
+}
+
+
+/* iPad landscape · width: 1024px */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+}
+
+@media  (max-width: 990px) {
+    .banniere-haut .logo {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    width: 60%; 
+    margin: -30px 0 -30px 20%;
+  }
+}
+
+
+/* iPhone 5 portrait · width: 321px */
+
+@media only screen and (min-width: 0px) and (max-width: 600px){
+    
+    body {
+
+        padding-top: 0px;
+    }
+    
+    .navbar {
+        
+        padding: .05rem 1rem;
+    }
+    
+    .navbar-inverse .navbar-toggler {
+        
+        margin-top: 1.2em;
+    } 
+    
+    #imageAccueil {
+    width: 100%;
+    height: 500px;
+    } 
+    
+    #imageAccueil img.oeil {
+
+    height: auto;
+
+    }
+    
+    #imageAccueil h1 {
+        
+        top: 22%;
+        left: 6%;
+        font-size: 2.8rem;
+    }
+    
+    #imageAccueil h2 {
+        top: 38%;
+        left: 5%;
+        font-size: 1.6rem;
+        width: 80%;
+        
+    }
+    
+    
+    
+    #imageAccueil p {
+       top: 59%;
+        left: 7%;
+        font-size: 1rem;
+        width: 80%;
+      
+        }
+    
+    .wrap-txt-profil {
+
+        /*height: 458px;*/
+    
+    }
+    
+        .wrap-inscris .fleur-gauche-gros {
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            width: 50%;
+        }
+    
+            .wrap-inscris .btn-default {
+
+            width: 12rem;
+
+        }
+    
+            .wrap-inscris a {
+            font-size: 1em;
+
+        }
+    
+            .wrap-inscris h4 {
+            font-size: 1.2rem;
+        }
+    
+            ul.wrap-jjjj li.large, ul.wrap-jjjj li.small  {
+            width: 100%;
+        }
+    
+            .wrap-articles .titre h3 {
+            font-size: 1.4em;
+        }
+    
+        .wrap-articles .titre h4 {
+            font-size: 1.2em;
+
+        }
+    
+    .wrap-article h3{
+        
+        font-size:1em;
+    }
+    
+    .wrap-consultez h5 {
+        font-size: 1.4em;
+        padding: 0 0em;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .wrap-consultez .btn-trouver {
+
+            padding: 0.6em 1em;
+            margin-left: 12%;
+            font-size: 1.2em;
+        
+        }
+    
+    .wrap-merci .merci {
+        font-size: 1.6em;
+
+    }
+}
+
+/* iPhone 6 portrait · width: 375px */
+
+@media only screen and (min-width: 321px) and (max-width: 375px){
+
+    body {
+
+        padding-top: 0px;
+    }
+    
+
+    
+    
+    
+    #imageAccueil .wrap-txt-home {
+        top: 13%;
+        left: 6%;
+    }
+    
+    .navbar {
+        
+        padding: .05rem 1rem;
+    }
+    
+    .navbar-inverse .navbar-toggler {
+        
+        margin-top: 0.2em;
+    } 
+    
+    body #imageAccueil {
+        width: 100%;
+        height: 450px !important;
+        min-height: 450px !important;
+    } 
+    
+    body {
+
+        padding-top: 91px !important;
+
+        }
+    
+    #imageAccueil img.oeil {
+
+        height: auto;
+
+    }
+    
+    #imageAccueil h1 {
+        
+        top: 38%;
+        left: 5%;
+        font-size: 2.8rem;
+    }
+    
+    #imageAccueil h2 {
+        top: 46%;
+        left: 5%;
+        font-size: 1.6rem;
+        width: 80%;
+        
+    }
+    
+    
+    
+    #imageAccueil p {
+       top: 64%;
+        left: 7%;
+        font-size: 1rem;
+        width: 80%;
+      
+        }
+    
+    .wrap-txt-profil {
+
+        /*height: 554px;*/
+    
+    }
+    
+        .wrap-inscris .fleur-gauche-gros {
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            width: 50%;
+        }
+    
+            .wrap-inscris .btn-default {
+
+            width: 12rem;
+
+        }
+    
+            .wrap-inscris a {
+            font-size: 1em;
+
+        }
+    
+            .wrap-inscris h4 {
+            font-size: 1.2rem;
+        }
+    
+            ul.wrap-jjjj li.large, ul.wrap-jjjj li.small  {
+            width: 100%;
+        }
+    
+            .wrap-articles .titre h3 {
+            font-size: 1.4em;
+        }
+    
+        .wrap-articles .titre h4 {
+            font-size: 1.2em;
+
+        }
+    
+    .wrap-article h3{
+        
+        font-size:1em;
+    }
+    
+    .wrap-consultez h5 {
+        font-size: 1.4em;
+        padding: 0 0em;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .wrap-consultez .btn-trouver {
+
+            padding: 0.6em 1em;
+            margin-left: 12%;
+            font-size: 1.2em;
+        
+        }
+    
+    .wrap-merci .merci {
+        font-size: 1.8em;
+
+    }
+    
+    .wrap-ecole-participante h4 {
+    margin-top: 2em;
+    }
+    
+    .h4{
+        font-size: 1.3rem;
+    }
+    
+    #navbarFooter ul li {
+
+    width: 100%;
+    }
+
+}

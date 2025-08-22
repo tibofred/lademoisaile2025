@@ -1,0 +1,55 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block metaDescription %}La deMOIs’aile - Contact{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 300px;
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <div>
+
+
+<div class="">
+    
+      <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-8 offset-sm-2 mt-5">
+                <h3 class="h3_cont my-3"><span>Contactez-nous</span><img src="/web/assets/scss/images/contact5.png" alt=''/></h3>
+                <p style="font-size:0.93rem">Vous avez des questions concernant le projet? Vous voulez nous faire part de vos commentaires ? Vous aimeriez devenir partenaires ? Vous désirez inscrire une école ?</p>
+                <div class="contact-form1">
+                    <h5><span>Écrivez-nous</span></h5>
+                
+                   <iframe aria-label='Contactez-nous' frameborder="0" style="height:600px;width:99%;border:none;" src='https://forms.zohopublic.ca/lademoisaile/form/Contacteznous/formperma/o723wE-mrZuRNJhJ3_mElCTUf4LQcmHGfRu0cI2xft0'></iframe
+                </div>    
+                <div class="link_ress">
+                    <a href="{{ path('site_page', {'page_slug': 'ressources'}) }}" class="btn btn-primary" style="color:white;">Ressources <i class="fa fa-angle-right"></i></a>
+                </div>
+            
+            </div>
+            
+            
+
+        </div>
+
+    </div>
+        
+</div>
+        
+        
+
+{% endblock %}

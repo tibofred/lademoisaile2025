@@ -1,0 +1,45 @@
+{% extends ':admin:layout.html.twig' %}
+
+{% block navbar %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <a class="navbar-brand" href="#">Cayer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ path('site_homepage') }}">Accueil</a>
+                </li>
+                {{ render(controller('SiteBundle:Default:navPages')) }}
+            </ul>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <a href="{{ path('site_admin_bloc_new') }}">Ajouter un bloc</a>
+
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Ordre</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for bloc in blocs %}
+            <tr>
+                <td>{{ bloc.name }}</td>
+                <td>{{ bloc.ordre }}</td>
+                <td><a href="{{ path('site_admin_bloc_edit', { 'bloc_id': bloc.id, 'bloc_name': bloc.name }) }}">Modifier</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

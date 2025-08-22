@@ -1,0 +1,184 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Ajouter une école</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- .row -->
+				<div class="row">
+					
+                    
+                    <!-- .col-md-6 -->
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+                                <h4><i class="ti i-cl-4 ti-arrow-left"></i> <a href="{{ path('site_admin_ecoles')}}">Revenir</a></h4>
+							</div>
+							
+							<div class="card-body">
+                                
+                                {{ form_start(form) }}
+                                
+                                
+                                 <div class="form-group">
+									{{ form_label(form.nom, "Nom de l'école") }}
+                                    
+                                    {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le nom de l'école</small>
+                                    {{ form_errors(form.nom) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.slug, "Slug de l'école") }}
+                                    
+                                    {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Le slug de l'école</small>
+                                    {{ form_errors(form.slug) }}
+                                    
+								  </div>
+                                
+                                
+                                
+                                
+                                
+                                 <div class="form-group">
+									{{ form_label(form.region, "Région") }}
+                                    
+                                    {{ form_widget(form.region, {'attr': {'class': 'custom-select mb-2 form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Région de l'école</small>
+                                    {{ form_errors(form.region) }}
+                                    
+								  </div>
+                                
+                                
+                                  <div class="form-group">
+									{{ form_label(form.commission, "Commission") }}
+                                    
+                                    {{ form_widget(form.commission, {'attr': {'class': 'custom-select mb-2 form-control'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Commisssion scolaire</small>
+                                    {{ form_errors(form.commission) }}
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.logo, "Logo") }}
+                                    
+                                    {{ form_widget(form.logo, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">L'image doit avoir 1200px X 630px</small>
+                                    {{ form_errors(form.logo) }}
+                                    
+                                    
+								  </div>
+                                
+                                <div class="form-group">
+									{{ form_label(form.telephone, "Téléphone") }}
+                                    
+                                    {{ form_widget(form.telephone, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Tél.:</small>
+                                    {{ form_errors(form.telephone) }}
+                                    
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.codepostal, "Code postal") }}
+                                    
+                                    {{ form_widget(form.codepostal, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Code postal</small>
+                                    {{ form_errors(form.codepostal) }}
+                                    
+                                    
+								  </div>
+                                
+                                
+                                 <div class="form-group">
+									{{ form_label(form.email, "Courriel") }}
+                                    
+                                    {{ form_widget(form.email, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Email</small>
+                                    {{ form_errors(form.email) }}
+                                    
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.ville, "Ville") }}
+                                    
+                                    {{ form_widget(form.ville, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Ville</small>
+                                    {{ form_errors(form.ville) }}
+                                    
+                                    
+								  </div>
+                                
+                                
+                                <div class="form-group">
+									{{ form_label(form.adresse, "Adresse") }}
+                                    
+                                    {{ form_widget(form.adresse, {'attr': {'class': 'form-control-file'}}) }}
+                                    
+									<small id="emailHelp" class="form-text text-muted">Adresse</small>
+                                    {{ form_errors(form.adresse) }}
+                                    
+                                    
+								  </div>
+                                
+                                
+                                 {{ form_widget(form.save, { 'label': 'Enregistrer' }) }}								
+
+                                  {{ form_widget(form) }}
+
+                            {{ form_end(form) }}
+                            {{ form_end(form) }}
+								
+							</div>
+						</div>
+                        
+
+                            
+                          
+
+                            
+                            {{ form_end(form) }}
+                        
+                        
+					</div>
+					<!-- /.col-md-6 -->
+				</div>
+				<!-- /.row -->
+					
+				
+				
+			
+				
+			</div>  
+			<!-- /.content-wrapper-->
+
+
+{% endblock %}

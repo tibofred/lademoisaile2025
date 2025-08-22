@@ -1,0 +1,32 @@
+<div class="banniere-haut eco_{{ecole.slug}}">
+        <div class="container">
+            <img alt="La deMOIs'aile - {{ ecole.nom }}" src="{{ absolute_url(asset('/uploads/logos-ecoles/')) }}{{ ecole.logo.id }}.{{ ecole.logo.url }}" class="logo">
+            
+            <div class="col-sm-12">
+                <!--h4>La deMOIs'aile</h4-->
+                <br><br><br>
+                <h3>{{ ecole.nom}}</h3>
+                {% if ecole.slug == 'augustin-norbert-morin' %}
+                <h5>Projet de mémoire d’une étudiante de maîtrise en psychoéducation de l’UQO</h5>
+                {% endif %}
+                {% if ecole.slug == 'ecole-secondaire-de-mirabel' %}
+                <div class="logo_mira">
+                    <img alt="CJE Mirabel" src="{{ absolute_url(asset('/assets/scss/images/')) }}LOGO_FINAL_CJE_MIRABEL.png" alt="">
+                    {#<img alt="PREL" src="{{ absolute_url(asset('/assets/scss/images/')) }}PREL_Logo_couleur_orange.png" alt="">
+                    <img alt="Québec" src="{{ absolute_url(asset('/assets/scss/images/')) }}quebec.jpg" alt="">
+                    <img alt="Reinde de la promo" src="{{ absolute_url(asset('/assets/scss/images/')) }}reinde-de-la-promo.jpg" alt="">#}
+                </div>
+                {% endif %}
+                {% if ecole.slug == 'ecole-secondaire-de-gracefield' %}
+                <div class="logo_mira" style="margin-bottom: -80px !important;">
+                    <img style="height:240px !important;" alt="JSFVG" src="{{ absolute_url(asset('/assets/scss/images/')) }}JSFVG.png" alt="">
+                </div>
+                {% endif %}
+                {% if ecole.slug == 'ecole-secondaire-le-tremplin' %}
+            <div class="logo_mira">
+                <span>Partenaire majeur</span>
+                <img alt="La deMOIs'aile - {{ ecole.nom }}" src="{{ absolute_url(asset('/uploads/logos-ecoles/')) }}Logo_blanc_ASDR.png" ></div>
+            {% endif %}
+            </div>
+        </div>
+    </div>

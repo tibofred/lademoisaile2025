@@ -1,0 +1,195 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block title %}{{ page.metaTitle }}{% endblock %}
+{% block metaDescription %}{{ page.metaDescription }}{% endblock %}
+{% block content %}
+
+<div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-9">
+                
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main padd">
+                        <h1>{{page.titre|raw}}</h1>
+                        {{ page.contenu|raw }}
+                        <p><br/></p>
+                        <p><a class="btn btn-primary" style="color: white;" href="{{ path('site_page', {'page_slug': 'ressources'}) }}">Ressources</a></p>
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+            
+            </div>
+            
+            <!-- ################################################
+                                      SIDE BAR
+                 ################################################  -->
+            
+            
+            <div class="col-sm-3">
+                <aside id="secondary" class="widget-area widget-fondateurs">
+                    
+                <span class="widget-title">Les fondateurs</span>
+                 <!-- Marie-Eve 
+                _______________________________________________________________________________
+                --> 
+                 
+
+                    {% if marie.avatar.id is defined and marie.avatar.id is not null %}
+					<img alt="{{ marie.prenom }} {{ marie.nom }}" class="card-img-top" src="{{ absolute_url(asset('/uploads/users-avatar/')) }}{{ marie.avatar.id }}.{{ marie.avatar.url }}" alt="{{ marie.prenom }} {{ marie.nom }}" />
+                    {% endif %}
+
+               
+
+                <h4>{% if marie.titre is defined and marie.titre is not null %}
+						{{ marie.titre|raw }}
+                     {% endif %}
+                   </h4>
+                <p>{% if  marie.courteDescription is defined and  marie.courteDescription is not null %}
+                    
+						{{  marie.courteDescription|raw }}
+                    
+                     {% endif %}</p>
+
+
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bd-marie-eve-modal-lg">En savoir plus</button>
+
+
+                <div class="modal fade bd-marie-eve-modal-lg" tabindex="-1" role="dialog" aria-labelledby="marie-eve-modal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+						<span style="position: absolute; right: 30px;cursor: pointer;" onClick="$('.modal.fade').click()">✖</span>
+						  {{ marie.description|raw }}
+                      
+                    </div>
+                  </div>
+                </div>   
+
+
+                <!-- Matieu 
+                _______________________________________________________________________________
+                -->
+                
+                  {% if mathieu.avatar.id is defined and mathieu.avatar.id is not null %}
+					<img alt="{{ mathieu.prenom }} {{ mathieu.nom }}" class="card-img-top" src="{{ absolute_url(asset('/uploads/users-avatar/')) }}{{ mathieu.avatar.id }}.{{ mathieu.avatar.url }}" alt="{{ mathieu.prenom }} {{ mathieu.nom }}" />
+                    {% endif %}
+
+               
+
+                <h4>{% if mathieu.titre is defined and mathieu.titre is not null %}
+						{{ mathieu.titre|raw }}
+                     {% endif %}
+                   </h4>
+                <p>{% if  mathieu.courteDescription is defined and  mathieu.courteDescription is not null %}
+                    
+						{{  mathieu.courteDescription|raw }}
+                    
+                     {% endif %}</p>
+
+
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bd-mathieu-modal-lg">En savoir plus</button>
+
+
+                <div class="modal fade bd-mathieu-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mathieu-modal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+						<span style="position: absolute; right: 30px;cursor: pointer;" onClick="$('.modal.fade').click()">✖</span>
+						  {{ mathieu.description|raw }}
+                      
+                    </div>
+                  </div>
+                </div> 
+
+                </aside><!-- #secondary -->
+            </div>
+        
+        </div>
+
+    </div>
+
+
+    
+    <div class="wrap-inscris">
+        <span class="ligne-top"></span>
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscrs-mon-ecole-la-demoisaile.png') }}" class="fleur-gauche-gros">
+        
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscrit--mon-ecole-gauche-la-demoisaile.png') }}" class="fleur-gauche">
+        <img alt="fleur" src="{{ asset('assets/scss/images/fleur-jinscris-mon-ecole-droite-la-demoisaile.png') }}" class="fleur-droite">
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-12 text-center">
+                    <h4>
+                        Vous voulez faire vivre l’expérience « La deMOIs’aile » à votre école ?<br>
+                        Nous vous invitons à vous inscrire dès maintenant. 
+                    </h4>
+                    <a href="{{ path('viweb_soumission_new') }}" class="btn btn-default ">J'inscris mon école</a>
+                </div>
+            </div>
+        </div>
+        <span class="ligne-bottom"></span>
+
+        
+    </div>
+    <div class="iframe_tube"><iframe width="100%" height="450" src="https://www.youtube.com/embed/uP5mFDnNw5I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+    
+    <div class="container style84 mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="mt-5">Mission</h3>      
+                <div class="text-center">Donner une voix et des ailes à la jeunesse féminine.</div>
+                <p class="mt-5"><strong>Et voilà que pour les 5 ans d’opération de La deMOIs’aile afin de permettre l’expansion et d’assurer la pérennité toujours en ayant la même mission en tête, nous avons créé l’OBNL sous le nom de Laisse vivre la blogueuse en toi.</strong></p>
+                
+                <h3 class="mt-5">Objectifs</h3>  
+                <ul>
+                    <li>Implantation du programme d’écriture favorisant l’estime de soi (Conférence, activités sociales, artistiques, multimédias…)</li>
+                    <li>Promotion de la gestion saine des émotions;</li>
+                    <li>Déstigmatiser la santé mentale;</li>
+                    <li>Mettre la persévérance scolaire de l’avant, en outillant les adolescentes durant leur parcours; </li>
+                    <li>Promouvoir le français écrit et la lecture via l’utilisation adéquate du Web. (Programme numérique afin d’expérimenter de nouvelle approche)</li>
+                </ul>
+                <h3 class="mt-5">Valeurs</h3>  
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Authenticité</h5>
+                                <p class="card-text">Avec l'expérience La deMOIs'aile, nous valorisons le "Oser être soi" et nous misons sur une approche humaine de qualité et personnalisée en mettant l'adolescente de l'avant.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Partage</h5>
+                                <p class="card-text">Le fait de pouvoir partager leur vécu avec autrui apporte un sentiment d'appartenance et un respect mutuel palpable puisque souvent, plusieurs vivent des situations similaires. Les deMOIs'ailes deviennent des modèles!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Épanouissement</h5>
+                                <p class="card-text">La deMOIs'aile donne des ailes par la découverte des richesses intrinsèques que les participantes possèdent. Des outils qui demeureront présents toute la vie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="text-center"><strong>ME D’Amours, <span style="color:#E83E8C">fondatrice et directrice générale</span></strong></div>
+                    <h5 class="my-3 text-center">Les administrateurs<br/>Membres du C.A. 2023-2024</h5>
+                    <ul class=" text-center">
+                        <li style="list-style: none;">Isabelle Marineau – <span style="color:#E83E8C">Présidente</span></li>
+                        <li style="list-style: none;">Annik Thilbault – <span style="color:#E83E8C">Vice-présidente</span></li>
+                        <li style="list-style: none;">Sonya Éthier – <span style="color:#E83E8C">Trésorière</span></li>
+                        <li style="list-style: none;">Shadei Saade (membre jeunesse) – <span style="color:#E83E8C">Secrétaire</span></li>
+                        <li style="list-style: none;">Fanny Jolicoeur – <span style="color:#E83E8C">administratrice</span></li>
+                        <li style="list-style: none;">Naomie Brosseau-Fortin (membre jeunesse) – <span style="color:#E83E8C">administratrice</span></li>
+                        <li style="list-style: none;">Marilou Séguin – <span style="color:#E83E8C">administratrice</span></li>
+                    </ul>
+                    <div class="style88">Merci pour votre précieuse présence et pour votre engagement envers notre mission.</div>
+                </div>
+            </div>
+        </div>
+    </div>    
+{% endblock %}

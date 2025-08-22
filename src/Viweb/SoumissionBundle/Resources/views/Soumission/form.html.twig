@@ -1,0 +1,164 @@
+<div class="well container">
+
+     {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+     {# Les erreurs générales du formulaire. #}
+     {{ form_errors(form) }}
+
+     <div class="row">
+         
+         
+         <div class="col-sm-6">
+             
+             <div class="row">
+                 
+                 <div class="col-12">
+                     <h3>Information sur l'école à inscrire</h3>
+                 </div>
+                 
+                    <div class="col-12">
+                        {# Champ Nom École #}
+                          <div class="form-group">
+                            {{ form_label(form.nomEcole, "Nom de l'école", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                            {{ form_errors(form.nomEcole) }}
+                            <div class="col-sm-12">
+                              {{ form_widget(form.nomEcole, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                          </div>
+                    </div>
+                 
+                 <div class="col-12">
+                        {# Champ Région #}
+                          <div class="form-group">
+                            {{ form_label(form.region, "Région", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                            {{ form_errors(form.region) }}
+                            <div class="col-sm-12">
+                              {{ form_widget(form.region, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                          </div>
+                    </div>
+                 
+                 
+                 <div class="col-12">
+                        {# Champ Commission scolaire #}
+                          <div class="form-group">
+                            {{ form_label(form.commissionScolaire, "Centre de services", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                            {{ form_errors(form.commissionScolaire) }}
+                            <div class="col-sm-12">
+                              {{ form_widget(form.commissionScolaire, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                          </div>
+                    </div>
+             
+             </div>
+             
+             
+         </div>
+         
+         
+         
+         
+          <div class="col-sm-6">
+              
+              <div class="col-12">
+                     <h3>Vos informations</h3>
+                 </div>
+                
+              <div class="col-12">
+                  <div class="row">
+
+                          <div class="col-6">
+                           {# Champ prenom #}
+                             <div class="form-group">
+                               {{ form_label(form.prenom, "Votre prénom", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                               {{ form_errors(form.prenom) }}
+                               <div class="col-sm-12">
+                                 {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                               </div>
+                             </div>
+                        </div>
+
+                        <div class="col-6">
+                           {# Champ nom #}
+                             <div class="form-group">
+                               {{ form_label(form.nom, "Votre nom", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                               {{ form_errors(form.nom) }}
+                               <div class="col-sm-12">
+                                 {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                               </div>
+                             </div>
+                       </div>
+
+                  </div>
+              </div>
+              
+              
+              
+               <div class="col-12">
+                   {# Champ Téléphone #}
+                     <div class="form-group">
+                       {{ form_label(form.telephone, "Téléphone", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.telephone) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+               </div>
+              
+              <div class="col-12">
+                   {# Champ Téléphone #}
+                     <div class="form-group">
+                       {{ form_label(form.courriel, "Courriel", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.courriel) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.courriel, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+               </div>
+              
+              <div class="col-12">
+                   {# Champ Type de contact #}
+                     <div class="form-group">
+                       {{ form_label(form.typeContact, "Je suis", {'label_attr': {'class': 'col-12 control-label'}}) }}
+                       {{ form_errors(form.typeContact) }}
+                       <div class="col-sm-12">
+                         {{ form_widget(form.typeContact, {'attr': {'class': 'form-control'}}) }}
+                       </div>
+                     </div>
+               </div>
+               
+          </div>
+
+         
+     </div>
+    
+    <div class="row">
+        <div class="col-12">
+            
+             {# Champ Message #}
+             <div class="form-group">
+               {{ form_label(form.message, "Message", {'label_attr': {'class': 'col-12 control-label'}}) }}
+               {{ form_errors(form.message) }}
+               <div class="col-sm-12">
+                 {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
+               </div>
+             </div>
+            
+            {# Champ date #}
+             <div class="form-group" style="display:none;">
+               {{ form_label(form.date, "Date", {'label_attr': {'class': 'col-12 control-label'}}) }}
+               {{ form_errors(form.date) }}
+               <div class="col-sm-12">
+                 {{ form_widget(form.date, {'attr': {'class': 'form-control'}}) }}
+               </div>
+             </div>
+            
+        </div>
+    </div>
+    
+    
+    {{ form_rest(form) }}
+     {# Fermeture de la balise form du formulaire HTML #}
+     {{ form_end(form) }}
+
+ </div>

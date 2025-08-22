@@ -1,0 +1,348 @@
+
+/*************************************
+				HEADER
+*************************************/
+.menu li{
+    position:relative;
+}
+
+.nav li a{
+    color:white;
+    text-transform:uppercase;
+}
+
+.nav li:hover a{
+    color:black;
+
+}
+
+.sous-menu{
+    display:none;
+    position:absolute;
+    margin:auto;
+    width:10em;
+    list-style-type:none;
+    z-index: 10;
+    background:white;
+}
+
+.wrap-menu-admin{
+
+    background-color:black;
+}
+
+
+
+/*************************************
+				BODY
+*************************************/
+
+img{
+    max-width:100%;
+}
+
+/***************************************
+				GALERIE
+***************************************/
+
+#galeries .galerie{
+    display:inline-block;
+    height:300px;
+    text-align:center;
+}
+
+#galeries .galerie>a>img{
+    max-height:100%;
+    max-width:100%;
+}
+
+#galeries .galerie>a>h6{
+    position:absolute;
+    width:100%;
+    background-color:rgba(0,0,0,0.74);
+    bottom:0;
+    color:white;
+}
+
+#edit_gallery .images .image{
+    position:relative;
+}
+
+#edit_gallery .images .image .fa-times{
+    position:absolute;
+    right:1.3em;
+}
+
+/*************************************
+			USAGERS
+*************************************/
+
+.changePassword{
+    display:none;
+}
+
+.btn.adjust{
+    position:relative;
+    top:1.35em;
+}
+
+/*************************************
+			GĆ‰NĆ‰RAL
+*************************************/
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container{
+    max-width:100%;
+}
+
+label>div a{
+    margin-left:4%;
+}
+
+.erreur{
+    background-color:#ff1a1a;
+}
+
+.ok{
+    background-color:#66ff66;
+}
+
+.columns:last-child:not(:first-child){
+    float:left;
+}
+
+.form-control{
+    width:90%;
+    display:inline-block;
+}
+
+label:first-child:last-child,.form-control:first-child:last-child{
+    width:100%;
+}
+
+.col-md-4>label>input, .col-md-2>label>input{
+    width:100%;
+    display:block;
+}
+
+a, .panel-heading[role=tab]{
+    cursor: pointer;
+}
+
+html{
+    height:100%;
+}
+
+#loading{
+    display: none;
+    width:100%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    text-align: center;
+    background-color:rgba(0,0,0,0.74);
+    z-index: 999999999999999;
+}
+
+#loading > .fa{
+    top:45%;
+    position:relative;
+    color:white;
+}
+
+.checkboxButton {
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:3px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:left;
+}
+
+.checkboxButton:hover {
+    background:#CDCDCD;
+}
+
+.checkboxButton label {
+    float:left;
+}
+
+.checkboxButton label span {
+    text-align:center;
+    padding:3px 0.5em;
+    display:block;
+}
+
+.checkboxButton label input {
+    display:none;
+}
+
+.checkboxButton label input:checked + span {
+    background-color:#d9534f;
+    border-color:#d9534f;
+    color:#fff;
+}
+
+.checkboxButton label:hover input:checked + span {
+    background-color:#c9302c;
+    border-color:#c12e2a;
+}
+
+.extendedInput{
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    border-radius:4px;
+}
+
+.extendedInput .caractereRestant{
+    width:5%;
+    position:absolute;
+    top:0;
+    right:0;
+    height:100%;
+    text-align:center;
+    background-color:#9c9c9c;
+    line-height:2.5;
+}
+
+.extendedInput input, .extendedInput textarea{
+    width:100%;
+    padding-right:5%;
+    display:block;
+}
+
+textarea{
+    max-width:100%;
+}
+
+/*************************************
+				Page de connexion
+*************************************/
+
+
+.login-page .logo{
+
+    display:none;
+}
+
+
+.full-background{
+    background-image:url(../images/bg-login.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+
+.row-centered {
+    text-align: center;
+}
+
+#login-block {
+    margin-top:20%;
+}
+
+.top-block {
+    background: rgba(199, 199, 199, 0.75);
+    text-align:center;
+    padding:1% 0;
+    float: left;
+    width: 100%;
+    padding: 2em;
+
+}
+
+.bottom-block {
+    padding:5%;
+    background:rgba(255,255,255,0.75);
+}
+
+.btn-default {
+    background-color: #e87024;
+    color:#fff;
+    -webkit-transition:0.3s all ease;
+    transition:0.3s all ease;
+}
+
+.btn-login:hover {
+    background-color: rgba(0,0,0,0.9);
+    color:#fff;
+}
+
+.logiciel-block {
+    padding: 10%;
+    background: rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+.logiciel-block > a {
+    color:#fff;
+    text-decoration:none;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
+
+.logiciel-block > a:hover {
+    color:rgba(222, 18, 24, 0.8);
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    text-align: left;
+    margin-right: -4px;
+}
+
+.logo-login{
+
+    width:100%;
+}
+
+#releveAnnuel div{
+    display:inline-block;
+    float:none;
+}
+
+.releve{
+    padding: 1em;
+}
+
+.releve>.row{
+    border:2px solid black;
+    padding: 1em;
+    margin:0;
+}
+
+
+
+/*************************************
+				FOOTER
+*************************************/
+
+.page-footer {
+    padding: 1% 0;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    height: 50px !important;
+    width: 100% !important;
+}

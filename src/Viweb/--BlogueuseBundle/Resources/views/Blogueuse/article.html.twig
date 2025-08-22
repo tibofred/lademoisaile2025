@@ -1,0 +1,103 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}{{ article.titre }}{% endblock %}
+{% block metaDescription %}{{ article.metaDescription }}{% endblock %}
+
+
+{% block content %}
+
+
+
+    {{ include("::header.html.twig") }}
+        
+
+    <div class="wrap-menu-ecole">
+        {{ include("::menu.html.twig") }}
+    </div>
+     
+     <div class="container">
+        <div class="row single-article">
+        <div class="col-sm-8">
+
+              <img src="{{ absolute_url(asset('/uploads/photos-articles/')) }}{{ article.photo.id }}.{{ article.photo.url }}" class="img-fluid single-article-img">
+              
+                  <h5><span>{{ article.categorie.nom }}</span></h5>
+              
+                  <h1 class="entry-title">{{ article.titre }}</h1>
+                      
+                  <ul id="auteur-info">
+                      
+                      <li>Écrit par : <a href="{{ path('site_blogueuse_profil', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id })}}">{{ blogueuse.prenom }} {{ blogueuse.nom }}</a></li>
+                      <li>École : <a href="#">{{ ecole.nom }}</a></li>
+                      <li>
+                        Année scolaire : 
+                        {% if article.anneScolaire == 6 %}
+                        Pré-DEP
+                        {% elseif article.anneScolaire == 7 %}
+                        Parcours
+                        {% else %}
+                        Secondaire {{ article.anneScolaire }}
+                        {% endif %}
+                      </li>
+                      <li>Publié le : {{ article.datePublication|date("m/d/Y") }}  </li>
+                      
+                  </ul>
+
+                   <div class="entry-content">
+                      {{ article.contenu|raw }}
+                   </div><!-- .entry-content -->
+
+                     <div class="row">
+                        <div class="col-sm-12">
+                          <div class="share_button">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://lademoisaile.ca{{ path('site_blogueuse_article', { 'ecole_slug': article.blogueuse.ecole.slug,'blogueuse_id': article.blogueuse.id, 'article_slug': article.slug }) }}" class="fa fa-facebook"></a>
+                            <a href="mailto:" class="fa fa-envelope"></a>
+                            <br/><br/>
+                          </div>
+                         </div> 
+                         <div class="col-sm-12 text-center">
+                            
+                             <a href="{{ path('site_blogueuse_profil', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id })}}" class="btn btn-auteur img-fluid">Voir les articles de {{ blogueuse.prenom }} {{ blogueuse.nom }}</a>
+                         
+                         </div>
+                         
+                         <div class="col-sm-12">
+                             
+                             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                 <a href="{{ path('site_admin_article_edit', { 'article_id': article.id }) }}" class="">Modifier</a>
+
+                                 {% endif %}
+                         
+                             
+                         
+                         </div>
+                     </div><!-- row -->
+
+        </div><!-- container -->
+
+        <div class="col-sm-4 auteur-single">
+               
+             <h3><a href="{{ path('site_blogueuse_profil', {'ecole_slug': article.blogueuse.ecole.slug, 'blogueuse_id': article.blogueuse.id })}}">{{ blogueuse.prenom }} {{ blogueuse.nom }}</a></h3>
+             <p>{{ blogueuse.description|raw }}</p>
+        
+                  <img src="{{ absolute_url(asset('/uploads/photos-blogueuses/')) }}{{ blogueuse.photo.id }}.{{ blogueuse.photo.url }}" class="auteur img-fluid"> 
+            <br><br>
+            <br><br>
+            
+                <!--div class="commanditaire text-center">
+                    <a href="{{ path('viweb_base_contact')}}" class="btn btn-primary" style="color:white;">J'aimerais commanditer <br>La deMOIs'aile</a>
+                </div-->
+                                    
+            
+        </div>
+
+    </div>
+</div>	
+
+
+
+
+    
+ 
+{% endblock %}
+

@@ -1,0 +1,6 @@
+viweb_base_contact_confirmation:
+    path:     /contact/confirmation
+    defaults: { _controller: ViwebBaseBundle:Contact:confirmation }
+viweb_base_contact:
+    path:     /contact
+    defaults: { _controller: ViwebBaseBundle:Contact:index }

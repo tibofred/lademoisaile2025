@@ -1,0 +1,85 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Écoles participantes{% endblock %}
+{% block metaDescription %}Meta description{% endblock %}
+
+
+{% block content %}
+
+
+        {{ include("::header.html.twig") }}
+
+
+              <div class="wrap-menu-ecole">
+                {{ include("::menu.html.twig") }}
+            </div>
+
+<span class="ligne-deco"></span>
+
+<div class="wrap-ecole-bienvenue">
+    
+      <div class="container">
+        
+        <div class="row">
+            
+            
+            
+            <div class="col-sm-12 text-center">
+                <h1>Les derniers articles de : {{ ecole.nom }} </h1>
+                <p><span class="pink">J'écris</span> - J'assume - <span class="pink">J'avance</span> - Je suis</p>
+             </div>
+          </div>
+    </div>
+</div>
+
+<span class="ligne-deco"></span>
+
+    <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-sm-12">
+                
+                
+                
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main">
+                        
+                        
+                        <div class="breadcrump">
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    <a href="{{ path('site_admin_ecole_edit', {'ecole_id': ecole.id })}}">Modifier </a> |
+                                    {% else %} {% endif %}
+                            
+                                 <a href="#">Accueil</a> | <span class="pink">{{ ecole.nom}}</span></div>
+                        
+  			
+                            <h3 class="articles-recents">Les plus récents articles</h3>
+                        
+                        <div class="row article-ecole">
+
+                        {% for article in articles %}
+                        
+                          {{ include('@ViwebArticle/Article/appercu.html.twig') }}
+											
+                        {% endfor %}
+                            
+                        </div>
+                            
+                        
+                        
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+            
+            </div>
+            
+            
+        
+        </div>
+
+    </div>
+	
+
+ 
+{% endblock %}
+

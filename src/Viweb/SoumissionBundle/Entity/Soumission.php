@@ -1,0 +1,313 @@
+<?php
+
+namespace Viweb\SoumissionBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+use Gedmo\Mapping\Annotation as Gedmo;
+// N'oubliez pas de rajouter ce « use », il définit le namespace pour les annotations de validation
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+/**
+ * Soumission
+ *
+ * @ORM\Table(name="soumissions")
+ * @ORM\Entity(repositoryClass="Viweb\SoumissionBundle\Repository\SoumissionRepository")
+ */
+class Soumission
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime")
+     */
+    private $date;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomEcole", type="string", length=255)
+     */
+    private $nomEcole;
+    
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="region", type="string", length=255)
+     */
+    private $region;
+    
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="commissionScolaire", type="string", length=255)
+     */
+    private $commissionScolaire;
+    
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="typeContact", type="string", length=255)
+     */
+    private $typeContact;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255)
+     */
+    private $prenom;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=255)
+     */
+    private $telephone;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="courriel", type="string", length=255)
+     * @Assert\Email(
+     *     message = "Ce courriel '{{ value }}' n'est pas valide.",
+     *     checkMX = true
+     * )
+     */
+    private $courriel;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="message", type="text")
+     */
+    private $message;
+
+    
+
+    public function __construct()
+    {
+        $this->date = new \Datetime();
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \DateTime $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param string $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * @param string $telephone
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCourriel()
+    {
+        return $this->courriel;
+    }
+
+    /**
+     * @param string $courriel
+     */
+    public function setCourriel($courriel)
+    {
+        $this->courriel = $courriel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param string $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
+
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+
+
+    /**
+     * Set nomEcole.
+     *
+     * @param string $nomEcole
+     *
+     * @return Soumission
+     */
+    public function setNomEcole($nomEcole)
+    {
+        $this->nomEcole = $nomEcole;
+
+        return $this;
+    }
+
+    /**
+     * Get nomEcole.
+     *
+     * @return string
+     */
+    public function getNomEcole()
+    {
+        return $this->nomEcole;
+    }
+
+    /**
+     * Set region.
+     *
+     * @param string $region
+     *
+     * @return Soumission
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+
+        return $this;
+    }
+
+    /**
+     * Get region.
+     *
+     * @return string
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * Set commissionScolaire.
+     *
+     * @param string $commissionScolaire
+     *
+     * @return Soumission
+     */
+    public function setCommissionScolaire($commissionScolaire)
+    {
+        $this->commissionScolaire = $commissionScolaire;
+
+        return $this;
+    }
+
+    /**
+     * Get commissionScolaire.
+     *
+     * @return string
+     */
+    public function getCommissionScolaire()
+    {
+        return $this->commissionScolaire;
+    }
+
+    /**
+     * Set typeContact.
+     *
+     * @param string $typeContact
+     *
+     * @return Soumission
+     */
+    public function setTypeContact($typeContact)
+    {
+        $this->typeContact = $typeContact;
+
+        return $this;
+    }
+
+    /**
+     * Get typeContact.
+     *
+     * @return string
+     */
+    public function getTypeContact()
+    {
+        return $this->typeContact;
+    }
+}

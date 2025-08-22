@@ -1,0 +1,49 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+{% block title %}
+
+{% endblock %}
+{% block content %}
+
+
+<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Modifier la ressource</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- .row -->
+				<div class="row">
+					
+                    
+                    <!-- .col-md-6 -->
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+                                <h4><i class="ti i-cl-4 ti-arrow-left"></i> <a href="{{ path('site_admin_ressources')}}">Revenir</a></h4>
+							</div>
+                            
+                            <div class="card-body">
+                            <h1>{{ ressource.titre }}</h1>
+                            <p>{{ ressource.contenu|raw }}</p>
+                            <hr>
+                            </div>
+                        </div>
+                    </div>
+                        
+                        
+                        
+                        
+        </div>
+    </div>
+    
+</div>
+
+     
+{% endblock %}

@@ -1,0 +1,53 @@
+site_admin:
+    path:     /
+    defaults: { _controller: SiteBundle:Admin\Default:index }
+
+site_admin_pages:
+    path:     /pages
+    defaults: { _controller: SiteBundle:Admin\Page:pages }
+
+site_admin_page_new:
+    path:     /page/ajouter
+    defaults: { _controller: SiteBundle:Admin\Page:ajouter }
+
+site_admin_page_edit:
+    path:     /page/{page_id}-{page_slug}/edit
+    defaults: { _controller: SiteBundle:Admin\Page:page }
+
+site_admin_page_delete:
+    path:      /page/{page_id}/delete
+    defaults:
+        _controller: SiteBundle:Admin\Page:delete
+    requirements:
+        id: \d+
+        
+site_admin_blocs:
+    path:     /blocs
+    defaults: { _controller: SiteBundle:Admin\Bloc:blocs }
+
+site_admin_bloc_new:
+    path:     /bloc/ajouter
+    defaults: { _controller: SiteBundle:Admin\Bloc:ajouter }
+
+site_admin_bloc_edit:
+    path:     /bloc/{bloc_id}-{bloc_name}/edit
+    defaults: { _controller: SiteBundle:Admin\Bloc:bloc }
+    
+    
+site_admin_ressources:
+    path:     /ressources
+    defaults: { _controller: SiteBundle:Admin\Ressource:ressources }
+
+site_admin_ressource_new:
+    path:     /ressource/ajouter
+    defaults: { _controller: SiteBundle:Admin\Ressource:ajouter }
+
+site_admin_ressource_edit:
+    path:     /ressource/{ressource_id}-{ressource_slug}/edit
+    defaults: { _controller: SiteBundle:Admin\Ressource:ressource }
+
+site_admin_ressource:
+    path:     /ressource/{ressource_slug}
+    defaults: { _controller: SiteBundle:Admin\Ressource:show }
+    requirements:
+        page_id: \d+

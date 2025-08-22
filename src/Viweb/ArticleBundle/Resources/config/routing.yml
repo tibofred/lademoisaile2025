@@ -1,0 +1,33 @@
+site_liste_articles:
+    path:     /articles
+    defaults: { _controller: ViwebArticleBundle:Article:listArticles }
+    
+site_liste_articles_journeefemme:
+    path:     /articles-journeefemme
+    defaults: { _controller: ViwebArticleBundle:Article:listArticlesJourneefemme }
+
+site_liste_articles_lettreainees:
+    path:     /articles-lettreainees
+    defaults: { _controller: ViwebArticleBundle:Article:listArticlesLettreainees }
+
+site_liste_articles_lettreblogueuses:
+    path:     /articles-lettreblogueuses
+    defaults: { _controller: ViwebArticleBundle:Article:listArticlesLettreblogueuses }
+
+site_liste_articles_archive:
+    path:     /articles/archive
+    defaults: { _controller: ViwebArticleBundle:Article:listArticlesArchive }
+
+    
+site_articles_categorie_groupe:
+    path:     /articles/categorie/groupe/{group}
+    defaults: { _controller: ViwebArticleBundle:Article:articlescategoriegroup }
+
+    
+site_articles_categorie:
+    path:     /articles/categorie/{categorie_id}
+    defaults: { _controller: ViwebArticleBundle:Article:articlescategorie }
+
+site_categories:
+    path:     /categories
+    defaults: { _controller: ViwebArticleBundle:Article:categories }

@@ -1,0 +1,3 @@
+viweb_media_homepage:
+    path:     /medias
+    defaults: { _controller: ViwebMediaBundle:Media:index }

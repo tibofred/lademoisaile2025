@@ -1,0 +1,323 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}La deMOIs’aile - Laisse vivre la blogueuse en toi!{% endblock %}
+
+{% block metaDescription %}Plateforme de blog, regroupant différentes écoles secondaires du Québec, permettant aux adolescentes de 12-17 ans, de vivre l’expérience « blogueuse ».{% endblock %}
+
+{% block content %}
+
+
+ <div id="imageAccueil"> 
+        
+         <div class="wrap-txt-home">
+     
+             <!--h1>La deMOIs’aile</h1-->
+              <h2>Laisse vivre la <br><span class="rose">blogueuse</span> en toi!</h2>
+              <p>Le projet <span class="rose">« La deMOIs’aile »</span>, c’est une plateforme de blog, regroupant
+                  différentes écoles secondaires du Québec, permettant aux adolescentes
+               de 12-17 ans, de vivre l’expérience « blogueuse ».</p>
+         </div>
+        
+     
+    </div>
+
+    <section class="sect_slide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="slide_home" class="d-none d-lg-block carousel slide" data-ride="carousel"  data-interval="false">
+                      <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div>
+                                <div class="car_text">
+                                    « Le projet « la deMOIs’aile » m’a permis de me centrer dans mon rôle d’intervenante, de voir fleurir de belles jeunes filles, de les voir évoluer et également de se transformer par l’entremise d’un medium puissant : l’écriture. Mon implication dans le projet m’a certainement fait grandir en tant qu’intervenante, mais aussi en tant que personne. C’est un projet qui m’a fait découvrir une facette méconnue des adolescentes que nous croisons tous les jours dans les couloirs. Une communauté s’est créée autour de ces treize « deMOIs’ailes » et une complicité inébranlable s’est établie ».
+                                </div>
+                                <div class="car_title"><strong>Catherine Tétreault</strong>, psychoéducatrice et coordonnatrice à l’école secondaire Curé Mercure</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+                                <div class="car_text">
+                                    « L’expérience « La deMOIs’aile » a été pour moi un déboulement de surprises inattendues…Quand cette petite boule d’énergie et de joie de vivre qu’est Marie-Ève D’Amours s’est présentée devant moi et les autres filles de mon niveau... Le sourire aux lèvres le plus resplendissant que je n’ai jamais vu et les yeux pétillants d’espoir, j’en ai perdu le souffle! Et alors qu’elle nous racontait son cheminement et nous expliquait son superbe projet, enflammée par la passion, j’étais tout simplement pendue à ses lèvres…Il m’était tout simplement impossible de détourner le regard. En sortant de cette conférence, mon cerveau était en ébullition et il me démangeait d’écrire toutes les idées frétillantes dans ma tête. En arrivant chez moi, j’ai sauté sur mon ordinateur et j’ai écrit un texte de participation. »
+                                </div>
+                                <div class="car_title"><strong>Émy Rochon</strong>, blogueuse La deMOIs’aile Curé Mercure 5e secondaire.</div>
+                            </div>    
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+                                <div class="car_text">
+                                    « La deMOIs’aile » est vraiment un projet génial qui m’a permis de me rendre enfin compte que je ne suis pas seule. Nous sommes plein de filles à vivre des expériences similaires et si différentes à la fois. Au début, j’avoue que j’ai eu un peu peur que mes articles ne soient pas à la hauteur, mais les autres blogueuses n’ont fait que m’encourager et m’écouter. Ensemble, nous avons créé un incroyable sentiment d’appartenance que je n’avais jamais encore ressenti même dans une équipe sportive. Merci de nous avoir offert cette superbe opportunité de pouvoir enfin lâcher les mots et les maux qui restaient coincés en dedans. »
+                                </div>
+                                <div class="car_title"><strong>Marianne Vaillant</strong>, blogueuse La deMOIs’aile Curé Mercure 5e secondaire.</div>
+                            </div>  
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+                                <div class="car_text">
+                                    « Je veux vous remercier d'avoir donné l'occasion, le moyen, à ma fille d'exprimer ce qu'elle a vécu.  Cette expérience est arrivée exactement au bon moment dans sa vie et lui a permis de grandir. Comme mère, cela m'a aussi permis de mieux comprendre ma fille.  Nous avons eu de très belles discussions mère-fille grâce à ses textes. De plus, cela a permis à mon mari de voir une facette de sa grande fille à laquelle il avait moins accès. Votre projet est extrêmement d'actualité et très valorisant pour nos filles. De plus, je trouve qu'il apporte une opportunité hors du commun à ces jeunes femmes en devenir qui trouvent difficilement leur place.!
+                                </div>
+                                <div class="car_title"><strong>Marie Sol Lacroix</strong>, mère d’une blogueuse de l’école secondaire Curé Mercure.</div>
+                            </div>  
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#slide_home" role="button" data-slide="prev">
+                        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                      </a>
+                      <a class="carousel-control-next" href="#slide_home" role="button" data-slide="next">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>                
+
+    
+    <section class="text_exp">
+                    <h4>
+                        Vous voulez faire vivre l’expérience « <span>La deMOIs’aile</span> » à votre école ?<br>
+                        Nous vous invitons à vous inscrire dès maintenant. 
+                    </h4>
+                    <a href="{{ path('viweb_soumission_new') }}" class="btn btn-primary">J'inscris mon école</a>
+    </section>
+
+    <section class="sect_vid">        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="bloc_svframe">
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/AWMEBG9tsVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>     
+                </div>
+                <div class="col-md-4">
+                    <div class="bloc_svframe">
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/7Hb2QoDJtzU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+                <div class="col-md-4">
+                    <div class="bloc_svframe">
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/j0pXw3Vkgds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>    
+                </div>
+                <div class="col-12">
+                    <div class="bloc_capv">
+                        <img src="{{ asset('assets/scss/images/motif5.png') }}" alt="">
+                        <h2>Capsules vidéo</h2>
+                        <p>
+                            Voici une série de 7 capsules Web touchant au merveilleux monde du blog.
+                            <br/>Juste parfait bien outiller la blogueuse en toi!
+                        </p>
+                    </div>
+                </div>
+            </div>    
+        </div>    
+    </section>
+    <section class="sect_capsul">        
+        <div class="row justify-content-center">
+            <div class="col-md-3" style="margin-top:10px; margin-bottom:5px; ">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/2q7Ap0K7gxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-3" style="margin-top:10px; margin-bottom:5px; ">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/DVcY6HbjI0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+            </div>
+            <div class="col-md-3" style="margin-top:10px; margin-bottom:5px; ">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/ubvrbutLGPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+            </div>
+            <div class="col-md-3" style="margin-top:10px; margin-bottom:5px; ">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/-djRBvUaPGw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+            </div>
+            <div class="col-md-3" style="margin-top:10px; margin-bottom:5px; ">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/RhsMF1izMFo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+            </div>
+        </div>    
+    </section>
+
+
+    <section class="sect_btique">  
+        <div class="col-12">
+            <div class="bloc_capv">
+                <img src="{{ asset('assets/scss/images/motif5.png') }}" alt="">
+                <h2>Boutique en ligne</h2>
+                <p>
+                    <br/>
+                </p>
+                <a href="https://boutique.lademoisaile.ca/" class="btn btn-primary">Allez à la boutique</a>
+            </div>
+        </div>
+    </section>    
+    <ul class="wrap-jjjj">
+    
+        <li class="large jecris">
+             <img src="{{ asset('assets/scss/images/groupe-bandeau-1.jpg') }}" alt="J'écris" class="fleur-droite">
+            <p>J'écris</p>
+        </li>
+         <li class="small jassume">
+             <img src="{{ asset('assets/scss/images/jassume-bandeau-2.jpg') }}" alt="J'assume" class="fleur-droite">
+            <p>J'assume</p>
+        </li>
+        <li class="small javance">
+             <img src="{{ asset('assets/scss/images/javance-bandeau-3.jpg') }}" alt="J'avance" class="fleur-droite">
+            <p>J'avance</p>
+        </li>
+         <li class="large jesuis">
+             <img src="{{ asset('assets/scss/images/je-suis-bandeau-4.jpg') }}" alt="Je suis" class="fleur-droite">
+            <p>Je suis</p>
+        </li>
+</ul>
+    
+
+<div class="wrap-articles">    
+    <div class="container">    
+        <div class="row titre">                
+            <div class="col-sm-12 text-center">
+                <img src="{{ asset('assets/scss/images/fleur-derniers-articles-droite-la-demoisaile.png') }}" alt="Les derniers articles De nos blogueuses" class="fleur-art">
+                <h3><span>Les derniers articles</span></h3>
+                <h4>De nos blogueuses</h4>
+            </div>
+        </div>
+    </div>      
+    <div class="container">    
+        <div class="row">            
+           {% for article in articles %}                        
+                {{ include('@ViwebArticle/Article/appercu.html.twig') }}                                            
+           {% endfor %}
+        </div>
+    </div>
+</div>
+
+<section class="text_exp">
+    <h4>
+        Consultez la liste des écoles secondaires inscrites,<br/>découvrez les blogueuses participantes et leurs textes 
+    </h4>
+    <a href="https://lademoisaile.ca/ecoles-participantes" class="btn btn-primary">Trouvez une école</a>
+</section>    
+
+
+<div class="wrap-merci">
+    
+    <div class="merci"><span>Merci</span> à nos blogueuses !</div>
+
+</div>
+<div class="wrap-logo">
+    <div class="container">
+        
+         <div class="row">
+            <div class="col-sm-12">
+        
+                <h4 class="h4_command">
+                    Merci à tous ceux qui ont permis à La deMOIs'aile de prendre son envol !
+                </h4>
+             </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-1" class="carousel carousel-by-item slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">            
+                            <div class="row logo_part">
+                                <div class="col-sm-3 col-6">
+                                    <a href="https://viweb.ca" target="_blank">
+                                        <img src="{{ asset('assets/scss/images/logo-partenaires/viweb.png') }}" alt="Viweb" class="logo-partenaire">
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-6">
+                                    <a href="http://www.photocopiesillico.com/" target="_blank">
+                                        <img src="{{ asset('assets/scss/images/logo-partenaires/ILLICOsainte-adele.jpg') }}" alt="Photocopies Sainte-Adèle" class="logo-partenaire">
+                                    </a>
+                                </div>                  
+                                <div class="col-sm-3 col-6">
+                                    <a href="https://moime.ca/" target="_blank">
+                                        <img src="{{ asset('assets/scss/images/logo-partenaires/moime-nv-logo.png') }}" alt="Moi & Me" class="logo-partenaire">
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 col-6">
+                                    <a href="http://www.linformationdunordmonttremblant.ca/" target="_blank">
+                                        <img src="{{ asset('assets/scss/images/logo-partenaires/partnaires.png') }}" alt="L'information du Nord" class="logo-partenaire">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="carousel-item">    
+                            <div class="row logo_part">                    
+                                <div class="col-sm-3 col-6">
+                                    <a href="https://www.journalacces.ca/" target="_blank">
+                                        <img src="{{ asset('assets/scss/images/logo-partenaires/logo-acces.jpg') }}" alt="Accès" class="logo-partenaire">
+                                    </a>
+                                </div>                  
+                                <div class="col-sm-3 col-6">
+                                    <a href="https://www.journalacces.ca/" target="_blank">
+                                        <img src="{{ absolute_url(asset('/assets/scss/images/')) }}quebec.jpg" alt="Québec" class="logo-partenaire">
+                                    </a>
+                                </div>             
+                                <div class="col-sm-3 col-6">
+                                    <a href="https://www.journallenord.com/" target="_blank">
+                                        <img src="{{ absolute_url(asset('/assets/scss/images/logo-partenaires/logo-nord.png')) }}" alt="journal Le Nord" class="logo-partenaire">
+                                    </a>
+                                </div>           
+                                <div class="col-sm-3 col-6">
+                                    <a href="https://www.journallenord.com/" target="_blank">
+                                        <img src="{{ absolute_url(asset('/assets/scss/images/logo-partenaires/iga.jpg')) }}" alt="IGA" class="logo-partenaire">
+                                    </a>
+                                </div>
+                            </div>    
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+                    <div class="commanditaire text-center">
+                        <a href="{{ path('viweb_base_contact')}}" class="btn btn-primary" style="color:white;">J'aimerais commanditer<br/>La deMOIs'aile</a>
+                    </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalInfoletter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="corps_popup">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <div class="text_h2">Oui, je veux m’inscrire à l’infolettre de  </div>
+            <div class="text_h1">La deMOIs’aile</div>
+            <div class="tnp tnp-subscription-minimal ">
+                <form action="https://lademoisaile.us18.list-manage.com/subscribe/post?u=5401db14a70ddfd108a726c8c&amp;id=0c8d2eb40d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                
+                  <input type="email" value="" name="EMAIL" class="tnp-email" id="mce-EMAIL" placeholder="Inscrire votre courriel ici" required>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5401db14a70ddfd108a726c8c_0c8d2eb40d" tabindex="-1" value=""></div>
+                  <input type="submit" value="OK" name="subscribe" id="mc-embedded-subscribe" class="tnp-submit">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{#
+<div class="modal fade" id="modalreseau" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="corps_popup">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <br/><br/>
+            <img src="/web/assets/scss/images/logo-lademoisaile.png" alt="">
+            <div class="tnp tnp-subscription-minimal ">
+                <br/><br/>
+                <div style=" text-align: center;">
+                    <a href="https://www.facebook.com/lademoisaile/" target="_blank" style="color: #FFF; list-style: none;">Suivez-nous sur Facebook <i class="fa fa-facebook-square" style="font-size:25px; margin-left:12px;" aria-hidden="true"></i></a><br><br>
+                    <a href="https://www.instagram.com/lademoisaile/" target="_blank" style="color: #FFF; list-style: none;">Suivez-nous sur Instagram <i class="fa fa-instagram" style="font-size:25px; margin-left:12px;" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+#}
+
+
+
+{% endblock %}

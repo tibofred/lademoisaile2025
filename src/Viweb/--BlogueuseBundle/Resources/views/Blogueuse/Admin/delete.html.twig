@@ -1,0 +1,77 @@
+{% extends ':admin:layout.html.twig' %}
+
+
+
+{% block content %}
+
+
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Suprimer</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- .row -->
+				<div class="row">
+					
+                    
+                    <!-- .col-md-6 -->
+					<div class="col-md-6 col-lg-6 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+                                <h4><i class="ti i-cl-4 ti-arrow-left"></i> <a href="{{ path('site_admin_ecoles')}}">Revenir</a></h4>
+							</div>
+							
+							<div class="card-body">
+                                
+                                <h2>Supprimer la blogueuse :  {{ blogueuse.nom }}</h2>
+
+                                  <p>
+                                    Etes-vous certain de vouloir supprimer la blogueuse "{{ blogueuse.nom }}" ?
+                                      
+                                  </p>
+                                
+                                    <a href="{{ path('site_admin_blogueuses') }}" class="btn btn-primary">
+                                      <i class="glyphicon glyphicon-chevron-left"></i>
+                                      Retour
+                                    </a>
+
+                                  {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+                                  <form action="{{ path('site_admin_blogueuse_delete', {'blogueuse_id': blogueuse.id}) }}" method="post">
+                                 
+                                    {# Ici j'ai écrit le bouton de soumission à la main #}
+                                    <input type="submit" value="Supprimer" class="btn btn-danger" />
+                                    {# Ceci va générer le champ CSRF #}
+                                    {{ form_rest(form) }}
+                                  </form>
+								
+							</div>
+						</div>
+                        
+
+                            
+                          
+
+                            
+                            {{ form_end(form) }}
+                        
+                        
+					</div>
+					<!-- /.col-md-6 -->
+				</div>
+				<!-- /.row -->
+					
+				
+				
+			
+				
+			</div>  
+			<!-- /.content-wrapper-->
+
+
+{% endblock %}

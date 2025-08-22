@@ -1,0 +1,107 @@
+{% extends ":admin:layout.html.twig" %}
+
+{% block title %}
+
+    Inscription - {{ parent() }}
+
+{% endblock %}
+
+{% block content %}
+
+		<!-- =================================================
+			Content Wrapper
+		================================================== -->
+		<div class="content-wrapper">
+			<div class="container-fluid">
+			
+				<!-- Title & Breadcrumbs-->
+				<div class="row page-titles">
+					<div class="col-md-12 align-self-center">
+						<h4 class="theme-cl">Liste des inscriptions</h4>
+					</div>
+				</div>
+				<!-- Title & Breadcrumbs-->
+				
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+					    
+                        <div class="card">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Prénom</th>
+                                        <th>Nom</th>
+                                        <th>Courriel</th>
+                                        <th>Description</th>
+                                        <th>Article</th>
+                                        <th>École</th>
+                                        <th>Facebook</th>
+                                        <th>Instagram</th>
+                                        <th>Date</th>
+                                    </tr>
+                                    </thead>
+                    
+                    
+                                    <tbody>
+                    
+                                    {% for inscription in listInscription %}
+                                        <tr>
+                                            <td>
+                                                {% if inscription.prenom is defined %}
+                                                    {{ inscription.prenom }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.nom is defined %}
+                                                    {{ inscription.nom }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.courriel is defined %}
+                                                    {{ inscription.courriel }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.description is defined %}
+                                                    {{ inscription.description }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.article is defined %}
+                                                    {{ inscription.article }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.nomEcole is defined %}
+                                                    {{ inscription.nomEcole }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.facebook is defined %}
+                                                    {{ inscription.facebook }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.facebook is defined %}
+                                                    {{ inscription.facebook }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if inscription.date	 is defined %}
+                                                    {{ inscription.date|date("d/m/Y")	 }}
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div> 
+{% endblock %}

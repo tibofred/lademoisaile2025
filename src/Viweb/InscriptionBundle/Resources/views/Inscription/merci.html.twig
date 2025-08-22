@@ -1,0 +1,50 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Écoles participantes - Inscrivez votre école - Confirmation{% endblock %}
+{% block metaDescription %}Confirmation d'inscription de votre école sur le site La deMOIs'aile {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 300px;
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container first-container">
+        <div class="row">
+            <div class="col-sm-8 mt-5 offset-sm-2">
+                <span>Accueil / Inscription en ligne / Confirmation d'envoi</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+
+        <div class="">
+        <span class="fleur"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2">
+
+                            <p class="mt-5 pt-2" style="font-size: 0.95rem;">MERCI!! Votre message a bien été envoyé. Nous allons vous répondre dans les plus brefs délais.<br></p>
+                            
+                        </div>
+                        
+
+                    </div>
+                </div>
+        
+        </div>
+        
+                <div class="img_soum img_soum2" style="padding: 25px 0 60px; min-height: auto;">
+                  <h2>OSE VIVRE L'EXPERIENCE !</h2>
+                  <h2 class="pink">Laisse vivre la blogueuse en toi !</h2>
+                  <img alt="La deMOIs'aile OSE VIVRE L'EXPERIENCE !" src="{{ asset('assets/scss/images/coeurs-ligne-bandeau-trouver-une-ecole-la-demoisaile.png') }}">
+                </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+viweb_admin_inscription_all:
+    path:     /inscriptions
+    defaults: { _controller: ViwebInscriptionBundle:Admin\Default:all }
+    
+viweb_admin_inscription_single:
+    path:     /inscription/{id}
+    defaults: { _controller: ViwebInscriptionBundle:Admin\Default:view }
+
+viweb_admin_inscription_delete:
+    path:      /inscription/delete/{id}
+    defaults:
+        _controller: ViwebInscriptionBundle:Admin\Default:delete
+    requirements:
+        id: \d+
+
+viweb_admin_inscription_edit:
+    path:      /inscription/edit/{id}
+    defaults:
+        _controller: ViwebInscriptionBundle:Admin\Default:edit
+    requirements:
+        id: \d+

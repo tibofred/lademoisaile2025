@@ -1,0 +1,90 @@
+<div class="header_mobile">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColmob" aria-controls="navbarColmob" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+  <div class="navbar_bloc">
+      <a class="navbar-brand" href="{{ path('site_homepage') }}" title="LaDemMois'aile">
+          <img src="{{ asset('assets/scss/images/logo-lademoisaile.png') }}" >
+      </a>  
+    </div>
+    <div class="navbar-collapse" id="navbarColmob">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+              <a class="nav-link uneligne link_sub1" href="javascript:void(0);">Les écoles</a>
+              <ul class="submenu_ecole sub_ecole1">
+                <li><a href="{{ path('site_ecole_participantes')}}">Toutes</a></li>
+                <li><a href="{{ path('site_ecole_single', {'slug': 'augustin-norbert-morin'}) }}">École secondaire Augustin-Norbert Morin</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'cap-jeunesse'}) }}">École secondaire Cap-Jeunesse</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'cure-mercure'}) }}">École secondaire Curé-Mercure</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'la-foret'}) }}">École secondaire d’Amos – La Forêt</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-de-gracefield'}) }}">École secondaire de Gracefield</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-de-mirabel'}) }}">École secondaire de Mirabel</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-des-trois-saisons'}) }}">École secondaire des Trois-Saisons</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-du-harfang'}) }}">École secondaire du Harfang</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'emilien-frenette'}) }}">École secondaire Émilien-Frenette</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-henri-dunant'}) }}">École secondaire Henri-Dunant</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-la-source'}) }}">École secondaire La Source</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-le-tremplin'}) }}">École secondaire Le Tremplin</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'liberte-jeunesse'}) }}">École secondaire Liberté Jeunesse</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-poly-jeunesse'}) }}">École secondaire Poly-Jeunesse</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'la-polyvalente-des-monts'}) }}">La Polyvalente des Monts</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'ecole-secondaire-du-marechal'}) }}">École secondaire du Maréchal</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'polyvalente-deux-montagnes'}) }}">Polyvalente Deux-Montagnes</a></li>
+                  <li><a href="{{ path('site_ecole_single', {'slug': 'polyvalente-st-jerome'}) }}">Polyvalente St-Jérôme</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link uneligne" href="{{ path('viweb_soumission_new') }}">Inscription</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link uneligne" href="{{ path('site_categories') }}">Catégories  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link uneligne" href="#">Vidéos</a>
+              <ul class="submenu_ecole">
+                <li><a href="{{ path('site_page', {'page_slug': 'capsule-video'}) }}">Capsules vidéo</a></li>
+                  <li><a href="{{ path('site_page', {'page_slug': 'wserie'}) }}">Web série</a></li>
+                  <li><a href="{{ path('site_liste_articles_journeefemme') }}">Journée de la femme</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link uneligne" href="{{ path('site_liste_articles') }}">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link uneligne" href="https://boutique.lademoisaile.ca/">Boutique en ligne</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link uneligne" href="#">À propos</a>
+              
+              <ul class="submenu_ecole">
+                <li><a href="{{ path('site_page', {'page_slug': 'qui-est-la-demoisaile'}) }}">Qui sommes-nous</a></li>
+                <li><a href="{{ path('viweb_media_homepage') }}">On parle de nous</a></li>
+                <li><a href="{{ path('site_partenaires') }}">Nos partenaires</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link uneligne" href="{{ path('site_contact') }}">Contact</a>
+            </li>
+            <li class="nav-item nav-link uneligne">
+
+              Aimez notre page
+                <div class="fb-like" data-href="https://www.facebook.com/lademoisaile/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>  
+            </li>
+
+            <li class="nav-item nav-link uneligne">
+              <span class="link_yout">Suivez nous sur </span>
+            </li>
+            <li class="nav-item nav-link uneligne">
+              <a href="https://www.youtube.com/channel/UCCCyrOefuDQAUuws38OwDEQ?sub_confirmation=1" target="_blank"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></a>    
+              <a href="https://www.facebook.com/lademoisaile/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/lademoisaile" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+              <a href="https://www.tiktok.com/@lademoisaile" target="_blank"><svg style="width: 21px; fill: black; vertical-align: top;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg></a>
+            </li>
+            <li class="nav-item nav-link uneligne">
+              <div class="search_bloc">  
+              <script async src="https://cse.google.com/cse.js?cx=006937059085235617015:nejfl1zlpbv"></script>
+              <div class="gcse-searchbox-only" data-resultsUrl="{{ path('site_search') }}"></div>
+            </div>
+            </li>
+        </ul>
+    </div>
+</div>  

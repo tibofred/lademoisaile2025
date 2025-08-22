@@ -1,0 +1,4 @@
+services:
+#    viweb_temoignage.example:
+#        class: Viweb\TemoignageBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
