@@ -1,41 +1,42 @@
-# --- Nix packages to install via Nixpacks ---
+# --- System packages from Nix ---
 [phases.setup]
-# Keep Yarn out of Nix only if you used Option B. Since you chose Option A, keep it.
+# Use PHP 7.4 to satisfy your locked deps
 nixPkgs = [
-  "php81",
+  "php74",
+  "php74Extensions.mbstring",
+  "php74Extensions.intl",
+  "php74Extensions.pdo_mysql",
+  "php74Extensions.zip",
   "nodejs_20",
   "yarn",
   "git"
 ]
 
-# --- Install phase: install Composer outside Nix and use it ---
+# --- Install: Composer outside Nix so no Yarn/Composer collision ---
 [phases.install]
 cmds = [
-  # be strict and fail fast
   "set -euxo pipefail",
-  # install Composer to a dir always on PATH
+  # install composer in a PATH dir
   "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"",
   "php composer-setup.php --install-dir=/bin --filename=composer",
   "rm -f composer-setup.php",
-  # confirm it’s visible
   "composer --version",
   # install PHP deps
   "COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --no-progress"
 ]
 
-# --- Build phase (optional: only if you actually have a JS step) ---
+# --- Build (only if you actually have a JS step) ---
 [phases.build]
 cmds = [
   "yarn install --frozen-lockfile || true",
   "yarn build || true",
+  # warm Symfony cache for prod
   "php bin/console cache:clear --env=prod || true"
 ]
 
-# --- Runtime env you may want ---
 [variables]
 COMPOSER_ALLOW_SUPERUSER = "1"
 
-# --- Start command (adjust to your Symfony layout) ---
 [start]
-# For Symfony 3.4 with /web front controller
+# Adjust if your entrypoint differs
 cmd = "php -S 0.0.0.0:${PORT} -t web web/app.php"
