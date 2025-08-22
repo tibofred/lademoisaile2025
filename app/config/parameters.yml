@@ -10,4 +10,3 @@ parameters:
     mailer_user: siteweb@lademoisaile.ca
     mailer_password: QxeVM235d34E12
     secret: ThisTokenIsNotSoSecretChangeIt
-    default_timezone: America/New_York
