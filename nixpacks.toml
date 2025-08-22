@@ -25,6 +25,7 @@ cmds = [
   # the key change is here: plural flag + verbosity
   "COMPOSER_ALLOW_SUPERUSER=1 composer install -n --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs -vvv"
 
+]
 
 # --- JS build only if you actually have one ---
 [phases.build]
