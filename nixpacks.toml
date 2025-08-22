@@ -1,3 +1,25 @@
-# nixpacks.toml
 [phases.setup]
-nixPkgs = ["php81", "composer", "nodejs_20", "git"]  # no yarn
+# Keep PHP + Node + Yarn in the Nix env; omit composer to avoid LICENSE clash
+nixPkgs = ["php81", "nodejs_20", "yarn", "git"]
+
+[phases.install]
+# Install Composer via PHAR (outside Nix) so no env collision occurs
+cmds = [
+  "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"",
+  "php composer-setup.php --install-dir=/usr/local/bin --filename=composer",
+  "php -r \"unlink('composer-setup.php');\"",
+  # Your app deps (adjust flags as needed)
+  "composer install --no-interaction --prefer-dist --no-progress"
+]
+
+[phases.build]
+# If you have a JS build step; otherwise remove this block
+cmds = [
+  "yarn install --frozen-lockfile || true",   # remove if you use npm
+  "yarn build || true",
+  "php bin/console cache:clear --env=prod || true"
+]
+
+[start]
+# Your start command (example for Symfony 3.4 in /web)
+cmd = "php -S 0.0.0.0:${PORT} -t web web/app.php"
