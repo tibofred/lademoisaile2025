@@ -1,6 +1,4 @@
-# --- System packages from Nix ---
 [phases.setup]
-# PHP 8.1 + common Symfony 3.4 extensions + Node/Yarn
 nixPkgs = [
   "php81",
   "php81Extensions.mbstring",
@@ -9,38 +7,46 @@ nixPkgs = [
   "php81Extensions.zip",
   "nodejs_20",
   "yarn",
-  "git"
+  "git",
+  "unzip"            # helps composer with dist archives
 ]
 
-# --- Install phase: install Composer outside Nix and "fake" PHP 7.4 for deps ---
 [phases.install]
 cmds = [
   "set -euxo pipefail",
-  "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"",
-  "php composer-setup.php --install-dir=/bin --filename=composer",
-  "rm -f composer-setup.php",
-  "composer --version",
-  # make deps resolve as if php=7.4 (keeps your 3.4-era locks happy)
-  "composer config platform.php 7.4.33",
-  # the key change is here: plural flag + verbosity
-  "COMPOSER_ALLOW_SUPERUSER=1 composer install -n --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs -vvv"
+  # sanity
+  "php -v",
+  "ls -la",
+  "test -f composer.json || (echo 'composer.json missing in /app' && exit 1)",
 
+  # Install Composer **2.2 LTS** (legacy-friendly)
+  "php -r \"copy('https://getcomposer.org/download/2.2.21/composer.phar', 'composer');\"",
+  "chmod +x composer && mv composer /bin/composer",
+  "/bin/composer --version",
+
+  # Resolve as if PHP 7.4 (keeps your locked deps happy)
+  "/bin/composer config platform.php 7.4.33",
+
+  # Warm up + diagnose (don’t fail the build here)
+  "/bin/composer clear-cache || true",
+  "/bin/composer diagnose || true",
+
+  # 1) Probe install with **no plugins/scripts** to bypass legacy crashes
+  "COMPOSER_ALLOW_SUPERUSER=1 /bin/composer install -n --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs --no-plugins --no-scripts -vvv",
+
+  # 2) If that worked, do the real install (plugins/scripts on). If it fails, we’ll see which plugin/script is bad.
+  "COMPOSER_ALLOW_SUPERUSER=1 /bin/composer install -n --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs -vvv"
 ]
 
-# --- JS build only if you actually have one ---
 [phases.build]
 cmds = [
   "yarn install --frozen-lockfile || true",
   "yarn build || true",
-  # warm Symfony cache for prod (ignore if CLI not wired yet)
   "php bin/console cache:clear --env=prod || true"
 ]
 
 [variables]
 COMPOSER_ALLOW_SUPERUSER = "1"
-SYMFONY_ENV = "prod"
-APP_ENV = "prod"
 
 [start]
-# Adjust to your entrypoint; this is common for Symfony 3.4 with /web
 cmd = "php -S 0.0.0.0:${PORT} -t web web/app.php"
