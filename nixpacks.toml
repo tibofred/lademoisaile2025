@@ -1,42 +1,50 @@
 # --- System packages from Nix ---
 [phases.setup]
-# Use PHP 7.4 to satisfy your locked deps
+# PHP 8.1 + common Symfony 3.4 extensions + Node/Yarn
 nixPkgs = [
-  "php74",
-  "php74Extensions.mbstring",
-  "php74Extensions.intl",
-  "php74Extensions.pdo_mysql",
-  "php74Extensions.zip",
+  "php81",
+  "php81Extensions.mbstring",
+  "php81Extensions.intl",
+  "php81Extensions.pdo_mysql",
+  "php81Extensions.zip",
   "nodejs_20",
   "yarn",
   "git"
 ]
 
-# --- Install: Composer outside Nix so no Yarn/Composer collision ---
+# --- Install phase: install Composer outside Nix and "fake" PHP 7.4 for deps ---
 [phases.install]
 cmds = [
   "set -euxo pipefail",
-  # install composer in a PATH dir
+
+  # Install Composer into a guaranteed PATH dir
   "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"",
   "php composer-setup.php --install-dir=/bin --filename=composer",
   "rm -f composer-setup.php",
   "composer --version",
-  # install PHP deps
-  "COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --no-progress"
+
+  # Make Composer resolve packages as if PHP = 7.4
+  # (does not change the runtime PHP; only dependency resolution)
+  "composer config platform.php 7.4.33",
+
+  # Install PHP deps (ignore platform just in case some packages still insist)
+  "COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --no-interaction --prefer-dist --no-progress --optimize-autoloader --ignore-platform-req=php"
 ]
 
-# --- Build (only if you actually have a JS step) ---
+# --- JS build only if you actually have one ---
 [phases.build]
 cmds = [
   "yarn install --frozen-lockfile || true",
   "yarn build || true",
-  # warm Symfony cache for prod
+  # warm Symfony cache for prod (ignore if CLI not wired yet)
   "php bin/console cache:clear --env=prod || true"
 ]
 
 [variables]
 COMPOSER_ALLOW_SUPERUSER = "1"
+SYMFONY_ENV = "prod"
+APP_ENV = "prod"
 
 [start]
-# Adjust if your entrypoint differs
+# Adjust to your entrypoint; this is common for Symfony 3.4 with /web
 cmd = "php -S 0.0.0.0:${PORT} -t web web/app.php"
