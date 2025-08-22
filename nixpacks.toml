@@ -16,20 +16,15 @@ nixPkgs = [
 [phases.install]
 cmds = [
   "set -euxo pipefail",
-
-  # Install Composer into a guaranteed PATH dir
   "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"",
   "php composer-setup.php --install-dir=/bin --filename=composer",
   "rm -f composer-setup.php",
   "composer --version",
-
-  # Make Composer resolve packages as if PHP = 7.4
-  # (does not change the runtime PHP; only dependency resolution)
+  # make deps resolve as if php=7.4 (keeps your 3.4-era locks happy)
   "composer config platform.php 7.4.33",
+  # the key change is here: plural flag + verbosity
+  "COMPOSER_ALLOW_SUPERUSER=1 composer install -n --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs -vvv"
 
-  # Install PHP deps (ignore platform just in case some packages still insist)
-  "COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --no-interaction --prefer-dist --no-progress --optimize-autoloader --ignore-platform-req=php"
-]
 
 # --- JS build only if you actually have one ---
 [phases.build]
