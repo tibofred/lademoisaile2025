@@ -1,10 +1,10 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_host: 127.0.0.1
-    database_port: null
-    database_name: lademoisaile_symfNew
-    database_user: lademoisaile_sym
-    database_password: 4SBhNre4KBVerLoH
+    database_host: lademoisaile-ey0w4-mysql.lademoisaile-ey0w4.svc.cluster.local
+    database_port: 3306
+    database_name: lademoisaile
+    database_user: lademoisaile
+    database_password: tQ0-hB0_mU2-eK9=lJ5=
     mailer_transport: smtp
     mailer_host: lademoisaile.ca
     mailer_user: siteweb@lademoisaile.ca
