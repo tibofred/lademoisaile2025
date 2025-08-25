@@ -2,6 +2,7 @@
     "name": "root/cayer",
     "license": "proprietary",
     "type": "project",
+    "packageManager": "npm@10.8.2",
     "autoload": {
         "psr-4": {
             "": "src/"
