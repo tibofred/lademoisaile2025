@@ -1,52 +1,27 @@
-[phases.setup]
-nixPkgs = [
-  "php81",
-  "php81Extensions.mbstring",
-  "php81Extensions.intl",
-  "php81Extensions.pdo_mysql",
-  "php81Extensions.zip",
-  "nodejs_20",
-  "yarn",
-  "git",
-  "unzip"            # helps composer with dist archives
-]
-
-[phases.install]
-cmds = [
-  "set -euxo pipefail",
-  # sanity
-  "php -v",
-  "ls -la",
-  "test -f composer.json || (echo 'composer.json missing in /app' && exit 1)",
-
-  # Install Composer **2.2 LTS** (legacy-friendly)
-  "php -r \"copy('https://getcomposer.org/download/2.2.21/composer.phar', 'composer');\"",
-  "chmod +x composer && mv composer /bin/composer",
-  "/bin/composer --version",
-
-  # Resolve as if PHP 7.4 (keeps your locked deps happy)
-  "/bin/composer config platform.php 7.4.33",
-
-  # Warm up + diagnose (don’t fail the build here)
-  "/bin/composer clear-cache || true",
-  "/bin/composer diagnose || true",
-
-  # 1) Probe install with **no plugins/scripts** to bypass legacy crashes
-  "COMPOSER_ALLOW_SUPERUSER=1 /bin/composer install -n --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs --no-plugins --no-scripts -vvv",
-
-  # 2) If that worked, do the real install (plugins/scripts on). If it fails, we’ll see which plugin/script is bad.
-  "COMPOSER_ALLOW_SUPERUSER=1 /bin/composer install -n --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs -vvv"
-]
-
-[phases.build]
-cmds = [
-  "yarn install --frozen-lockfile || true",
-  "yarn build || true",
-  "php bin/console cache:clear --env=prod || true"
-]
+# nixpacks.toml
 
 [variables]
+APP_ENV = "prod"
+APP_DEBUG = "0"
+COMPOSER_MEMORY_LIMIT = "-1"
 COMPOSER_ALLOW_SUPERUSER = "1"
 
-[start]
-cmd = "php -S 0.0.0.0:${PORT} -t web web/app.php"
+# Facultatif : si tu veux aider la résolution Composer sans casser le runtime.
+# Voir aussi la section "PHP" plus bas concernant la version.
+# (À mettre dans composer.json > config.platform.php = "7.4.33")
+
+[phases.setup]
+# ajoute ici des paquets dont ton app a besoin (ex: unzip, git, …)
+# Nixpacks fournit déjà PHP/Composer automatiquement pour les projets PHP. :contentReference[oaicite:1]{index=1}
+packages = ["git", "unzip"]
+
+[phases.install]
+# IMPORTANT: on n’exécute AUCUN script Composer en build
+cmds = [
+  "composer diagnose || true",
+  "composer install -n --no-dev --prefer-dist --optimize-autoloader --no-plugins --no-scripts -vvv"
+]
+
+# (optionnel) si tu as un build front (encorejs/webpack), ajoute une phase build ici
+
+# On ne définit PAS de phase start ici ; on mettra la commande de démarrage dans Kinsta (Processes)
