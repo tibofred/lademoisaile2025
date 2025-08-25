@@ -19,7 +19,8 @@ packages = ["git", "unzip"]
 # IMPORTANT: on n’exécute AUCUN script Composer en build
 cmds = [
   "composer diagnose || true",
-  "composer install -n --no-dev --prefer-dist --optimize-autoloader --no-plugins --no-scripts -vvv"
+  "composer install -n --no-dev --prefer-dist --optimize-autoloader --no-plugins --no-scripts --ignore-platform-req=php -vvv"
+
 ]
 
 # (optionnel) si tu as un build front (encorejs/webpack), ajoute une phase build ici
