@@ -4,9 +4,10 @@ parameters:
     database_port: 3306
     database_name: lademoisaile
     database_user: lademoisaile
-    database_password: tQ0-hB0_mU2-eK9=lJ5=
+    database_password: 'tQ0-hB0_mU2-eK9=lJ5='
     mailer_transport: smtp
     mailer_host: lademoisaile.ca
     mailer_user: siteweb@lademoisaile.ca
     mailer_password: QxeVM235d34E12
     secret: ThisTokenIsNotSoSecretChangeIt
+    default_timezone: America/New_York
