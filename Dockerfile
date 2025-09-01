@@ -29,4 +29,5 @@ ENV COMPOSER_ALLOW_SUPERUSER=1 \
 RUN composer install -n --no-dev --prefer-dist --optimize-autoloader
 
 # Kinsta fournit $PORT (ex: 8080)
-EXP
+EXPOSE 8080
+CMD sh -c 'php -S 0.0.0.0:${PORT:-8080} -t web web/app.php'
